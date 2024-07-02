@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>3</activeVersionNumber>
+    <description>Flow used to check if the Opportunity Discard flag has changed to TRUE if so invokes Apex Class to create Discard Record.</description>
+    <masterLabel>scaleMatters Opportunity Discard Flow</masterLabel>
+</FlowDefinition>

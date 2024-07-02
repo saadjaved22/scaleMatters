@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Forecast_Category_ID__c</fullName>
+    <description>Used the GUID for scaleMatters to run queries off of Forecast Category values</description>
+    <externalId>false</externalId>
+    <formula>CASE(
+    Opportunity__r.ForecastCategoryName,
+    &quot;Omitted&quot;,&quot;8b12643f98be4df5bbeddf4c6e289872&quot;,
+    &quot;Pipeline&quot;,&quot;8e015b6b4cf148ec838dada5099c96a7&quot;,
+    &quot;Best Case&quot;,&quot;67011b62115d4b10a9cc2018c235cbcf&quot;,
+    &quot;Commit&quot;,&quot;4fd4956c247748dcbf3d4e44dcce5530&quot;,
+    &quot;Closed&quot;,&quot;beadb1ac1afc4fcf927617ce99df32f0&quot;,
+    NULL
+)</formula>
+    <label>Forecast Category ID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

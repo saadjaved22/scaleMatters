@@ -1,0 +1,4467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Ads_Facebook</name>
+        <label>Ads - Facebook</label>
+        <locationX>11402</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Ads - Facebook</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Ads_Instagram</name>
+        <label>Ads - Instagram</label>
+        <locationX>11666</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Ads - Instagram</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Ads_LinkedIn</name>
+        <label>Ads - LinkedIn</label>
+        <locationX>11930</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Ads - LinkedIn</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Ads_Other</name>
+        <label>Ads - Other</label>
+        <locationX>12194</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Ads - Other</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Ads_Search</name>
+        <label>Ads - Search</label>
+        <locationX>12458</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Ads - Search</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Ads_Twitter</name>
+        <label>Ads - Twitter</label>
+        <locationX>12722</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Ads - Twitter</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to assign new values</description>
+        <name>Assign_AE_Record_Owner</name>
+        <label>Assign - AE Record Owner</label>
+        <locationX>18508</locationX>
+        <locationY>671</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Record_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Record_Owner_Role__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Owner.Current_Role__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Should_the_funnel_group_be_re_evaulated_FIXME</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to assign new values</description>
+        <name>Assign_AE_Record_Owner_User_Source</name>
+        <label>Assign - AE Record Owner &amp; User Source</label>
+        <locationX>18244</locationX>
+        <locationY>671</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__User_Source__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__User_Source_Role__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Owner.Current_Role__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Record_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Record_Owner_Role__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Owner.Current_Role__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Should_the_funnel_group_be_re_evaulated_FIXME</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to assign new values</description>
+        <name>Assign_Changed_to_Non_Sales</name>
+        <label>Assign - Changed to Non Sales</label>
+        <locationX>19036</locationX>
+        <locationY>671</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Record_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Record_Owner_Role__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Owner.Current_Role__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Should_the_funnel_group_be_re_evaulated_FIXME</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to assign new values</description>
+        <name>Assign_Changed_to_Non_Sales_No_User_Source</name>
+        <label>Assign - Changed to Non Sales No User Source</label>
+        <locationX>18772</locationX>
+        <locationY>671</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__User_Source__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__User_Source_Role__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Owner.Current_Role__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Record_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Record_Owner_Role__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Owner.Current_Role__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Should_the_funnel_group_be_re_evaulated_FIXME</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to assign new values</description>
+        <name>Assign_SDR_Record_Owner_User_Source</name>
+        <label>Assign - SDR Record Owner &amp; User Source</label>
+        <locationX>17980</locationX>
+        <locationY>671</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__User_Source__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__User_Source_Role__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Owner.Current_Role__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Record_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Record_Owner_Role__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Owner.Current_Role__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Should_the_funnel_group_be_re_evaulated_FIXME</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to assign variables.</description>
+        <name>Created_by_User</name>
+        <label>Created by User</label>
+        <locationX>6078</locationX>
+        <locationY>1463</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead 0</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Created_Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead 0</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_0_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_0_Conversion_Mechanism__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Record_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Record_Owner_Role__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Current_Role__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__User_Source__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__User_Source_Role__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Current_Role__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>New_Contact_Rating_is_Unknown</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Events</name>
+        <label>Events</label>
+        <locationX>14570</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Events</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Events_BIGRYG_Webinar</name>
+        <label>Events - BIGRYG Webinar</label>
+        <locationX>12986</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Events - BIGRYG Webinar</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Events_Impact_Webinar</name>
+        <label>Events - Impact Webinar</label>
+        <locationX>13250</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Events - Impact Webinar</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Events_Other</name>
+        <label>Events - Other</label>
+        <locationX>13514</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Events - Other</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Events_RYG</name>
+        <label>Events - RYG</label>
+        <locationX>13778</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Events - RYG</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Events_TL_Webinar</name>
+        <label>Events - TL Webinar</label>
+        <locationX>14042</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Events - TL Webinar</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Events_VRYG</name>
+        <label>Events - VRYG</label>
+        <locationX>14306</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Events - VRYG</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Inbound_Other</name>
+        <label>Inbound Other</label>
+        <locationX>14834</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Inbound Other</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Inbound_Unpaid</name>
+        <label>Inbound Unpaid</label>
+        <locationX>15098</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Inbound Unpaid</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Listings_Business_Software</name>
+        <label>Listings - Business Software</label>
+        <locationX>15362</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - Business Software</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Listings_BuyerZone</name>
+        <label>Listings - BuyerZone</label>
+        <locationX>15626</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - BuyerZone</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Listings_Capterra</name>
+        <label>Listings - Capterra</label>
+        <locationX>15890</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - Capterra</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Listings_G2_Crowd</name>
+        <label>Listings - G2 Crowd</label>
+        <locationX>16154</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - G2 Crowd</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Listings_MVF</name>
+        <label>Listings - MVF</label>
+        <locationX>16418</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - MVF</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Listings_Natural_Intelligence</name>
+        <label>Listings - Natural Intelligence</label>
+        <locationX>16682</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - Natural Intelligence</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Listings_Other</name>
+        <label>Listings - Other</label>
+        <locationX>16946</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - Other</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Listings_Software_Advice</name>
+        <label>Listings - Software Advice</label>
+        <locationX>17210</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - Software Advice</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Listings_Trafficpoint</name>
+        <label>Listings - Trafficpoint</label>
+        <locationX>17474</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - Trafficpoint</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Listings_TrustRadius</name>
+        <label>Listings - TrustRadius</label>
+        <locationX>17738</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - TrustRadius</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Ads_Facebook</name>
+        <label>New - Ads - Facebook</label>
+        <locationX>1106</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Ads - Facebook</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Ads_Instagram</name>
+        <label>New - Ads - Instagram</label>
+        <locationX>1370</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Ads - Instagram</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Ads_LinkedIn</name>
+        <label>New - Ads - LinkedIn</label>
+        <locationX>1634</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Ads - LinkedIn</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Ads_Other</name>
+        <label>New - Ads - Other</label>
+        <locationX>1898</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Ads - Other</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Ads_Search</name>
+        <label>New - Ads - Search</label>
+        <locationX>2162</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Ads - Search</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Ads_Twitter</name>
+        <label>New - Ads - Twitter</label>
+        <locationX>2426</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Ads - Twitter</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Sets &quot;Record Owner&quot; and &quot;Record Owner Role&quot; field values</description>
+        <name>New_Assign_Record_Owner_Record_Owner_Role</name>
+        <label>New - Assign Record Owner &amp; Record Owner Role</label>
+        <locationX>3152</locationX>
+        <locationY>551</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Record_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Record_Owner_Role__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Owner.Current_Role__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>New_Is_User_Source_Blank</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Sets &quot;User Source&quot; and &quot;User Source Role&quot; field values</description>
+        <name>New_Assign_User_Source_User_Source_Role</name>
+        <label>New - Assign User Source &amp; User Source Role</label>
+        <locationX>3152</locationX>
+        <locationY>887</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__User_Source__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__User_Source_Role__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Owner.Current_Role__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Converted_from_Lead</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Events</name>
+        <label>New - Events</label>
+        <locationX>4274</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Events</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Events_BIGRYG_Webinar</name>
+        <label>New - Events - BIGRYG Webinar</label>
+        <locationX>2690</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Events - BIGRYG Webinar</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Events_Impact_Webinar</name>
+        <label>New - Events - Impact Webinar</label>
+        <locationX>2954</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Events - Impact Webinar</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Events_Other</name>
+        <label>New - Events - Other</label>
+        <locationX>3218</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Events - Other</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Events_RYG</name>
+        <label>New - Events - RYG</label>
+        <locationX>3482</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Events - RYG</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Events_TL_Webinar</name>
+        <label>New - Events - TL Webinar</label>
+        <locationX>3746</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Events - TL Webinar</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Events_VRYG</name>
+        <label>New - Events - VRYG</label>
+        <locationX>4010</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Events - VRYG</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Inbound_Other</name>
+        <label>New - Inbound Other</label>
+        <locationX>4538</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Inbound Other</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Inbound_Unpaid</name>
+        <label>New - Inbound Unpaid</label>
+        <locationX>4802</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Inbound Unpaid</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Listings_Business_Software</name>
+        <label>New - Listings - Business Software</label>
+        <locationX>5066</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - Business Software</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Listings_BuyerZone</name>
+        <label>New - Listings - BuyerZone</label>
+        <locationX>5330</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - BuyerZone</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Listings_Capterra</name>
+        <label>New - Listings - Capterra</label>
+        <locationX>5594</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - Capterra</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Listings_G2_Crowd</name>
+        <label>New - Listings - G2 Crowd</label>
+        <locationX>5858</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - G2 Crowd</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Listings_MVF</name>
+        <label>New - Listings - MVF</label>
+        <locationX>6122</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - MVF</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Listings_Natural_Intelligence</name>
+        <label>New - Listings - Natural Intelligence</label>
+        <locationX>6386</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - Natural Intelligence</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Listings_Other</name>
+        <label>New - Listings - Other</label>
+        <locationX>6650</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - Other</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Listings_Software_Advice</name>
+        <label>New - Listings - Software Advice</label>
+        <locationX>6914</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - Software Advice</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Listings_Trafficpoint</name>
+        <label>New - Listings - Trafficpoint</label>
+        <locationX>7178</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - Trafficpoint</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Listings_TrustRadius</name>
+        <label>New - Listings - TrustRadius</label>
+        <locationX>7442</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Listings - TrustRadius</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Organic</name>
+        <label>New - Organic</label>
+        <locationX>7970</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Organic</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Other</name>
+        <label>New - Other</label>
+        <locationX>7706</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Other</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Prospecting_3rd_Party</name>
+        <label>New - Prospecting - 3rd Party</label>
+        <locationX>8234</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Prospecting - 3rd Party</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Prospecting_AE</name>
+        <label>New - Prospecting - AE</label>
+        <locationX>8498</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Prospecting - AE</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Prospecting_SDR</name>
+        <label>New - Prospecting - SDR</label>
+        <locationX>8762</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Prospecting - SDR</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Prospecting_Social</name>
+        <label>New - Prospecting - Social</label>
+        <locationX>9026</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Prospecting - Social</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Referrals_Customer</name>
+        <label>New - Referrals - Customer</label>
+        <locationX>9290</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Referrals - Customer</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Referrals_Employee</name>
+        <label>New - Referrals - Employee</label>
+        <locationX>9554</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Referrals - Employee</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Referrals_Other</name>
+        <label>New - Referrals - Other</label>
+        <locationX>9818</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Referrals - Other</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Referrals_Partner</name>
+        <label>New - Referrals - Partner</label>
+        <locationX>10082</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Referrals - Partner</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Syndication_Integrate</name>
+        <label>New - Syndication - Integrate</label>
+        <locationX>10346</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Syndication - Integrate</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Syndication_Other</name>
+        <label>New - Syndication - Other</label>
+        <locationX>10610</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Syndication - Other</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Syndication_TechTarget</name>
+        <label>New - Syndication - TechTarget</label>
+        <locationX>10874</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Syndication - TechTarget</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>New_Undefined</name>
+        <label>New - Undefined</label>
+        <locationX>11138</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Undefined</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Organic</name>
+        <label>Organic</label>
+        <locationX>18266</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Organic</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Other</name>
+        <label>Other</label>
+        <locationX>18002</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Other</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Prospecting_3rd_Party</name>
+        <label>Prospecting - 3rd Party</label>
+        <locationX>18530</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Prospecting - 3rd Party</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Prospecting_AE</name>
+        <label>Prospecting - AE</label>
+        <locationX>18794</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Prospecting - AE</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Prospecting_SDR</name>
+        <label>Prospecting - SDR</label>
+        <locationX>19058</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Prospecting - SDR</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Prospecting_Social</name>
+        <label>Prospecting - Social</label>
+        <locationX>19322</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Prospecting - Social</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Referrals_Customer</name>
+        <label>Referrals - Customer</label>
+        <locationX>19586</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Referrals - Customer</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Referrals_Employee</name>
+        <label>Referrals - Employee</label>
+        <locationX>19850</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Referrals - Employee</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Referrals_Other</name>
+        <label>Referrals - Other</label>
+        <locationX>20114</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Referrals - Other</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Referrals_Partner</name>
+        <label>Referrals - Partner</label>
+        <locationX>20378</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Referrals - Partner</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set value</description>
+        <name>Set_Bypass_to_0</name>
+        <label>Set Bypass to 0</label>
+        <locationX>18706</locationX>
+        <locationY>1895</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_2_Bypass__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Velocity_Dates_FIXME</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set the default Cycle for New - Contact</description>
+        <name>Set_Contact_Cycle_Type</name>
+        <label>Set Contact Cycle Type</label>
+        <locationX>6122</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Cycle_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>New - Contact</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Created_manually_by_User_FIXME</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assigning Rating</description>
+        <name>Set_Dead_New</name>
+        <label>Set Dead New</label>
+        <locationX>4846</locationX>
+        <locationY>1919</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Dead</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Dead_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Released_to_Cadence__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>New_Funnel_Group_FIXME</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assigning Rating</description>
+        <name>Set_Former_Customer_New</name>
+        <label>Set Former Customer New</label>
+        <locationX>5110</locationX>
+        <locationY>1919</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Former Customer</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Released_to_Cadence__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>New_Funnel_Group_FIXME</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set rating</description>
+        <name>Set_L0</name>
+        <label>Set L0</label>
+        <locationX>20246</locationX>
+        <locationY>2327</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead 0</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_L0_Date</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set value</description>
+        <name>Set_L0_Date</name>
+        <label>Set L0 Date</label>
+        <locationX>20114</locationX>
+        <locationY>2567</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_0_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Assigning Rating</description>
+        <name>Set_L0_Edit</name>
+        <label>Set L0 Edit</label>
+        <locationX>19410</locationX>
+        <locationY>1655</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead 0</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Velocity_Dates_FIXME</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set rating</description>
+        <name>Set_L1</name>
+        <label>Set L1</label>
+        <locationX>19718</locationX>
+        <locationY>2327</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead 1</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_L1_Date</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set value</description>
+        <name>Set_L1_Date</name>
+        <label>Set L1 Date</label>
+        <locationX>19586</locationX>
+        <locationY>2567</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_1_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Assigning Rating</description>
+        <name>Set_L1_Edit</name>
+        <label>Set L1 Edit</label>
+        <locationX>19146</locationX>
+        <locationY>1655</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead 1</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Velocity_Dates_FIXME</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set rating</description>
+        <name>Set_L2</name>
+        <label>Set L2</label>
+        <locationX>19190</locationX>
+        <locationY>2327</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead 2</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_L2_Date</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set value</description>
+        <name>Set_L2_Date</name>
+        <label>Set L2 Date</label>
+        <locationX>19058</locationX>
+        <locationY>2567</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_2_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Assigning Rating</description>
+        <name>Set_L2_Edit</name>
+        <label>Set L2 Edit</label>
+        <locationX>18838</locationX>
+        <locationY>1655</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead 2</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_L2_Bypass</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set rating</description>
+        <name>Set_L3</name>
+        <label>Set L3</label>
+        <locationX>18530</locationX>
+        <locationY>2327</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead 3</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_L3_Dates</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set value</description>
+        <name>Set_L3_Date</name>
+        <label>Set L3 Date</label>
+        <locationX>18530</locationX>
+        <locationY>2567</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_3_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Assigning Rating</description>
+        <name>Set_L3_Edit</name>
+        <label>Set L3 Edit</label>
+        <locationX>18442</locationX>
+        <locationY>1655</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead 3</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Velocity_Dates_FIXME</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set value</description>
+        <name>Set_L3_L2_Date</name>
+        <label>Set L3 &amp; L2 Date</label>
+        <locationX>18266</locationX>
+        <locationY>2567</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_3_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_2_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_2_Bypass__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Assigning Rating</description>
+        <name>Set_Lead_0_New</name>
+        <label>Set Lead 0 New</label>
+        <locationX>6166</locationX>
+        <locationY>1919</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead 0</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_0_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Released_to_Cadence__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>New_Funnel_Group_FIXME</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assigning Rating</description>
+        <name>Set_Lead_1_New</name>
+        <label>Set Lead 1 New</label>
+        <locationX>5902</locationX>
+        <locationY>1919</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead 1</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_1_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Released_to_Cadence__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>New_Funnel_Group_FIXME</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assigning Rating</description>
+        <name>Set_Lead_2_New</name>
+        <label>Set Lead 2 New</label>
+        <locationX>5638</locationX>
+        <locationY>1919</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead 2</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_2_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_2_Bypass__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Released_to_Cadence__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>New_Funnel_Group_FIXME</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assigning Rating</description>
+        <name>Set_Lead_3_New</name>
+        <label>Set Lead 3 New</label>
+        <locationX>5374</locationX>
+        <locationY>1919</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead 3</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_3_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_2_Bypass__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_2_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Released_to_Cadence__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>New_Funnel_Group_FIXME</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assigning Rating and Lead 3 Date</description>
+        <name>Set_Lead_3_New_0_0</name>
+        <label>Set Lead 3 New</label>
+        <locationX>314</locationX>
+        <locationY>1343</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead 3</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_3_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Assigning Rating, Lead 3 Date and Release to Cadence Date</description>
+        <name>Set_Lead_3_Release_to_Cadence_New</name>
+        <label>Set Lead 3 &amp; Release to Cadence New</label>
+        <locationX>50</locationX>
+        <locationY>1343</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead 3</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_3_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Released_to_Cadence__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Assigning Rating and Release to Cadence Date</description>
+        <name>Set_Release_to_Cadence_New</name>
+        <label>Set Release to Cadence New</label>
+        <locationX>578</locationX>
+        <locationY>1343</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead 3</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Released_to_Cadence__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set rating</description>
+        <name>Set_Stalled</name>
+        <label>Set Stalled</label>
+        <locationX>17870</locationX>
+        <locationY>2327</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Stalled</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Stalled_Date_is_Unknown</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set value</description>
+        <name>Set_Stalled_Date</name>
+        <label>Set Stalled Date</label>
+        <locationX>17738</locationX>
+        <locationY>2567</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Stalled_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Syndication_Integrate</name>
+        <label>Syndication - Integrate</label>
+        <locationX>20642</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Syndication - Integrate</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Syndication_Other</name>
+        <label>Syndication - Other</label>
+        <locationX>20906</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Syndication - Other</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Syndication_TechTarget</name>
+        <label>Syndication - TechTarget</label>
+        <locationX>21170</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Syndication - TechTarget</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to set funnel group.</description>
+        <name>Undefined</name>
+        <label>Undefined</label>
+        <locationX>21434</locationX>
+        <locationY>1223</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Undefined</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Decision looking for date values being blank or not</description>
+        <name>Check_L0_Date</name>
+        <label>Check L0 Date</label>
+        <locationX>20246</locationX>
+        <locationY>2447</locationY>
+        <defaultConnectorLabel>Continue to the next step</defaultConnectorLabel>
+        <rules>
+            <name>L0_are_Unknown</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_0_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_L0_Date</targetReference>
+            </connector>
+            <label>L0 are Unknown</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Decision looking for date values being blank or not</description>
+        <name>Check_L1_Date</name>
+        <label>Check L1 Date</label>
+        <locationX>19718</locationX>
+        <locationY>2447</locationY>
+        <defaultConnectorLabel>Continue to the next step</defaultConnectorLabel>
+        <rules>
+            <name>L1_are_Unknown</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_1_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_L1_Date</targetReference>
+            </connector>
+            <label>L1 are Unknown</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Reviewing to check Lead 2 Bypass</description>
+        <name>Check_L2_Bypass</name>
+        <label>Check L2 Bypass</label>
+        <locationX>18838</locationX>
+        <locationY>1775</locationY>
+        <defaultConnector>
+            <targetReference>Velocity_Dates_FIXME</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Bypass_0</name>
+            <conditionLogic>(1 AND (2 OR 3)) OR 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Created_Rating__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Lead 2</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_2_Bypass__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_2_Bypass__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Bypass_to_0</targetReference>
+            </connector>
+            <label>Bypass 0</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Decision looking for date values being blank or not</description>
+        <name>Check_L2_Date</name>
+        <label>Check L2 Date</label>
+        <locationX>19190</locationX>
+        <locationY>2447</locationY>
+        <defaultConnectorLabel>Continue to the next step</defaultConnectorLabel>
+        <rules>
+            <name>L2_are_Unknown</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_2_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_L2_Date</targetReference>
+            </connector>
+            <label>L2 are Unknown</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks to see if Lead 3 Date or Release to Cadence Dates are blank
+
+***FIXME - In each outcome, we need to include additional criteria in these decision outcomes so that these decisions are only met if the Contact is not in a Stalled or Dead Status.  Currently, we have scaleMatters Rating &lt;&gt; Stalled OR scaleMatters Rating &lt;&gt; Dead as a placeholder***</description>
+        <name>Check_L3_Date_Release_to_Cadence_FIXME</name>
+        <label>Check L3 Date &amp; Release to Cadence - FIXME</label>
+        <locationX>446</locationX>
+        <locationY>1223</locationY>
+        <defaultConnectorLabel>Continue</defaultConnectorLabel>
+        <rules>
+            <name>Lead_3_Date_Release_to_Cadence_Blank_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_3_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Released_to_Cadence__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Stalled</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Dead</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Lead_3_Release_to_Cadence_New</targetReference>
+            </connector>
+            <label>Lead 3 Date &amp; Release to Cadence Blank - FIXME</label>
+        </rules>
+        <rules>
+            <name>Lead_3_Date_is_Blank_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_3_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Stalled</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Dead</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Lead_3_New_0_0</targetReference>
+            </connector>
+            <label>Lead 3 Date is Blank - FIXME</label>
+        </rules>
+        <rules>
+            <name>Release_to_Cadence_Is_Blank_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Released_to_Cadence__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Stalled</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Dead</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Release_to_Cadence_New</targetReference>
+            </connector>
+            <label>Release to Cadence Is Blank - FIXME</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Decision looking for date values being blank or not</description>
+        <name>Check_L3_Dates</name>
+        <label>Check L3 Dates</label>
+        <locationX>18530</locationX>
+        <locationY>2447</locationY>
+        <defaultConnectorLabel>Continue to the next step</defaultConnectorLabel>
+        <rules>
+            <name>L3_L2_are_Unknown</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Created_Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Lead 2</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_3_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_2_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_L3_L2_Date</targetReference>
+            </connector>
+            <label>L3, L2 are Unknown</label>
+        </rules>
+        <rules>
+            <name>L3_Unknown</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_3_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_L3_Date</targetReference>
+            </connector>
+            <label>L3 Unknown</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Decision checking if a record&apos;s conversion mechanism changed during an edit</description>
+        <name>Conversion_Mechanism_Change</name>
+        <label>Conversion Mechanism Change</label>
+        <locationX>19058</locationX>
+        <locationY>1535</locationY>
+        <defaultConnector>
+            <targetReference>Velocity_Dates_FIXME</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Continue to next step</defaultConnectorLabel>
+        <rules>
+            <name>Meeting_Set_Edit</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Meeting_Date__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Meeting_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_L3_Edit</targetReference>
+            </connector>
+            <label>Meeting Set Edit</label>
+        </rules>
+        <rules>
+            <name>L2_Set_Edit</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_2_Conversion_Mechanism__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_2_Conversion_Mechanism__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_L2_Edit</targetReference>
+            </connector>
+            <label>L2 Set Edit</label>
+        </rules>
+        <rules>
+            <name>L1_Set_Edit</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_1_Conversion_Mechanism__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_1_Conversion_Mechanism__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_L1_Edit</targetReference>
+            </connector>
+            <label>L1 Set Edit</label>
+        </rules>
+        <rules>
+            <name>L0_Set_Edit</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_0_Conversion_Mechanism__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_0_Conversion_Mechanism__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_L0_Edit</targetReference>
+            </connector>
+            <label>L0 Set Edit</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking if this Contact was created from a Lead conversion or not.</description>
+        <name>Converted_from_Lead</name>
+        <label>Converted from Lead?</label>
+        <locationX>3284</locationX>
+        <locationY>1103</locationY>
+        <defaultConnector>
+            <targetReference>Set_Contact_Cycle_Type</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Continue to next step</defaultConnectorLabel>
+        <rules>
+            <name>Lead_Conversion</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Converted_from_Lead__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_L3_Date_Release_to_Cadence_FIXME</targetReference>
+            </connector>
+            <label>Lead Conversion</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Decision to see if the record was created manually by user.
+
+***Delete this and everything after this once you&apos;ve updated for customer***
+Depending on the customer&apos;s needs you&apos;ll find how and who will create leads within their system ideally they should be created via a List Import template or Web Form Submission. If users are manually creating leads find out what users and account for them within this decision logic. All of these currently will set every record to Created Rating = Lead 0 and set the user creating as the Record Owner &amp; User Source
+***End***</description>
+        <name>Created_manually_by_User_FIXME</name>
+        <label>Created manually by User? - FIXME</label>
+        <locationX>6122</locationX>
+        <locationY>1343</locationY>
+        <defaultConnector>
+            <targetReference>New_Contact_Rating_is_Unknown</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Continue to next step</defaultConnectorLabel>
+        <rules>
+            <name>Don_t_Overwrite</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Don_t_Overwrite_Source__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Contact_Rating_is_Unknown</targetReference>
+            </connector>
+            <label>Don&apos;t Overwrite</label>
+        </rules>
+        <rules>
+            <name>Created_by_Sales_Users_FIXME</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$User.Current_Role__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SDR</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$User.Current_Role__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SDR Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$User.Current_Role__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>AE</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$User.Current_Role__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Sales Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$User.Current_Role__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Executive Leadership</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$User.Current_Role__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer Success</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Created_by_User</targetReference>
+            </connector>
+            <label>Created by Sales Users - FIXME</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking if the owner changed or not.</description>
+        <name>Did_Owner_Change</name>
+        <label>Did Owner Change?</label>
+        <locationX>19058</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Should_the_funnel_group_be_re_evaulated_FIXME</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Continue to next step</defaultConnectorLabel>
+        <rules>
+            <name>Owner_Changed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Who_did_owner_change_to</targetReference>
+            </connector>
+            <label>Owner Changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking to see if the Rating field is already known or not</description>
+        <name>New_Contact_Rating_is_Unknown</name>
+        <label>New Contact Rating is Unknown</label>
+        <locationX>6122</locationX>
+        <locationY>1679</locationY>
+        <defaultConnector>
+            <targetReference>New_Funnel_Group_FIXME</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Continue to next step</defaultConnectorLabel>
+        <rules>
+            <name>Rating_Unknown</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Rating_FIXME</targetReference>
+            </connector>
+            <label>Rating Unknown</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Since our record is new this determines what sourcing strategy this record should be placed into.
+
+***Delete this and everything after this once you&apos;ve updated for customer***
+You&apos;ll reference the Data Integrity Framework document for this customer which will map the fields used for placing into the funnel groups.
+***END***</description>
+        <name>New_Funnel_Group_FIXME</name>
+        <label>New Funnel Group - FIXME</label>
+        <locationX>6122</locationX>
+        <locationY>2231</locationY>
+        <defaultConnector>
+            <targetReference>New_Undefined</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Undefined</defaultConnectorLabel>
+        <rules>
+            <name>New_Ads_Facebook_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ads - Facebook</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Ads_Facebook</targetReference>
+            </connector>
+            <label>New Ads - Facebook - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Ads_Instagram_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ads - Instagram</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Ads_Instagram</targetReference>
+            </connector>
+            <label>New Ads - Instagram - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Ads_LinkedIn_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ads - LinkedIn</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Ads_LinkedIn</targetReference>
+            </connector>
+            <label>New Ads - LinkedIn - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Ads_Other_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ads - Other</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Ads_Other</targetReference>
+            </connector>
+            <label>New Ads - Other - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Ads_Search_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ads - Search</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Ads_Search</targetReference>
+            </connector>
+            <label>New Ads - Search - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Ads_Twitter_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ads - Twitter</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Ads_Twitter</targetReference>
+            </connector>
+            <label>New Ads - Twitter - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Events_BIGRYG_Webinar_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Events - BIGRYG Webinar</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Events_BIGRYG_Webinar</targetReference>
+            </connector>
+            <label>New Events - BIGRYG Webinar - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Events_Impact_Webinar_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Events - Impact Webinar</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Events_Impact_Webinar</targetReference>
+            </connector>
+            <label>New Events - Impact Webinar - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Events_Other_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Events - Other</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Events_Other</targetReference>
+            </connector>
+            <label>New Events - Other - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Events_RYG_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Events - RYG</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Events_RYG</targetReference>
+            </connector>
+            <label>New Events - RYG - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Events_TL_Webinar_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Events - TL Webinar</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Events_TL_Webinar</targetReference>
+            </connector>
+            <label>New Events - TL Webinar - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Events_VRYG_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Events - VRYG</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Events_VRYG</targetReference>
+            </connector>
+            <label>New Events - VRYG - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Events_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Events</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Events</targetReference>
+            </connector>
+            <label>New Events - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Inbound_Other_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Inbound Other</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Inbound_Other</targetReference>
+            </connector>
+            <label>New Inbound Other - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Inbound_Unpaid_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Inbound Unpaid</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Inbound_Unpaid</targetReference>
+            </connector>
+            <label>New Inbound Unpaid - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Listings_Business_Software_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - Business Software</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Listings_Business_Software</targetReference>
+            </connector>
+            <label>New Listings - Business Software - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Listings_BuyerZone_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - BuyerZone</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Listings_BuyerZone</targetReference>
+            </connector>
+            <label>New Listings - BuyerZone - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Listings_Capterra_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - Capterra</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Listings_Capterra</targetReference>
+            </connector>
+            <label>New Listings - Capterra - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Listings_G2_Crowd_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - G2 Crowd</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Listings_G2_Crowd</targetReference>
+            </connector>
+            <label>New Listings - G2 Crowd - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Listings_MVF_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - MVF</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Listings_MVF</targetReference>
+            </connector>
+            <label>New Listings - MVF - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Listings_Natural_Intelligence_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - Natural Intelligence</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Listings_Natural_Intelligence</targetReference>
+            </connector>
+            <label>New Listings - Natural Intelligence - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Listings_Other_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - Other</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Listings_Other</targetReference>
+            </connector>
+            <label>New Listings - Other - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Listings_Software_Advice_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - Software Advice</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Listings_Software_Advice</targetReference>
+            </connector>
+            <label>New Listings - Software Advice - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Listings_Trafficpoint_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - Trafficpoint</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Listings_Trafficpoint</targetReference>
+            </connector>
+            <label>New Listings - Trafficpoint - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Listings_TrustRadius_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - TrustRadius</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Listings_TrustRadius</targetReference>
+            </connector>
+            <label>New Listings - TrustRadius - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Other_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Other</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Other</targetReference>
+            </connector>
+            <label>New Other - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Organic_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Organic</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Organic</targetReference>
+            </connector>
+            <label>New Organic - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Prospecting_3rd_Party_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Prospecting - 3rd Party</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Prospecting_3rd_Party</targetReference>
+            </connector>
+            <label>New Prospecting - 3rd Party - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Prospecting_AE_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Prospecting - AE</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Prospecting_AE</targetReference>
+            </connector>
+            <label>New Prospecting - AE - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Prospecting_SDR_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Prospecting - SDR</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Prospecting_SDR</targetReference>
+            </connector>
+            <label>New Prospecting - SDR - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Prospecting_Social_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Prospecting - Social</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Prospecting_Social</targetReference>
+            </connector>
+            <label>New Prospecting - Social - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Referrals_Customer_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Referrals - Customer</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Referrals_Customer</targetReference>
+            </connector>
+            <label>New Referrals - Customer - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Referrals_Employee_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Referrals - Employee</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Referrals_Employee</targetReference>
+            </connector>
+            <label>New Referrals - Employee - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Referrals_Other_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Referrals - Other</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Referrals_Other</targetReference>
+            </connector>
+            <label>New Referrals - Other - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Referrals_Partner_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Referrals - Partner</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Referrals_Partner</targetReference>
+            </connector>
+            <label>New Referrals - Partner - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Syndication_Integrate_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Syndication - Integrate</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Syndication_Integrate</targetReference>
+            </connector>
+            <label>New Syndication - Integrate - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Syndication_Other_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Syndication - Other</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Syndication_Other</targetReference>
+            </connector>
+            <label>New Syndication - Other - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Syndication_TechTarget_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Syndication - TechTarget</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Syndication_TechTarget</targetReference>
+            </connector>
+            <label>New Syndication - TechTarget - FIXME</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks to see if scaleMatters field &quot;Record Owner&quot; is blank.</description>
+        <name>New_Is_Record_Owner_Blank</name>
+        <label>New - Is Record Owner Blank?</label>
+        <locationX>3284</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>New_Is_User_Source_Blank</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Continue</defaultConnectorLabel>
+        <rules>
+            <name>Record_Owner_Blank</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Record_Owner__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Assign_Record_Owner_Record_Owner_Role</targetReference>
+            </connector>
+            <label>Record Owner Blank</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks to see if scaleMatters field &quot;User Source&quot; is blank.</description>
+        <name>New_Is_User_Source_Blank</name>
+        <label>New - Is User Source Blank?</label>
+        <locationX>3284</locationX>
+        <locationY>767</locationY>
+        <defaultConnector>
+            <targetReference>Converted_from_Lead</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>User_Source_Blank</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__User_Source__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Assign_User_Source_User_Source_Role</targetReference>
+            </connector>
+            <label>User Source Blank</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking the conversion mechanisms to set appropriate Rating on the record.
+
+***Delete this and everything after this once you&apos;ve updated for customer***
+You&apos;ll reference the Data Integrity Framework document for this customer which will map the fields used for placing into the proper rating based off conversion mechanism and the status.
+***END***</description>
+        <name>New_Rating_FIXME</name>
+        <label>New Rating - FIXME</label>
+        <locationX>5638</locationX>
+        <locationY>1799</locationY>
+        <defaultConnector>
+            <targetReference>New_Funnel_Group_FIXME</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Continue to next step</defaultConnectorLabel>
+        <rules>
+            <name>New_Dead_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Dead</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Dead_New</targetReference>
+            </connector>
+            <label>New Dead - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Stalled_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Stalled</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Former_Customer_New</targetReference>
+            </connector>
+            <label>New Stalled - FIXME</label>
+        </rules>
+        <rules>
+            <name>New_Lead_3</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Meeting_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Lead_3_New</targetReference>
+            </connector>
+            <label>New Lead 3</label>
+        </rules>
+        <rules>
+            <name>New_Lead_2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_2_Conversion_Mechanism__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Lead_2_New</targetReference>
+            </connector>
+            <label>New Lead 2</label>
+        </rules>
+        <rules>
+            <name>New_Lead_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_1_Conversion_Mechanism__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Lead_1_New</targetReference>
+            </connector>
+            <label>New Lead 1</label>
+        </rules>
+        <rules>
+            <name>New_Lead_0</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_0_Conversion_Mechanism__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Lead_0_New</targetReference>
+            </connector>
+            <label>New Lead 0</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>This is a decision checking if the opportunity is new or being edited.</description>
+        <name>Record_IsNew</name>
+        <label>Record IsNew</label>
+        <locationX>11171</locationX>
+        <locationY>311</locationY>
+        <defaultConnector>
+            <targetReference>Did_Owner_Change</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Existing Record</defaultConnectorLabel>
+        <rules>
+            <name>Is_New_Record</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>IsNEWFormula</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Is_Record_Owner_Blank</targetReference>
+            </connector>
+            <label>Is New Record</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking to see if the fields used to place into sourcing strategy changed or not. Update the the resources for Yes Re-Evaluate to include all fields used in sourcing strategy to OR and Is Changed to re-run.</description>
+        <name>Should_the_funnel_group_be_re_evaulated_FIXME</name>
+        <label>Should the funnel group be re-evaulated? - FIXME</label>
+        <locationX>19058</locationX>
+        <locationY>983</locationY>
+        <defaultConnector>
+            <targetReference>Conversion_Mechanism_Change</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Continue to next step</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Re_Evaluate_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>What_is_New_Funnel_Group_FIXME</targetReference>
+            </connector>
+            <label>Yes Re-Evaluate - FIXME</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking if the Stalled date is set or not.</description>
+        <name>Stalled_Date_is_Unknown</name>
+        <label>Stalled Date is Unknown</label>
+        <locationX>17870</locationX>
+        <locationY>2447</locationY>
+        <defaultConnectorLabel>Continue to next step</defaultConnectorLabel>
+        <rules>
+            <name>Stalled_Date_is_not_Known</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Stalled_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Stalled_Date</targetReference>
+            </connector>
+            <label>Stalled Date is not Known</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>In this decision checking on status and rating to figure out if velocity dates need to be filled in.
+
+****</description>
+        <name>Velocity_Dates_FIXME</name>
+        <label>Velocity Dates - FIXME</label>
+        <locationX>19058</locationX>
+        <locationY>2207</locationY>
+        <defaultConnectorLabel>Continue to next step</defaultConnectorLabel>
+        <rules>
+            <name>Dead_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Dead</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Dead - FIXME</label>
+        </rules>
+        <rules>
+            <name>Stalled_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Stalled</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Stalled</targetReference>
+            </connector>
+            <label>Stalled - FIXME</label>
+        </rules>
+        <rules>
+            <name>Lead_3_FIXME</name>
+            <conditionLogic>(1 AND (2 OR 3 OR 4 OR 5)) OR (1 AND 6 AND 7)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Meeting_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Dead</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Stalled</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Open Opportunity</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Lead 3</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_L3</targetReference>
+            </connector>
+            <label>Lead 3 - FIXME</label>
+        </rules>
+        <rules>
+            <name>Lead_2_FIXME</name>
+            <conditionLogic>(1 AND (2 OR 3 OR 4 OR 5)) OR (1 AND 6 AND 7)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_2_Conversion_Mechanism__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Dead</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Stalled</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Open Opportunity</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Lead 2</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_L2</targetReference>
+            </connector>
+            <label>Lead 2 - FIXME</label>
+        </rules>
+        <rules>
+            <name>Lead_1_FIXME</name>
+            <conditionLogic>(1 AND (2 OR 3 OR 4 OR 5)) OR (1 AND 6 AND 7)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_1_Conversion_Mechanism__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Dead</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Stalled</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Open Opportunity</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Lead 1</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_L1</targetReference>
+            </connector>
+            <label>Lead 1 - FIXME</label>
+        </rules>
+        <rules>
+            <name>Lead_0_FIXME</name>
+            <conditionLogic>(1 AND (2 OR 3 OR 4 OR 5)) OR (1 AND 6 AND 7)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_0_Conversion_Mechanism__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Dead</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Stalled</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Open Opportunity</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Rating__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Lead 0</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_L0</targetReference>
+            </connector>
+            <label>Lead 0 - FIXME</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Since our record changed to place into a funnel group this decision figured out what the new funnel group should be.
+
+***Delete this and everything after this once you&apos;ve updated for customer***
+You&apos;ll reference the Data Integrity Framework document for this customer which will map the fields used for placing into the funnel groups.
+***END***</description>
+        <name>What_is_New_Funnel_Group_FIXME</name>
+        <label>What is New Funnel Group - FIXME</label>
+        <locationX>16418</locationX>
+        <locationY>1103</locationY>
+        <defaultConnector>
+            <targetReference>Undefined</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Undefined</defaultConnectorLabel>
+        <rules>
+            <name>Edit_Ads_Facebook_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ads - Facebook</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Ads_Facebook</targetReference>
+            </connector>
+            <label>Edit Ads - Facebook - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Ads_Instagram_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ads - Instagram</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Ads_Instagram</targetReference>
+            </connector>
+            <label>Edit Ads - Instagram - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Ads_LinkedIn_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ads - LinkedIn</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Ads_LinkedIn</targetReference>
+            </connector>
+            <label>Edit Ads - LinkedIn - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Ads_Other_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ads - Other</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Ads_Other</targetReference>
+            </connector>
+            <label>Edit Ads - Other - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Ads_Search_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ads - Search</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Ads_Search</targetReference>
+            </connector>
+            <label>Edit Ads - Search - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Ads_Twitter_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ads - Twitter</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Ads_Twitter</targetReference>
+            </connector>
+            <label>Edit Ads - Twitter - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Events_BIGRYG_Webinar_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Events - BIGRYG Webinar</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Events_BIGRYG_Webinar</targetReference>
+            </connector>
+            <label>Edit Events - BIGRYG Webinar - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Events_Impact_Webinar_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Events - Impact Webinar</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Events_Impact_Webinar</targetReference>
+            </connector>
+            <label>Edit Events - Impact Webinar - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Events_Other_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Events - Other</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Events_Other</targetReference>
+            </connector>
+            <label>Edit Events - Other - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Events_RYG_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Events - RYG</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Events_RYG</targetReference>
+            </connector>
+            <label>Edit Events - RYG - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Events_TL_Webinar_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Events - TL Webinar</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Events_TL_Webinar</targetReference>
+            </connector>
+            <label>Edit Events - TL Webinar - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Events_VRYG_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Events - VRYG</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Events_VRYG</targetReference>
+            </connector>
+            <label>Edit Events - VRYG - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Events_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Events</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Events</targetReference>
+            </connector>
+            <label>Edit Events - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Inbound_Other_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Inbound Other</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Inbound_Other</targetReference>
+            </connector>
+            <label>Edit Inbound Other - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Inbound_Unpaid_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Inbound Unpaid</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Inbound_Unpaid</targetReference>
+            </connector>
+            <label>Edit Inbound Unpaid - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Listings_Business_Software_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - Business Software</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Listings_Business_Software</targetReference>
+            </connector>
+            <label>Edit Listings - Business Software - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Listings_BuyerZone_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - BuyerZone</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Listings_BuyerZone</targetReference>
+            </connector>
+            <label>Edit Listings - BuyerZone - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Listings_Capterra_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - Capterra</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Listings_Capterra</targetReference>
+            </connector>
+            <label>Edit Listings - Capterra - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Listings_G2_Crowd_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - G2 Crowd</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Listings_G2_Crowd</targetReference>
+            </connector>
+            <label>Edit Listings - G2 Crowd - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Listings_MVF_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - MVF</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Listings_MVF</targetReference>
+            </connector>
+            <label>Edit Listings - MVF - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Listings_Natural_Intelligence_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - Natural Intelligence</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Listings_Natural_Intelligence</targetReference>
+            </connector>
+            <label>Edit Listings - Natural Intelligence - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Listings_Other_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - Other</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Listings_Other</targetReference>
+            </connector>
+            <label>Edit Listings - Other - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Listings_Software_Advice_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - Software Advice</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Listings_Software_Advice</targetReference>
+            </connector>
+            <label>Edit Listings - Software Advice - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Listings_Trafficpoint_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - Trafficpoint</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Listings_Trafficpoint</targetReference>
+            </connector>
+            <label>Edit Listings - Trafficpoint - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Listings_TrustRadius_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings - TrustRadius</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Listings_TrustRadius</targetReference>
+            </connector>
+            <label>Edit Listings - TrustRadius - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Other_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Other</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Other</targetReference>
+            </connector>
+            <label>Edit Other - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Organic_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Organic</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Organic</targetReference>
+            </connector>
+            <label>Edit Organic - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Prospecting_3rd_Party_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Prospecting - 3rd Party</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Prospecting_3rd_Party</targetReference>
+            </connector>
+            <label>Edit Prospecting - 3rd Party - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Prospecting_AE_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Prospecting - AE</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Prospecting_AE</targetReference>
+            </connector>
+            <label>Edit Prospecting - AE - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Prospecting_SDR_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Prospecting - SDR</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Prospecting_SDR</targetReference>
+            </connector>
+            <label>Edit Prospecting - SDR - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Prospecting_Social_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Prospecting - Social</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Prospecting_Social</targetReference>
+            </connector>
+            <label>Edit Prospecting - Social - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Referrals_Customer_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Referrals - Customer</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Referrals_Customer</targetReference>
+            </connector>
+            <label>Edit Referrals - Customer - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Referrals_Employee_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Referrals - Employee</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Referrals_Employee</targetReference>
+            </connector>
+            <label>Edit Referrals - Employee - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Referrals_Other_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Referrals - Other</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Referrals_Other</targetReference>
+            </connector>
+            <label>Edit Referrals - Other - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Referrals_Partner_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Referrals - Partner</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Referrals_Partner</targetReference>
+            </connector>
+            <label>Edit Referrals - Partner - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Syndication_Integrate_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Syndication - Integrate</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Syndication_Integrate</targetReference>
+            </connector>
+            <label>Edit Syndication - Integrate - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Syndication_Other_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Syndication - Other</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Syndication_Other</targetReference>
+            </connector>
+            <label>Edit Syndication - Other - FIXME</label>
+        </rules>
+        <rules>
+            <name>Edit_Syndication_TechTarget_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Syndication - TechTarget</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Syndication_TechTarget</targetReference>
+            </connector>
+            <label>Edit Syndication - TechTarget - FIXME</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking to see what type of use the Owner changed to and if that related User is tagged or not?</description>
+        <name>Who_did_owner_change_to</name>
+        <label>Who did owner change to?</label>
+        <locationX>18640</locationX>
+        <locationY>551</locationY>
+        <defaultConnector>
+            <targetReference>Should_the_funnel_group_be_re_evaulated_FIXME</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Continue to next step</defaultConnectorLabel>
+        <rules>
+            <name>Changed_to_SDR</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner.scaleMatters__Current_Role__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SDR</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner.scaleMatters__Current_Role__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SDR Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_SDR_Record_Owner_User_Source</targetReference>
+            </connector>
+            <label>Changed to SDR</label>
+        </rules>
+        <rules>
+            <name>Changed_to_AE_No_User_Source</name>
+            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner.scaleMatters__Current_Role__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>AE</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner.scaleMatters__Current_Role__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Sales Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__User_Source__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_AE_Record_Owner_User_Source</targetReference>
+            </connector>
+            <label>Changed to AE No User Source</label>
+        </rules>
+        <rules>
+            <name>Changed_to_AE_User_Source</name>
+            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner.scaleMatters__Current_Role__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>AE</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner.scaleMatters__Current_Role__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Sales Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__User_Source__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_AE_Record_Owner</targetReference>
+            </connector>
+            <label>Changed to AE User Source</label>
+        </rules>
+        <rules>
+            <name>Changed_to_Non_Sales_No_User_Source</name>
+            <conditionLogic>(1 OR 2 OR 3 OR 4) AND 5</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner.scaleMatters__Current_Role__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>SDR</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner.scaleMatters__Current_Role__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>SDR Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner.scaleMatters__Current_Role__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>AE</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner.scaleMatters__Current_Role__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Sales Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__User_Source__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Changed_to_Non_Sales_No_User_Source</targetReference>
+            </connector>
+            <label>Changed to Non Sales No User Source</label>
+        </rules>
+        <rules>
+            <name>Changed_to_Non_Sales</name>
+            <conditionLogic>(1 OR 2 OR 3 OR 4) AND 5</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner.scaleMatters__Current_Role__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>SDR</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner.scaleMatters__Current_Role__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>SDR Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner.scaleMatters__Current_Role__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>AE</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner.scaleMatters__Current_Role__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Sales Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__User_Source__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Changed_to_Non_Sales</targetReference>
+            </connector>
+            <label>Changed to Non Sales</label>
+        </rules>
+    </decisions>
+    <description>Used to run when a new Contact is created within the system, as well as updates Contact record with necessary fields upon edit with scaleMatters&apos; data points.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Formula used to check if the record is new or being edited</description>
+        <name>IsNEWFormula</name>
+        <dataType>Boolean</dataType>
+        <expression>IF( 
+      ISNEW(),
+TRUE, FALSE)</expression>
+    </formulas>
+    <interviewLabel>sM - Contact - Record Automation - Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <isTemplate>true</isTemplate>
+    <label>sM - Contact - Record Automation - Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>11045</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Record_IsNew</targetReference>
+        </connector>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

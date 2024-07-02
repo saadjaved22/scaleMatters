@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <description>Making relationship connection from Event to Funnel Conversion Cycle</description>
+        <name>Check_if_related_to_Funnel_Conversion_Cycle</name>
+        <label>Check if related to Funnel Conversion Cycle</label>
+        <locationX>842</locationX>
+        <locationY>935</locationY>
+        <defaultConnectorLabel>End</defaultConnectorLabel>
+        <rules>
+            <name>Not_releated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__scaleMatters_Record__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Related_to_Funnel_Record</targetReference>
+            </connector>
+            <label>Not releated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking to see if the meeting date just needs to be updated</description>
+        <name>Checking_Meeting_Date_is_Prior_Start_Date</name>
+        <label>Checking Meeting Date is Prior Start Date</label>
+        <locationX>666</locationX>
+        <locationY>815</locationY>
+        <defaultConnector>
+            <targetReference>Check_if_related_to_Funnel_Conversion_Cycle</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Continue</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Meeting_Date_is_Prior_Start</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Open_Funnel_Conversion_Cycle.Meeting_Date__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>PriorStartDate</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Funnel_Cycle_Edit</targetReference>
+            </connector>
+            <label>Yes Meeting Date is Prior Start</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking if there is meeting information or not</description>
+        <name>Does_Record_Have_Meeting_New</name>
+        <label>Does Record Have Meeting - New</label>
+        <locationX>182</locationX>
+        <locationY>695</locationY>
+        <defaultConnector>
+            <targetReference>Related_to_Funnel_Record</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Has Meeting</defaultConnectorLabel>
+        <rules>
+            <name>No_Meeting_New</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Open_Funnel_Conversion_Cycle.Meeting_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Funnel_Cycle_New</targetReference>
+            </connector>
+            <label>No Meeting - New</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking to see if this is New or Edit?</description>
+        <name>New_or_Edit</name>
+        <label>New or Edit?</label>
+        <locationX>556</locationX>
+        <locationY>575</locationY>
+        <defaultConnector>
+            <targetReference>Start_Date_Changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Edit</defaultConnectorLabel>
+        <rules>
+            <name>New_Record</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>IsNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Does_Record_Have_Meeting_New</targetReference>
+            </connector>
+            <label>New Record</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking if the Start Date Changed</description>
+        <name>Start_Date_Changed</name>
+        <label>Start Date Changed</label>
+        <locationX>930</locationX>
+        <locationY>695</locationY>
+        <defaultConnectorLabel>End</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Start_Date_Changed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StartDateTime</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Checking_Meeting_Date_is_Prior_Start_Date</targetReference>
+            </connector>
+            <label>Yes - Start Date Changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking to see if a record was found</description>
+        <name>Was_an_Open_Funnel_Conversion_Cycle_Found</name>
+        <label>Was an Open Funnel Conversion Cycle Found</label>
+        <locationX>1007</locationX>
+        <locationY>455</locationY>
+        <defaultConnectorLabel>End</defaultConnectorLabel>
+        <rules>
+            <name>Found_Record</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Open_Funnel_Conversion_Cycle.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_or_Edit</targetReference>
+            </connector>
+            <label>Found Record</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <description>Used to check if New</description>
+        <name>IsNew</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+ISNEW(),
+TRUE,
+FALSE
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Getting the prior date to compare</description>
+        <name>PriorStartDate</name>
+        <dataType>Date</dataType>
+        <expression>DATEVALUE({!$Record__Prior.StartDateTime})</expression>
+    </formulas>
+    <interviewLabel>X-Meeting Funnel Concept {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>X-Meeting Funnel Concept</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Checking for an Open Cycle</description>
+        <name>Get_Open_Funnel_Conversion_Cycle</name>
+        <label>Get Open Funnel Conversion Cycle</label>
+        <locationX>1007</locationX>
+        <locationY>335</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Was_an_Open_Funnel_Conversion_Cycle_Found</targetReference>
+        </connector>
+        <filterLogic>(1 OR 2) AND 3</filterLogic>
+        <filters>
+            <field>Lead__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhoId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Contact__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhoId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Closed__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Funnel_Conversion_Cycle__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Used to connect record</description>
+        <name>Related_to_Funnel_Record</name>
+        <label>Related to Funnel Record</label>
+        <locationX>556</locationX>
+        <locationY>1559</locationY>
+        <inputAssignments>
+            <field>Funnel_Conversion_Cycle__c</field>
+            <value>
+                <elementReference>Get_Open_Funnel_Conversion_Cycle.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Setting meeting information on funnel cycle</description>
+        <name>Update_Funnel_Cycle_Edit</name>
+        <label>Update Funnel Cycle - Edit</label>
+        <locationX>490</locationX>
+        <locationY>935</locationY>
+        <connector>
+            <targetReference>Related_to_Funnel_Record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Open_Funnel_Conversion_Cycle.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Meeting_Date__c</field>
+            <value>
+                <elementReference>$Record.StartDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Funnel_Conversion_Cycle__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Setting meeting information on funnel cycle</description>
+        <name>Update_Funnel_Cycle_New</name>
+        <label>Update Funnel Cycle - New</label>
+        <locationX>50</locationX>
+        <locationY>815</locationY>
+        <connector>
+            <targetReference>Related_to_Funnel_Record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Open_Funnel_Conversion_Cycle.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Meeting_Date__c</field>
+            <value>
+                <elementReference>$Record.StartDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Meeting_Source_Role__c</field>
+            <value>
+                <elementReference>$Record.CreatedBy.Current_Role__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Meeting_Source__c</field>
+            <value>
+                <elementReference>$Record.CreatedById</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Funnel_Conversion_Cycle__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>881</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Open_Funnel_Conversion_Cycle</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>WhoId</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Event</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

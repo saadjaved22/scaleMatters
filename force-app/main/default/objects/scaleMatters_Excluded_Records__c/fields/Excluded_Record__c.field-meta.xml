@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Excluded_Record__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Used to link to record within the List view and Compact Layout</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    NOT(ISBLANK(Account__c)),
+        HYPERLINK(&quot;/&quot; &amp; Account__r.Id, Account__r.Name, &quot;_self&quot;),
+IF(
+    NOT(ISBLANK(Contact__c)),
+        HYPERLINK(&quot;/&quot; &amp; Contact__r.Id, Contact__r.FirstName &amp; &quot; &quot; &amp; Contact__r.LastName , &quot;_self&quot;),
+IF(
+    NOT(ISBLANK(Opportunity__c)),
+        HYPERLINK(&quot;/&quot; &amp; Opportunity__r.Id, Opportunity__r.Name, &quot;_self&quot;),
+IF(
+    NOT(ISBLANK(Lead__c)),
+        HYPERLINK(&quot;/&quot; &amp; Lead__r.Id, Lead__r.FirstName &amp; &quot; &quot; &amp; Lead__r.LastName , &quot;_self&quot;),
+&quot;No Record&quot;
+            )
+        )
+    )
+)</formula>
+    <label>Excluded Record</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

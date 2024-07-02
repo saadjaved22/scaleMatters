@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Used to configure which records should sync back to scaleMatters leveraging the Data Live Date and Historical Record Date.</description>
+    <icon>scaleMatters/scaleMatters_Logo.png</icon>
+    <label>scaleMatters Date Configuration</label>
+    <motif>Custom118: TV Widescreen</motif>
+    <page>scaleMattersDateConfig</page>
+</CustomTab>

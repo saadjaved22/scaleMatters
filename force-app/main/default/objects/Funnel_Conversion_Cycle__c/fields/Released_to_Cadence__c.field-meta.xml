@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Released_to_Cadence__c</fullName>
+    <description>Date when a Lead is moved into a Cadence.</description>
+    <externalId>false</externalId>
+    <label>Released to Cadence Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

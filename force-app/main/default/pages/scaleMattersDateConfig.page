@@ -1,0 +1,27 @@
+<apex:page docType="html-5.0" controller="scaleMattersDateConfigCntrl" action="{!createDateConfig}" lightningStylesheets="true">
+    <html>
+    <apex:form >
+    <apex:pageBlock title="scaleMatters Date Configurations">
+        <iframe height="200px" id="theIframe" scrolling="no" name="theIframe" src="https://www.scalematters.com/scalematters-date-configuration" width="100%" style="border:none;"></iframe>
+
+    
+        <apex:pageBlockSection >
+        <apex:pageBlockSectionItem >
+             <apex:outputText value="Please Enter Data Live Date: " ></apex:outputText>
+             <apex:input type="date" value="{!dld}" />
+         </apex:pageBlockSectionItem>
+            <br/>
+         <apex:pageBlockSectionItem >
+          <apex:outputText value="Please Enter Historical Record Date: " ></apex:outputText>
+            <apex:input type="date" value="{!hrd}" />
+        </apex:pageBlockSectionItem>
+            <br/>
+            <apex:pageBlockSectionItem >
+                <apex:commandButton action="{!updateDateConfig}" value="Save Mapping" style="margin-left: 540px;" />
+            </apex:pageBlockSectionItem>
+            
+            </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+    </html>
+</apex:page>

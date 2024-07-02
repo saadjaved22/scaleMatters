@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <description>Used to collect Event record details prior to being deleted. scaleMatters&apos; SellScience application uses the records to be updated within its database.</description>
+    <environments>Default</environments>
+    <interviewLabel>sM - Event - Create Deleted Record - Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <isTemplate>true</isTemplate>
+    <label>sM - Event - Create Deleted Record - Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Used to create a record to store details of the record being deleted</description>
+        <name>Create_Deleted_Records_FIXME</name>
+        <label>Create - Deleted Records - FIXME</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <inputAssignments>
+            <field>Deleted_Date_Time__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Deleted_Object__c</field>
+            <value>
+                <stringValue>Event</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Deleted_SafeID__c</field>
+            <value>
+                <elementReference>$Record.Activity_SafeID__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Deleted_Record__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Create_Deleted_Records_FIXME</targetReference>
+        </connector>
+        <object>Event</object>
+        <recordTriggerType>Delete</recordTriggerType>
+        <triggerType>RecordBeforeDelete</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

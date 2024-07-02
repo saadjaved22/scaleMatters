@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <assignments>
+        <description>Used to auto set discard flag</description>
+        <name>Discard_Record</name>
+        <label>Discard Record</label>
+        <locationX>1150</locationX>
+        <locationY>983</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_Discard__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Used to auto set discard flag</description>
+        <name>Undiscard_Record</name>
+        <label>Undiscard Record</label>
+        <locationX>270</locationX>
+        <locationY>983</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.scaleMatters__Lead_Discard__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <description>Checking the discard flag to see if it is TRUE or FALSE</description>
+        <name>Check_Discard_Flag</name>
+        <label>Check Discard Flag</label>
+        <locationX>710</locationX>
+        <locationY>311</locationY>
+        <defaultConnector>
+            <targetReference>False_Check_if_Lead_2_is_known</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Discard is FALSE</defaultConnectorLabel>
+        <rules>
+            <name>Discard_is_TRUE</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_Discard__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>TRUE_Check_if_Lead_2_is_known</targetReference>
+            </connector>
+            <label>Discard is TRUE</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking to see if both the RTC is after HRD and Created Date is before Historical Record Date for SellScience
+
+******
+Looking at the customer&apos;s configuration you&apos;ll update the RTC to Greater or Equal to HRD and Created Date to Less Than HRD</description>
+        <name>Did_RTC_2_Change_to_After_HRD_FIXME</name>
+        <label>Did RTC 2 Change to After HRD? - FIXME</label>
+        <locationX>490</locationX>
+        <locationY>551</locationY>
+        <defaultConnectorLabel>End</defaultConnectorLabel>
+        <rules>
+            <name>Need_to_undiscard_for_RTC_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Released_to_Cadence__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <dateValue>1900-01-01</dateValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedDate</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <dateTimeValue>1900-01-01T05:00:00.000Z</dateTimeValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Undiscard_Record</targetReference>
+            </connector>
+            <label>Need to undiscard for RTC - FIXME</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking to see if both the RTC, Lead 2 and Created Date are before Historical Record Date for SellScience
+
+******
+Looking at the customer&apos;s configuration you&apos;ll update the RTC, Lead 2 Date and Created Date to Less Than HRD</description>
+        <name>Did_RTC_AND_Lead_2_Change_Before_HRD_FIXME</name>
+        <label>Did RTC AND Lead 2 Change Before HRD? - FIXME</label>
+        <locationX>930</locationX>
+        <locationY>551</locationY>
+        <defaultConnectorLabel>End</defaultConnectorLabel>
+        <rules>
+            <name>Need_to_Discard_RTC_L2_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Released_to_Cadence__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <dateValue>1900-01-01</dateValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedDate</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <dateTimeValue>1900-01-01T05:00:00.000Z</dateTimeValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_2_Date__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <dateValue>1900-01-01</dateValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Discard_Record</targetReference>
+            </connector>
+            <label>Need to Discard RTC &amp; L2 - FIXME</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking to see if both the RTC and Created Date are before Historical Record Date for SellScience
+
+******
+Looking at the customer&apos;s configuration you&apos;ll update the RTC and Created Date to Less Than HRD</description>
+        <name>Did_RTC_Change_Before_HRD_FIXME</name>
+        <label>Did RTC Change Before HRD? - FIXME</label>
+        <locationX>1370</locationX>
+        <locationY>551</locationY>
+        <defaultConnectorLabel>End</defaultConnectorLabel>
+        <rules>
+            <name>Need_to_Discard_for_RTC_FIXME</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Released_to_Cadence__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <dateValue>1900-01-01</dateValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedDate</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <dateTimeValue>1900-01-01T05:00:00.000Z</dateTimeValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Discard_Record</targetReference>
+            </connector>
+            <label>Need to Discard for RTC - FIXME</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking to see if both the RTC, Lead 2 and Created Date are before Historical Record Date for SellScience
+
+******
+Looking at the customer&apos;s configuration you&apos;ll update the RTC, Lead 2 Date to Greater or Equal to HRD and Created Date to Less Than HRD</description>
+        <name>Did_RTC_OR_Lead_2_Change_to_After_HRD_FIXME</name>
+        <label>Did RTC OR Lead 2 Change to After HRD? - FIXME</label>
+        <locationX>50</locationX>
+        <locationY>551</locationY>
+        <defaultConnectorLabel>End</defaultConnectorLabel>
+        <rules>
+            <name>Need_to_Undiscard_RTC_L2_FIXME</name>
+            <conditionLogic>(1 AND 2) OR (2 AND 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Released_to_Cadence__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <dateValue>1900-01-01</dateValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedDate</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <dateTimeValue>1900-01-01T05:00:00.000Z</dateTimeValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_2_Date__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <dateValue>1900-01-01</dateValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Undiscard_Record</targetReference>
+            </connector>
+            <label>Need to Undiscard RTC &amp; L2 - FIXME</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking if Lead 2 Date is known or not</description>
+        <name>False_Check_if_Lead_2_is_known</name>
+        <label>False - Check if Lead 2 is known</label>
+        <locationX>1150</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Did_RTC_Change_Before_HRD_FIXME</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Lead 2 Date Unknown</defaultConnectorLabel>
+        <rules>
+            <name>False_Lead_2_Date_Known</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_2_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Did_RTC_AND_Lead_2_Change_Before_HRD_FIXME</targetReference>
+            </connector>
+            <label>False - Lead 2 Date Known</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking if Lead 2 Date is known or not</description>
+        <name>TRUE_Check_if_Lead_2_is_known</name>
+        <label>TRUE - Check if Lead 2 is known</label>
+        <locationX>270</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Did_RTC_2_Change_to_After_HRD_FIXME</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Lead 2 Date Unknown</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_Lead_2_Date_Known</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.scaleMatters__Lead_2_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Did_RTC_OR_Lead_2_Change_to_After_HRD_FIXME</targetReference>
+            </connector>
+            <label>TRUE - Lead 2 Date Known</label>
+        </rules>
+    </decisions>
+    <description>Used to check if the Lead Discard flag should be checked based on the RTC, L2 and Create Dates before or after HRD.</description>
+    <environments>Default</environments>
+    <interviewLabel>sM - Lead Before Saves - Auto Discard Check {!$Flow.CurrentDateTime}</interviewLabel>
+    <isTemplate>true</isTemplate>
+    <label>sM - Lead Before Saves - Auto Discard Check</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>584</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Discard_Flag</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Released_to_Cadence__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Lead_2_Date__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Lead</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

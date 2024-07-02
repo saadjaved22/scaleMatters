@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Owner_SafeId__c</fullName>
+    <description>Used to provide 18 digit ID of Opportunity Owner</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    NOT(ISBLANK(Opportunity__c)),
+    CASESAFEID(Opportunity__r.OwnerId),
+    NULL
+)</formula>
+    <label>Opportunity Owner SafeId</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

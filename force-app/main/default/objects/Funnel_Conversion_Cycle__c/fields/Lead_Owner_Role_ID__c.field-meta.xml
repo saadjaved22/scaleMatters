@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Owner_Role_ID__c</fullName>
+    <description>Used for scaleMatters to pass over a UID based on Role of Owner.</description>
+    <externalId>false</externalId>
+    <formula>CASE(
+    Lead_Owner_Role__c,
+    &quot;SDR&quot;,&quot;cfeb24f1c4204cb3a76c16364b6d8aa7&quot;,
+    &quot;AE&quot;,&quot;97f25826d3bd4670acb6657ba2db04ec&quot;,
+    &quot;Sales Manager&quot;,&quot;abaa02ffcefd48be9cc53a0cb305a90f&quot;,
+    &quot;SDR Manager&quot;,&quot;bd3e558106b94781b2c1ecf3eb82df8a&quot;,
+    &quot;Executive Leadership&quot;,&quot;3683ae746cc846989fe5c27706db889e&quot;,
+    &quot;Customer Success&quot;,&quot;a8761f78876c4ec399e5d645fa8871fd&quot;,
+    &quot;Operations&quot;,&quot;3f16785fd86d4b7ea0a2eda3aee9b40e&quot;,
+    &quot;Other&quot;,&quot;a1c4445669254a6f944bfab089945408&quot;,
+    NULL
+)</formula>
+    <label>Lead Owner Role ID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
