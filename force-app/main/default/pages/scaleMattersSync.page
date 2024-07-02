@@ -1,0 +1,342 @@
+<apex:page controller="scaleMatterSyncCntrl" action="{!createSyncMapping}" lightningStylesheets="true">
+    <apex:form >
+    <apex:pageBlock title="Salesforce Opportunities to Sync to scaleMatters">
+    <iframe height="215px" id="theIframe" scrolling="no" name="theIframe" src="https://www.scalematters.com/scalematters-opportunity-sync" width="100%" style="border:none;"></iframe>
+    <apex:pageblockSection title="Please Select Filter Type to Sync Opportunities with scaleMatters">
+        <apex:pageBlockSectionItem >
+            <apex:outputText value="Please Select Filter Type: " ></apex:outputText>
+            <apex:selectList value="{!smFilter}" size="1" multiselect="false">
+             <apex:selectOptions value="{!filterType}"/>
+            </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+            <apex:commandButton action="{!updateFilterMapping}" value="Create Mapping" />
+        </apex:pageBlockSectionItem>
+    </apex:pageblockSection>
+        
+    <apex:pageblockSection title="Please Enter Filter Criteria to Sync Opportunities with scaleMatters">
+        <apex:pageBlockSectionItem >
+            <apex:outputText value="Please Enter Sync Conditions: " ></apex:outputText>
+            <apex:inputText value="{!condition}"/>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+            <apex:commandButton action="{!updateSyncMapping}" value="Create Mapping" />
+        </apex:pageBlockSectionItem>
+    </apex:pageblockSection>
+
+    <apex:pageblockSection title="Please Map Fields with any Conditions to Sync Opportunities with scaleMatters" >
+                <apex:panelGrid columns="5" id="theGrid" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 1 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping1}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping1Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping1Value}"></apex:inputText>
+                    <apex:commandButton action="{!field1Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid2" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 2 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping2}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping2Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping2Value}"></apex:inputText>
+                    <apex:commandButton action="{!field2Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid3" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 3 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping3}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping3Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping3Value}"></apex:inputText>
+                    <apex:commandButton action="{!field3Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid4" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 4 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping4}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping4Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping4Value}"></apex:inputText>
+                    <apex:commandButton action="{!field4Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid5" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 5 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping5}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping5Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping5Value}"></apex:inputText>
+                    <apex:commandButton action="{!field5Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid6" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 6 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping6}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping6Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping6Value}"></apex:inputText>
+                    <apex:commandButton action="{!field6Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid7" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 7 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping7}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping7Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping7Value}"></apex:inputText>
+                    <apex:commandButton action="{!field7Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid8" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 8 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping8}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping8Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping8Value}"></apex:inputText>
+                    <apex:commandButton action="{!field8Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid9" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 9 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping9}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping9Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping9Value}"></apex:inputText>
+                    <apex:commandButton action="{!field9Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+        <!--
+                <apex:panelGrid columns="5" id="theGrid10" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 10 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping10}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping10Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping10Value}"></apex:inputText>
+                    <apex:commandButton action="{!field10Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid11" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 11 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping11}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping11Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping11Value}"></apex:inputText>
+                    <apex:commandButton action="{!field11Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid12" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 12 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping12}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping12Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping12Value}"></apex:inputText>
+                    <apex:commandButton action="{!field12Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid13" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 13 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping13}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping13Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping13Value}"></apex:inputText>
+                    <apex:commandButton action="{!field13Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid14" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 14 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping14}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping14Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping14Value}"></apex:inputText>
+                    <apex:commandButton action="{!field14Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid15" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 15 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping15}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping15Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping15Value}"></apex:inputText>
+                    <apex:commandButton action="{!field15Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid16" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 16 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping16}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping16Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping16Value}"></apex:inputText>
+                    <apex:commandButton action="{!field16Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid17" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 17 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping17}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping17Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping17Value}"></apex:inputText>
+                    <apex:commandButton action="{!field17Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid18" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 18 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping18}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping18Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping18Value}"></apex:inputText>
+                    <apex:commandButton action="{!field18Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid19" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 19 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping19}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping19Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping19Value}"></apex:inputText>
+                    <apex:commandButton action="{!field19Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid20" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 20 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping20}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping20Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping20Value}"></apex:inputText>
+                    <apex:commandButton action="{!field20Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid21" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 21 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping21}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping21Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping21Value}"></apex:inputText>
+                    <apex:commandButton action="{!field21Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid22" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 22 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping22}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping22Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping22Value}"></apex:inputText>
+                    <apex:commandButton action="{!field22Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid23" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 23 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping23}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping23Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping23Value}"></apex:inputText>
+                    <apex:commandButton action="{!field23Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid24" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 24 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping24}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping24Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping24Value}"></apex:inputText>
+                    <apex:commandButton action="{!field24Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+                <apex:panelGrid columns="5" id="theGrid25" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Select Mapping 25 conditions"></apex:outputText>
+                    <apex:selectList value="{!smMapping25}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!fields}"/>
+                    </apex:selectList>
+                    <apex:selectList value="{!smMapping25Operator}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!oprtrs}"/>
+                    </apex:selectList>
+                    <apex:inputText value="{!smMapping25Value}"></apex:inputText>
+                    <apex:commandButton action="{!field25Mapping}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+     -->       
+            <apex:panelGrid columns="3" id="theGrid26" style="width: 1800px; height:100%;">
+                    <apex:outputText value="Add your filtering logic "></apex:outputText>
+                    <apex:inputText value="{!filteringLogic}"></apex:inputText>
+                    <apex:commandButton action="{!createFilteringLogic}" value="Create Mapping" />
+                </apex:panelGrid>
+                <br/>
+
+    
+        </apex:pageblockSection>
+        
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

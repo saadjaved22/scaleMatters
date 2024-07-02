@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Used for configuring tasks mapping to LinkedIn, Call or Email for scaleMatters.</description>
+    <icon>scaleMatters/scaleMatters_Logo.png</icon>
+    <label>scaleMatters Task Mapping</label>
+    <motif>Custom118: TV Widescreen</motif>
+    <page>scaleMattersTaskConfiguration</page>
+</CustomTab>

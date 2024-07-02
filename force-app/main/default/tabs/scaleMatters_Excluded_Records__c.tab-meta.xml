@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customObject>true</customObject>
+    <description>These are records that would want to be excluded from scaleMatters. This can be test records or simply records you do not want to sync back to scaleMatters.</description>
+    <icon>scaleMatters/scaleMatters_Logo.png</icon>
+    <motif>Custom118: TV Widescreen</motif>
+</CustomTab>

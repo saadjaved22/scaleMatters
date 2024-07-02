@@ -1,0 +1,13 @@
+<apex:page lightningStylesheets="true" showHeader="false" showQuickActionVfHeader="false" showChat="false" >
+    <apex:form >
+        <apex:outputLabel value="On this configuration page you'll have the option to map your Salesforce Opportunity Stages fields to scaleMatters 8 Stages plus link to Won, Lost, Certified Deal and/or Ghosted. You do not need to map all 8 stages if your organization does not use them. These can be multi-select so if you have different sales process leveraging record types you’ll have the ability to select all the stages that make sense for that stage in the sales process.
+
+You do not need to update the related Last Stage before Loss number per stage. This only needs to be updated for Won Opportunities and IsCertified. Example, if you have 5 sales stage included your closed for both Won Opportunities and IsCertified your Last Stage before Loss would be 4.
+
+Within each section after you selected your stage(s) make sure you click the Map Field button per section.
+
+After you've completed all stage mapping moving forward any opportunities where that stage field is updated the data will begin to flow into scaleMatters automatically. In order to get historical data correctly lined up you’ll need to use a data loader tool to mass update opportunities with the data you mapped between Salesforce and scaleMatters Stage Mapping fields.
+
+Should you need to troubleshoot you can always check the custom settings that were set by going into Salesforce’s Setup → in Quick Find type in Custom Settings → Click on Manage next scaleMatters Stage Mapping." ></apex:outputLabel>
+    </apex:form>
+</apex:page>

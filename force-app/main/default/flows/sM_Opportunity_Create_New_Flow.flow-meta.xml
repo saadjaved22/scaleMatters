@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>56.0</apiVersion>
+    <assignments>
+        <description>Used to assign variables</description>
+        <name>Assign_Contact_ID</name>
+        <label>Assign - Contact ID</label>
+        <locationX>314</locationX>
+        <locationY>278</locationY>
+        <assignmentItems>
+            <assignToReference>varContactID</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Contact</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Used to assign variables</description>
+        <name>Assign_Contact_ID_from_Account</name>
+        <label>Assign - Contact ID from Account</label>
+        <locationX>50</locationX>
+        <locationY>398</locationY>
+        <assignmentItems>
+            <assignToReference>varContactID</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>PrimaryContact</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Contact</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Check if creation of Opportunity is initiated via Account or Contact</description>
+        <name>Decision_Initiate_creation_via_Account_or_Contact</name>
+        <label>Decision - Initiate creation via Account or Contact</label>
+        <locationX>314</locationX>
+        <locationY>158</locationY>
+        <defaultConnectorLabel>End</defaultConnectorLabel>
+        <rules>
+            <name>Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>001</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Primary_Contact_Screen</targetReference>
+            </connector>
+            <label>Account</label>
+        </rules>
+        <rules>
+            <name>Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>003</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Contact_ID</targetReference>
+            </connector>
+            <label>Contact</label>
+        </rules>
+    </decisions>
+    <description>Used as a simple way to create Opportunities asking for required information and setting scaleMatters&apos; data points.</description>
+    <dynamicChoiceSets>
+        <description>Used to select Opportunity Type</description>
+        <name>OppType</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Type</picklistField>
+        <picklistObject>Opportunity</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <description>Used to find all related contacts</description>
+        <name>PrimaryContact</name>
+        <dataType>String</dataType>
+        <displayField>Name</displayField>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <object>Contact</object>
+        <valueField>Id</valueField>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <formulas>
+        <description>Used to set Created Rating</description>
+        <name>CreatedRatingFormulaFIXME</name>
+        <dataType>String</dataType>
+        <expression>IF(
+ISBLANK(TEXT({!Get_Contact.Created_Rating__c})),
+&quot;Lead 0&quot; , TEXT({!Get_Contact.Created_Rating__c})
+)</expression>
+    </formulas>
+    <formulas>
+        <description>used to set cycle type</description>
+        <name>CycleTypeFormulaFIXME</name>
+        <dataType>String</dataType>
+        <expression>IF(
+ISBLANK(TEXT({!Get_Contact.Cycle_Type__c})),
+&quot;New - Contact&quot; , TEXT({!Get_Contact.Cycle_Type__c})
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Used to Set Funnel Group</description>
+        <name>FunnelGroupFormulaFIXME</name>
+        <dataType>String</dataType>
+        <expression>IF(
+ISBLANK(TEXT({!Get_Contact.Funnel_Group__c})),
+&quot;Prospecting - AE&quot; , TEXT({!Get_Contact.Funnel_Group__c})
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Used to set Lead 0 Date</description>
+        <name>Lead0FormulaFIXME</name>
+        <dataType>Date</dataType>
+        <expression>IF(
+    AND(
+        OR(
+            ISPICKVAL({!Get_Contact.scaleMatters__Created_Rating__c},&quot;Lead 0&quot;),
+            ISPICKVAL({!Get_Contact.scaleMatters__Created_Rating__c},&quot;Lead 1&quot;),
+            ISPICKVAL({!Get_Contact.scaleMatters__Created_Rating__c},&quot;Lead 2&quot;),
+            ISPICKVAL({!Get_Contact.scaleMatters__Created_Rating__c},&quot;Lead 3&quot;)),
+            NOT(ISBLANK({!Get_Contact.scaleMatters__Lead_0_Date__c}))),
+    {!Get_Contact.scaleMatters__Lead_0_Date__c},
+IF(
+    AND(
+        ISBLANK({!Get_Contact.scaleMatters__Lead_0_Date__c}),
+        ISBLANK(TEXT({!Get_Contact.scaleMatters__Created_Rating__c}))),
+    {!$Flow.CurrentDate},
+IF(
+    AND(
+            ISPICKVAL({!Get_Contact.scaleMatters__Created_Rating__c},&quot;Lead 0&quot;),
+            ISBLANK({!Get_Contact.scaleMatters__Lead_0_Date__c})),
+    {!$Flow.CurrentDate},
+    {!Get_Contact.scaleMatters__Lead_0_Date__c}
+    )        
+  )
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Used to set Lead 1 Date</description>
+        <name>Lead1FormulaFIXME</name>
+        <dataType>Date</dataType>
+        <expression>IF(
+    AND(
+            ISPICKVAL({!Get_Contact.Created_Rating__c},&quot;Lead 1&quot;),
+            NOT(ISBLANK({!Get_Contact.Lead_1_Date__c}))),
+    {!Get_Contact.Lead_1_Date__c},
+    NULL
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Used to set Lead 2 Bypass value</description>
+        <name>Lead2BypassFormulaFIXME</name>
+        <dataType>Number</dataType>
+        <expression>IF(
+    NOT(
+        ISPICKVAL({!Get_Contact.Created_Rating__c},&quot;Lead 2&quot;)),
+        1, 0
+)</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <description>Used to set Lead 2 Date</description>
+        <name>Lead2FormulaFIXME</name>
+        <dataType>Date</dataType>
+        <expression>IF(
+     NOT(ISBLANK({!Get_Contact.scaleMatters__Lead_2_Date__c})),
+    {!Get_Contact.scaleMatters__Lead_2_Date__c},
+{!$Flow.CurrentDate}      
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Used to set Lead 3 Date</description>
+        <name>Lead3FormulaFIXME</name>
+        <dataType>Date</dataType>
+        <expression>IF(
+     NOT(ISBLANK({!Get_Contact.scaleMatters__Lead_3_Date__c})),
+    {!Get_Contact.scaleMatters__Lead_3_Date__c},
+{!$Flow.CurrentDate}      
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Used to set Lead Source value</description>
+        <name>LeadSourceFormulaFIXME</name>
+        <dataType>String</dataType>
+        <expression>IF(
+ISBLANK(TEXT({!Get_Contact.LeadSource})),
+&quot;Prospecting - AE&quot;, TEXT({!Get_Contact.LeadSource})
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Used to set meeting date</description>
+        <name>MeetingDateFormulaFIXME</name>
+        <dataType>Date</dataType>
+        <expression>IF(
+    ISBLANK({!Get_Contact.scaleMatters__Meeting_Date__c}),
+    {!$Flow.CurrentDate},{!Get_Contact.scaleMatters__Meeting_Date__c}
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Used to set Meeting Disposition</description>
+        <name>MeetingDispositionFormulaFIXME</name>
+        <dataType>String</dataType>
+        <expression>IF(
+ISBLANK(TEXT({!Get_Contact.Meeting_Disposition__c})),
+&quot;Completed&quot; , TEXT({!Get_Contact.Meeting_Disposition__c})
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Used to Set Meeting Source</description>
+        <name>MeetingSourceFormulaFIXME</name>
+        <dataType>String</dataType>
+        <expression>IF(
+ISBLANK({!Get_Contact.Meeting_Source__c}),
+{!$User.Id}, {!Get_Contact.Meeting_Source__c}
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Used to Set meeting Source Role</description>
+        <name>MeetingSourceRoleFormulaFIXME</name>
+        <dataType>String</dataType>
+        <expression>IF(
+   ISBLANK({!Get_Contact.Meeting_Source_Role__c}),
+   TEXT({!$User.Current_Role__c}), {!Get_Contact.Meeting_Source_Role__c}
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Used to set Release to Cadence Date</description>
+        <name>ReleaseToCadenceFormulaFIXME</name>
+        <dataType>Date</dataType>
+        <expression>IF(
+     NOT(ISBLANK({!Get_Contact.scaleMatters__Released_to_Cadence__c})),
+    {!Get_Contact.scaleMatters__Released_to_Cadence__c},
+{!$Flow.CurrentDate}      
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Used to set the user source of the opportunity</description>
+        <name>UserSourceFormulaFIXME</name>
+        <dataType>String</dataType>
+        <expression>IF(
+ISBLANK({!Get_Contact.User_Source__c}),
+{!$User.Id}, {!Get_Contact.User_Source__c}
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Used to set the user source&apos;s role</description>
+        <name>UserSourceRoleFormulaFIXME</name>
+        <dataType>String</dataType>
+        <expression>IF(
+   ISBLANK({!Get_Contact.User_Source_Role__c}),
+   TEXT({!$User.Current_Role__c}), {!Get_Contact.User_Source_Role__c}
+)</expression>
+    </formulas>
+    <interviewLabel>sM - Opportunity - Create New - Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <isTemplate>true</isTemplate>
+    <label>sM - Opportunity - Create New - Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <description>Used to create Opportunity</description>
+        <name>Create_Opportunity_FIXME</name>
+        <label>Create Opportunity - FIXME</label>
+        <locationX>314</locationX>
+        <locationY>854</locationY>
+        <connector>
+            <targetReference>Set_Primary_Contact</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>Get_Contact.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CloseDate</field>
+            <value>
+                <elementReference>Close_Date</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Contact_SafeID__c</field>
+            <value>
+                <elementReference>Get_Contact.Contact_SafeID__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Converted_from_Contact__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Created_Rating__c</field>
+            <value>
+                <elementReference>CreatedRatingFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cycle_Type__c</field>
+            <value>
+                <elementReference>CycleTypeFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Funnel_Group__c</field>
+            <value>
+                <elementReference>FunnelGroupFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LeadSource</field>
+            <value>
+                <elementReference>LeadSourceFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Lead_0_Date__c</field>
+            <value>
+                <elementReference>Lead0FormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Lead_1_Date__c</field>
+            <value>
+                <elementReference>Lead1FormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Lead_2_Bypass__c</field>
+            <value>
+                <elementReference>Lead2BypassFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Lead_2_Date__c</field>
+            <value>
+                <elementReference>Lead2FormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Lead_3_Date__c</field>
+            <value>
+                <elementReference>Lead3FormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Meeting_Date__c</field>
+            <value>
+                <elementReference>MeetingDateFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Meeting_Disposition__c</field>
+            <value>
+                <elementReference>MeetingDispositionFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Meeting_Source_Role__c</field>
+            <value>
+                <elementReference>MeetingSourceRoleFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Meeting_Source__c</field>
+            <value>
+                <elementReference>MeetingSourceFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>Opportunity_Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Record_Owner_Role__c</field>
+            <value>
+                <elementReference>$User.Current_Role__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Record_Owner__c</field>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Released_to_Cadence__c</field>
+            <value>
+                <elementReference>ReleaseToCadenceFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StageName</field>
+            <value>
+                <stringValue>Stage 1</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <elementReference>Type</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>User_Source_Role__c</field>
+            <value>
+                <elementReference>UserSourceRoleFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>User_Source__c</field>
+            <value>
+                <elementReference>UserSourceFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <description>Used to set the Primary Contact on the Opportunity</description>
+        <name>Set_Primary_Contact</name>
+        <label>Set Primary Contact</label>
+        <locationX>314</locationX>
+        <locationY>974</locationY>
+        <connector>
+            <targetReference>Update_Contact_FIXME</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <elementReference>Get_Contact.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>IsPrimary</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OpportunityId</field>
+            <value>
+                <elementReference>Create_Opportunity_FIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <object>OpportunityContactRole</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>Used to collect Contact Record information</description>
+        <name>Get_Contact</name>
+        <label>Get Contact</label>
+        <locationX>314</locationX>
+        <locationY>614</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Opportunity_Details_Screen_FIXME</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varContactID</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Used to set values back to contact if needed</description>
+        <name>Update_Contact_FIXME</name>
+        <label>Update Contact - FIXME</label>
+        <locationX>314</locationX>
+        <locationY>1094</locationY>
+        <connector>
+            <targetReference>Success_Screen_FIXME</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Contact.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Created_Rating__c</field>
+            <value>
+                <elementReference>CreatedRatingFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cycle_Type__c</field>
+            <value>
+                <elementReference>CycleTypeFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Funnel_Group__c</field>
+            <value>
+                <elementReference>FunnelGroupFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LeadSource</field>
+            <value>
+                <elementReference>LeadSourceFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Lead_0_Date__c</field>
+            <value>
+                <elementReference>Lead0FormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Lead_1_Date__c</field>
+            <value>
+                <elementReference>Lead1FormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Lead_2_Bypass__c</field>
+            <value>
+                <elementReference>Lead2BypassFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Lead_2_Date__c</field>
+            <value>
+                <elementReference>Lead2FormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Lead_3_Date__c</field>
+            <value>
+                <elementReference>Lead3FormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Meeting_Date__c</field>
+            <value>
+                <elementReference>MeetingDateFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Meeting_Disposition__c</field>
+            <value>
+                <elementReference>MeetingDispositionFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Meeting_Source_Role__c</field>
+            <value>
+                <elementReference>MeetingSourceRoleFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Meeting_Source__c</field>
+            <value>
+                <elementReference>MeetingSourceFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Rating__c</field>
+            <value>
+                <stringValue>Open Opportunity</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Record_Owner_Role__c</field>
+            <value>
+                <elementReference>$User.Current_Role__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Record_Owner__c</field>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Released_to_Cadence__c</field>
+            <value>
+                <elementReference>ReleaseToCadenceFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>User_Source_Role__c</field>
+            <value>
+                <elementReference>UserSourceRoleFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>User_Source__c</field>
+            <value>
+                <elementReference>UserSourceFormulaFIXME</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <screens>
+        <description>Used as a Title Screen</description>
+        <name>Opportunity_Details_Screen_FIXME</name>
+        <label>Opportunity Details Screen - FIXME</label>
+        <locationX>314</locationX>
+        <locationY>734</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Create_Opportunity_FIXME</targetReference>
+        </connector>
+        <fields>
+            <name>Opportunity_Name</name>
+            <dataType>String</dataType>
+            <fieldText>Opportunity Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Opportunity_Details_Screen_FIXME_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Opportunity_Details_Screen_FIXME_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Close_Date</name>
+                    <dataType>Date</dataType>
+                    <fieldText>Close Date</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Opportunity_Details_Screen_FIXME_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Type</name>
+                    <choiceReferences>OppType</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>Type</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>Screen for selecting Primary Contact for the Opp</description>
+        <name>Primary_Contact_Screen</name>
+        <label>Primary Contact Screen</label>
+        <locationX>50</locationX>
+        <locationY>278</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Assign_Contact_ID_from_Account</targetReference>
+        </connector>
+        <fields>
+            <name>Primary_Contact</name>
+            <choiceReferences>PrimaryContact</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Select Primary Contact</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Success_Screen_FIXME</name>
+        <label>Success Screen - FIXME</label>
+        <locationX>314</locationX>
+        <locationY>1214</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Success_Message_FIX_ME</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Your {!Type} Opportunity has been successfully created. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Click this &lt;/span&gt;&lt;a href=&quot;https://revops-scalematters-dev-ed.lightning.force.com/{!Create_Opportunity_FIXME}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 12px;&quot;&gt;link&lt;/a&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt; to go to the Opportunity record.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;﻿Click Finish to proceed to the Opportunity list view page.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Decision_Initiate_creation_via_Account_or_Contact</targetReference>
+        </connector>
+    </start>
+    <status>Obsolete</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Used to store Account ID</description>
+        <name>varAccountID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Used to store Contact ID</description>
+        <name>varContactID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

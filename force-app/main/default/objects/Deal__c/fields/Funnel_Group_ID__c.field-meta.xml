@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Funnel_Group_ID__c</fullName>
+    <description>Used the GUID for scaleMatters&apos; SellScience to run queries off of Funnel Group values.</description>
+    <externalId>false</externalId>
+    <formula>CASE(
+    Funnel_Group__c,
+    &quot;Ads - Facebook&quot;,&quot;5fa39f43493545c4ac3b3ae3715592ee&quot;,
+    &quot;Ads - Instagram&quot;,&quot;ab69c562a8ef41b18e954023f2c555f9&quot;,
+    &quot;Ads - LinkedIn&quot;,&quot;5ed91af112b441d7b35c44b533cdf7c8&quot;,
+    &quot;Ads - Other&quot;,&quot;c3ab33a9346a40dc83f789d8d669a1c1&quot;,
+    &quot;Ads - Search&quot;,&quot;fe78cd637fb94957a5f858fb26abb157&quot;,
+    &quot;Ads - Twitter&quot;,&quot;eb3f417f3aa141458131d414c1dcf713&quot;,
+    &quot;Events&quot;,&quot;198bf6b581a74522bf6bb628dc81b6ed&quot;,
+    &quot;Events - BIGRYG Webinar&quot;,&quot;b584c1cc30f446bd958a1ff6de8ae7c0&quot;,
+    &quot;Events - Impact Webinar&quot;,&quot;d1db7f0a6ed14ab4b8c3ed325d474cc0&quot;,
+    &quot;Events - Other&quot;,&quot;c58470bb61f84fe1877512721b602126&quot;,
+    &quot;Events - RYG&quot;,&quot;947d7a8d0f174c75b78c896118be6f5c&quot;,
+    &quot;Events - TL Webinar&quot;,&quot;16f252b69c1d471798ff2f67cdb4c23e&quot;,
+    &quot;Events - VRYG&quot;,&quot;69f77e5522e549459de5d3cd2f50a1e9&quot;,
+    &quot;Inbound Other&quot;,&quot;175792a4f5ea418b9db76f4581a4b98b&quot;,
+    &quot;Inbound Unpaid&quot;,&quot;51bcf3cf08594e5b8b90a957ad384b76&quot;,
+    &quot;Listings - Business Software&quot;,&quot;855a955d96144686bfd212987736ea73&quot;,
+    &quot;Listings - BuyerZone&quot;,&quot;5c04ec402ee44b399d23b7b559762c2e&quot;,
+    &quot;Listings - Capterra&quot;,&quot;3ce83af74f2349ba954cec8fb9eb4e0c&quot;,
+    &quot;Listings - G2 Crowd&quot;,&quot;248c495bc8bf4c3aa9e2452a207f435c&quot;,
+    &quot;Listings - MVF&quot;,&quot;324abc0251e24855ab86190aeac6343d&quot;,
+    &quot;Listings - Natural Intelligence&quot;,&quot;c6940189cb5b401587d51c24499a245b&quot;,
+    &quot;Listings - Software Advice&quot;,&quot;c12ac8a05e2e4cdea5f3e6294882c023&quot;,
+    &quot;Listings - Trafficpoint&quot;,&quot;492d0aa908d443eeb7f53f6a22f30c5f&quot;,
+    &quot;Listings - TrustRadius&quot;,&quot;81a1236f58794f03ac3b3b28fff4455d&quot;,
+    &quot;Listings - Other&quot;,&quot;4c11bf7254474e56a8f911b95b186a79&quot;,
+    &quot;Organic&quot;, &quot;2eb032a9200e4c7b82283846f6085863&quot;,
+    &quot;Other&quot;,&quot;88602e64bcb847e0a26e6d1d06cb8791&quot;,
+    &quot;Prospecting - 3rd Party&quot;,&quot;33b2b2f5362a4d33b091f05c02340985&quot;,
+    &quot;Prospecting - AE&quot;,&quot;a380b8be586641bb9996d56dc3b7a742&quot;,
+    &quot;Prospecting - SDR&quot;,&quot;5e41d72fc99a4254a91548457d26d056&quot;,
+    &quot;Prospecting - Social&quot;,&quot;2fe75d840f0544c088513260cb9e2540&quot;,
+    &quot;Referrals - Customer&quot;,&quot;31c633f2db004a9da7c884b3503560f5&quot;,
+    &quot;Referrals - Employee&quot;,&quot;fb0837b962d648589329cd4f0e034200&quot;,
+    &quot;Referrals - Partner&quot;,&quot;60e23cbb312b41bc947022ce9730211f&quot;,
+    &quot;Referrals - Other&quot;,&quot;aadd2520530b41bab61ab3b8c9a2cc20&quot;,
+    &quot;Syndication - Integrate&quot;,&quot;d043bbf49f264dc88f56177aa029e9ae&quot;,
+    &quot;Syndication - TechTarget&quot;,&quot;71a134972e75438a96f52bc13284d4a0&quot;,
+    &quot;Syndication - Other&quot;,&quot;352b39b8f4a7426cba7fefe0233dd757&quot;,
+    &quot;Undefined&quot;,&quot;fc0d39178f2d437892311f4368fc7e06&quot;,
+    &quot;Upsell&quot;,&quot;a288bdc6d871427d9b35788c968af4ff&quot;,
+NULL
+)</formula>
+    <label>Funnel Group ID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

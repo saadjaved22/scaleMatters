@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conv_OPP__c</fullName>
+    <description>Formula to calculate number of months to conversion.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    ISPICKVAL(Created_Rating__c, &quot;Lead 2&quot;),
+        IF(DATEVALUE(CreatedDate)&lt;Lead_2_Date__c, -1,
+        ((YEAR(DATEVALUE(CreatedDate)) - YEAR(Lead_2_Date__c))*12) + (MONTH(DATEVALUE(CreatedDate)) - MONTH(Lead_2_Date__c))),
+    IF(DATEVALUE(CreatedDate)&lt;Released_to_Cadence__c, -1,
+    ((YEAR(DATEVALUE(CreatedDate)) - YEAR(Released_to_Cadence__c))*12) + (MONTH(DATEVALUE(CreatedDate)) - MONTH(Released_to_Cadence__c)))
+)</formula>
+    <label>Conv_OPP</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

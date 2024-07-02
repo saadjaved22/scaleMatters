@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cycle_Type_ID__c</fullName>
+    <description>Used to tell if this is a new or rework cycle on a Lead or Contact for scaleMatters.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    AND(
+        TEXT(Cycle_Type__c) = &quot;New&quot;,
+        TEXT(Cycle_Object__c) = &quot;Lead&quot;
+    ),
+    &quot;7ea3d6e3caa94e07a5a8f20a864d6f23&quot;,
+IF(
+    AND(
+        TEXT(Cycle_Type__c) = &quot;Rework&quot;,
+        TEXT(Cycle_Object__c) = &quot;Lead&quot;
+    ),
+    &quot;c6faa56d91224e06a79783428474c5c7&quot;,
+IF(
+    AND(
+        TEXT(Cycle_Type__c) = &quot;New&quot;,
+        TEXT(Cycle_Object__c) = &quot;Contact&quot;
+    ),
+    &quot;fb9489e422904a2f964c604dcad51b4d&quot;,
+IF(
+    AND(
+        TEXT(Cycle_Type__c) = &quot;Rework&quot;,
+        TEXT(Cycle_Object__c) = &quot;Contact&quot;
+    ),
+    &quot;05e7ce3501f14dfbbdce2857cba57cc2&quot;,
+    NULL
+            )
+        )
+    )
+)</formula>
+    <label>Cycle Type ID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

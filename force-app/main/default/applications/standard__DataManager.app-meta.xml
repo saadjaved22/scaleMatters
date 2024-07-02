@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Data Manager</label>
+    <navType>Standard</navType>
+    <tabs>standard-AnalyticsDataManager</tabs>
+    <tabs>Deal__c</tabs>
+    <tabs>Funnel_Conversion_Cycle__c</tabs>
+    <tabs>scaleMatters_Stage_Mapping</tabs>
+    <tabs>scaleMatters_Currency_Mapping</tabs>
+    <tabs>scaleMatters_Opportunity_Sync</tabs>
+    <tabs>scaleMatters_Date_Configuration</tabs>
+    <tabs>scaleMatters_Task_Mapping</tabs>
+    <tabs>Funnel_Configuration_Mapping__c</tabs>
+    <tabs>scaleMatters_Lead_Funnel_Mapping</tabs>
+    <tabs>scaleMatters_Rework_Recycle_Mapping</tabs>
+    <tabs>Operational_View_Mapping__c</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

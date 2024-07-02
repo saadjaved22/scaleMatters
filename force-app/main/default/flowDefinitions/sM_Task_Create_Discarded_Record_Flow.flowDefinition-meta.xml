@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Used to collect Task record details that are being discarded. scaleMatters&apos; SellScience application uses the records to be updated within its database.</description>
+    <masterLabel>sM - Task - Create Discarded Record - Flow</masterLabel>
+</FlowDefinition>

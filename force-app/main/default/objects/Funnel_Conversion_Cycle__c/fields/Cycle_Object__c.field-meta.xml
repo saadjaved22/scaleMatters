@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cycle_Object__c</fullName>
+    <description>Used to tell object the cycle type is related to.</description>
+    <externalId>false</externalId>
+    <label>Cycle Object</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Related_Object</valueSetName>
+    </valueSet>
+</CustomField>

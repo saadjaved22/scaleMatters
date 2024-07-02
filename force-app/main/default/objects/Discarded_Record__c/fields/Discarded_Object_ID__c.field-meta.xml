@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discarded_Object_ID__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Used as a UID to label the Object from the Discarded Records object.</description>
+    <externalId>false</externalId>
+    <formula>CASE(
+    Discarded_Object__c,
+    &quot;Lead&quot;,&quot;276b58efc41f4227899a96bc11c6b5d5&quot;,
+    &quot;Contact&quot;,&quot;7058ebd5404f4f2face0907551310448&quot;,
+    &quot;Account&quot;,&quot;7156e4f033aa4a5d81fcc29095f44ccd&quot;,
+    &quot;Opportunity&quot;,&quot;af15422020394263b1fb35ef3f204cc5&quot;,
+    &quot;Task&quot;,&quot;993a935821cf416ba7304b2f35d6298a&quot;,
+    &quot;Event&quot;,&quot;465def80e1f045f1b0164ab393c6e402&quot;,
+    NULL
+)</formula>
+    <label>Discarded Object ID</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

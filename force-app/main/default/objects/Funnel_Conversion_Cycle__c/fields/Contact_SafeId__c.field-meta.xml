@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_SafeId__c</fullName>
+    <description>Used to provide 18 digit id for Contact</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    NOT(ISBLANK(Contact__c)),
+    CASESAFEID(Contact__r.Id),
+    NULL
+)</formula>
+    <label>Contact SafeId</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

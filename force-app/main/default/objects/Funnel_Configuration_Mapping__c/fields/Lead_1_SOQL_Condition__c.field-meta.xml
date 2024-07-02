@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_1_SOQL_Condition__c</fullName>
+    <description>SOQL condition for this funnel to result in Lead 1</description>
+    <externalId>false</externalId>
+    <label>Lead 1 - SOQL Condition</label>
+    <length>25000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

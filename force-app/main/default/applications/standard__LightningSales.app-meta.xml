@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <formFactors>Small</formFactors>
+    <formFactors>Medium</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Sales</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>standard-Lead</tabs>
+    <tabs>standard-Task</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Campaign</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Case</tabs>
+    <tabs>Deleted_Record__c</tabs>
+    <tabs>Discarded_Record__c</tabs>
+    <tabs>Funnel_Conversion_Cycle__c</tabs>
+    <tabs>scaleMatters_Stage_Mapping</tabs>
+    <tabs>scaleMatters_Currency_Mapping</tabs>
+    <tabs>scaleMatters_Opportunity_Sync</tabs>
+    <tabs>scaleMatters_Date_Configuration</tabs>
+    <tabs>scaleMatters_Task_Mapping</tabs>
+    <tabs>Funnel_Configuration_Mapping__c</tabs>
+    <tabs>scaleMatters_Lead_Funnel_Mapping</tabs>
+    <tabs>scaleMatters_Rework_Recycle_Mapping</tabs>
+    <tabs>Operational_View_Mapping__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>LightningSales_UtilityBar</utilityBar>
+</CustomApplication>
