@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Lead_Owner_Role__c</fullName>
-    <description>Used to populate the Owner Role of the Lead when record is created.</description>
+    <description
+  >Used to populate the Owner Role of the Lead when record is created.</description>
     <externalId>false</externalId>
     <label>Lead Owner Role</label>
     <length>255</length>

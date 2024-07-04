@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>53.0</apiVersion>
     <assignments>
@@ -8,7 +8,8 @@
         <locationX>314</locationX>
         <locationY>551</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Activity_Type__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Activity_Type__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Call</stringValue>
@@ -22,7 +23,8 @@
         <locationX>578</locationX>
         <locationY>551</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Activity_Type__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Activity_Type__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Email</stringValue>
@@ -36,7 +38,8 @@
         <locationX>50</locationX>
         <locationY>551</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Activity_Type__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Activity_Type__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>LinkedIn</stringValue>
@@ -50,7 +53,8 @@
         <locationX>842</locationX>
         <locationY>551</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Activity_Type__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Activity_Type__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Other</stringValue>
@@ -64,24 +68,28 @@
         <locationX>446</locationX>
         <locationY>311</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Original_WhatID__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Original_WhatID__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Record.WhatId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Original_WhoID__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Original_WhoID__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Record.WhoId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Owner_Role__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Owner_Role__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>$Record.Owner:User.Current_Role__c</elementReference>
+                <elementReference
+        >$Record.Owner:User.Current_Role__c</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -89,7 +97,8 @@
         </connector>
     </assignments>
     <decisions>
-        <description>Decision checking what type of task was created.</description>
+        <description
+    >Decision checking what type of task was created.</description>
         <name>What_Type_of_Task_FIXME</name>
         <label>What Type of Task? FIXME</label>
         <locationX>446</locationX>
@@ -186,8 +195,10 @@
             <label>Email - FIXME</label>
         </rules>
     </decisions>
-    <description>This is a flow designed to set scaleMatters data points on new tasks.</description>
-    <interviewLabel>sM - Tasks - New - Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <description
+  >This is a flow designed to set scaleMatters data points on new tasks.</description>
+    <interviewLabel
+  >sM - Tasks - New - Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <isTemplate>true</isTemplate>
     <label>sM - Tasks - New - Flow</label>
     <processMetadataValues>

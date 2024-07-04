@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>55.0</apiVersion>
-    <description>Used to collect Opportunity record details prior to being deleted. scaleMatters&apos; SellScience application uses the records to be updated within its database.</description>
+    <description
+  >Used to collect Opportunity record details prior to being deleted. scaleMatters&apos; SellScience application uses the records to be updated within its database.</description>
     <environments>Default</environments>
-    <interviewLabel>sM - Opportunity - Create Deleted Record - Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >sM - Opportunity - Create Deleted Record - Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <isTemplate>true</isTemplate>
     <label>sM - Opportunity - Create Deleted Record - Flow</label>
     <processMetadataValues>
@@ -26,7 +28,8 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordCreates>
-        <description>Used to create a record to store details of the record being deleted</description>
+        <description
+    >Used to create a record to store details of the record being deleted</description>
         <name>Create_Deleted_Records_FIXME</name>
         <label>Create - Deleted Records - FIXME</label>
         <locationX>176</locationX>
@@ -52,7 +55,8 @@
         <inputAssignments>
             <field>Deleted_SafeID__c</field>
             <value>
-                <elementReference>$Record.Opportunity_SafeID__c</elementReference>
+                <elementReference
+        >$Record.Opportunity_SafeID__c</elementReference>
             </value>
         </inputAssignments>
         <object>Deleted_Record__c</object>

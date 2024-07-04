@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>53.0</apiVersion>
     <decisions>
-        <description>Check if a discarded record needs to be created</description>
+        <description
+    >Check if a discarded record needs to be created</description>
         <name>Decision_Discarded_Records_FIXME</name>
         <label>Decision - Discarded Records - FIXME</label>
         <locationX>182</locationX>
@@ -12,14 +13,16 @@
             <name>Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record__Prior.scaleMatters__Contact_Discard__c</leftValueReference>
+                <leftValueReference
+        >$Record__Prior.scaleMatters__Contact_Discard__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.scaleMatters__Contact_Discard__c</leftValueReference>
+                <leftValueReference
+        >$Record.scaleMatters__Contact_Discard__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -31,8 +34,10 @@
             <label>Yes</label>
         </rules>
     </decisions>
-    <description>Used to collect Contact record details that are being discarded. scaleMatters&apos; SellScience application uses the records to be updated within its database.</description>
-    <interviewLabel>sM - Contact - Create Discarded Record - Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <description
+  >Used to collect Contact record details that are being discarded. scaleMatters&apos; SellScience application uses the records to be updated within its database.</description>
+    <interviewLabel
+  >sM - Contact - Create Discarded Record - Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <isTemplate>true</isTemplate>
     <label>sM - Contact - Create Discarded Record - Flow</label>
     <processMetadataValues>

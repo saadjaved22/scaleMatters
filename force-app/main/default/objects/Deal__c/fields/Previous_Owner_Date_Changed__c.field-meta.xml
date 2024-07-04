@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Previous_Owner_Date_Changed__c</fullName>
-    <description>Populated when records (Leads/Account/Contacts/Opps) are mass re-assigned after an employee is terminated or leaves and updated with the date of this change.</description>
+    <description
+  >Populated when records (Leads/Account/Contacts/Opps) are mass re-assigned after an employee is terminated or leaves and updated with the date of this change.</description>
     <externalId>false</externalId>
     <label>Previous Owner Date Changed</label>
     <required>false</required>

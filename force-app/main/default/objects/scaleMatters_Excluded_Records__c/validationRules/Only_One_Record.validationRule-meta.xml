@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Only_One_Record</fullName>
     <active>true</active>
-    <description>Not allowing a user to add more than one excluded record</description>
+    <description
+  >Not allowing a user to add more than one excluded record</description>
     <errorConditionFormula>IF(
     (Account_Count__c + Contact_Count__c + Lead_Count__c + Opportunity_Count__c) &gt; 1,
     TRUE,

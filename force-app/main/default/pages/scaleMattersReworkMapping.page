@@ -1,57 +1,85 @@
-<apex:page controller="scaleMattersReworkCntrl"  lightningStylesheets="true" docType="html-5.0" >
-    <apex:form >
-        <apex:pageblock title="scaleMatters Funnel Conversion Cycle Configuration">
-            <iframe height="120px" id="theIframe" scrolling="no" name="theIframe" src="https://www.scalematters.com/funnel-conversion-cycle-configuration" width="100%" style="border:none;"></iframe>
-            <apex:pageBlockSection title="Cycle Mappings for Lead" >
-                
-                <apex:pageBlockSectionItem >
-                    <apex:outputText value="What Date Field on Lead would Trigger a New Cycle?" ></apex:outputText>
-                    <apex:selectList value="{!leadDate}" size="1" multiselect="false" >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                </apex:pageBlockSectionItem>
-                <apex:pageBlockSectionItem >
-                    <apex:outputText value="How many days between date field should this create a new cycle?" ></apex:outputText>
-                    <apex:input type="number" value="{!leaddays}"  ></apex:input>
-                </apex:pageBlockSectionItem>
-                <apex:pageBlockSectionItem >
-                    <apex:outputText value="How many days between date field should this auto close current cycle?" ></apex:outputText>
-                    <apex:input type="number" value="{!leadSchddays}"  ></apex:input>
-                </apex:pageBlockSectionItem>
-                
-                <br/>
-                <br/>              
-                
-                <apex:pageBlockSectionItem >
-                    <apex:commandButton value="Save Mapping" action="{!saveMapping}" style="margin-left: 600px;" />
-                </apex:pageBlockSectionItem>
-                
-            </apex:pageBlockSection>  
-            <apex:pageBlockSection title="Cycle Mappings for Contact"  >
-                
-                <apex:pageBlockSectionItem >
-                    <apex:outputText value="What Date Field on Contact would Trigger a New Cycle?" ></apex:outputText>
-                    <apex:selectList value="{!contactDate}" size="1" multiselect="false" >
-                        <apex:selectOptions value="{!itemsContact}"/>
-                    </apex:selectList>
-                </apex:pageBlockSectionItem>
-                <apex:pageBlockSectionItem >
-                    <apex:outputText value="How many days between date field should this create a new cycle?" ></apex:outputText>
-                    <apex:input type="number" value="{!contactdays}"  ></apex:input>
-                </apex:pageBlockSectionItem>
-                <apex:pageBlockSectionItem >
-                    <apex:outputText value="How many days between date field should this auto close current cycle?" ></apex:outputText>
-                    <apex:input type="number" value="{!contactSchddays}"  ></apex:input>
-                </apex:pageBlockSectionItem>
-                
-                <br/>
-                <br/>              
-                
-                <apex:pageBlockSectionItem >
-                    <apex:commandButton value="Save Mapping" action="{!saveContactMapping}" style="margin-left: 600px;" />
-                </apex:pageBlockSectionItem>
-                
-            </apex:pageBlockSection>
-        </apex:pageblock>
-    </apex:form>
+<apex:page
+  controller="scaleMattersReworkCntrl"
+  lightningStylesheets="true"
+  docType="html-5.0"
+>
+  <apex:form>
+    <apex:pageblock title="scaleMatters Funnel Conversion Cycle Configuration">
+      <iframe
+        height="120px"
+        id="theIframe"
+        scrolling="no"
+        name="theIframe"
+        src="https://www.scalematters.com/funnel-conversion-cycle-configuration"
+        width="100%"
+        style="border: none"
+      ></iframe>
+      <apex:pageBlockSection title="Cycle Mappings for Lead">
+        <apex:pageBlockSectionItem>
+          <apex:outputText
+            value="What Date Field on Lead would Trigger a New Cycle?"
+          ></apex:outputText>
+          <apex:selectList value="{!leadDate}" size="1" multiselect="false">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem>
+          <apex:outputText
+            value="How many days between date field should this create a new cycle?"
+          ></apex:outputText>
+          <apex:input type="number" value="{!leaddays}"></apex:input>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem>
+          <apex:outputText
+            value="How many days between date field should this auto close current cycle?"
+          ></apex:outputText>
+          <apex:input type="number" value="{!leadSchddays}"></apex:input>
+        </apex:pageBlockSectionItem>
+
+        <br />
+        <br />
+
+        <apex:pageBlockSectionItem>
+          <apex:commandButton
+            value="Save Mapping"
+            action="{!saveMapping}"
+            style="margin-left: 600px"
+          />
+        </apex:pageBlockSectionItem>
+      </apex:pageBlockSection>
+      <apex:pageBlockSection title="Cycle Mappings for Contact">
+        <apex:pageBlockSectionItem>
+          <apex:outputText
+            value="What Date Field on Contact would Trigger a New Cycle?"
+          ></apex:outputText>
+          <apex:selectList value="{!contactDate}" size="1" multiselect="false">
+            <apex:selectOptions value="{!itemsContact}" />
+          </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem>
+          <apex:outputText
+            value="How many days between date field should this create a new cycle?"
+          ></apex:outputText>
+          <apex:input type="number" value="{!contactdays}"></apex:input>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem>
+          <apex:outputText
+            value="How many days between date field should this auto close current cycle?"
+          ></apex:outputText>
+          <apex:input type="number" value="{!contactSchddays}"></apex:input>
+        </apex:pageBlockSectionItem>
+
+        <br />
+        <br />
+
+        <apex:pageBlockSectionItem>
+          <apex:commandButton
+            value="Save Mapping"
+            action="{!saveContactMapping}"
+            style="margin-left: 600px"
+          />
+        </apex:pageBlockSectionItem>
+      </apex:pageBlockSection>
+    </apex:pageblock>
+  </apex:form>
 </apex:page>

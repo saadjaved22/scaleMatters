@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>Used to collect Task record details prior to being deleted. scaleMatters&apos; SellScience application uses the records to be updated within its database.</description>
+    <description
+  >Used to collect Task record details prior to being deleted. scaleMatters&apos; SellScience application uses the records to be updated within its database.</description>
     <masterLabel>sM - Task - Create Deleted Record - Flow</masterLabel>
 </FlowDefinition>

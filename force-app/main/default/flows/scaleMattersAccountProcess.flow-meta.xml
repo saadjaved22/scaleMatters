@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <processMetadataValues>
             <name>apexSelection</name>
             <value>
-                <stringValue>scaleMatters__scaleMattersAccountUpdate</stringValue>
+                <stringValue
+        >scaleMatters__scaleMattersAccountUpdate</stringValue>
             </value>
         </processMetadataValues>
         <name>myRule_1_A1</name>
@@ -42,7 +43,7 @@
             <processMetadataValues>
                 <name>objectType</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -98,10 +99,12 @@
                         <stringValue>Reference</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>myVariable_current.CreatedDate</leftValueReference>
+                <leftValueReference
+        >myVariable_current.CreatedDate</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
-                    <elementReference>myVariable_current.LastModifiedDate</elementReference>
+                    <elementReference
+          >myVariable_current.LastModifiedDate</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -110,8 +113,10 @@
             <label>Account is created/edited , call Apex</label>
         </rules>
     </decisions>
-    <description>Used to run scaleMatters&apos; Apex to check Validity of an Account</description>
-    <interviewLabel>scaleMatters__scaleMattersAccountProcess-3_InterviewLabel</interviewLabel>
+    <description
+  >Used to run scaleMatters&apos; Apex to check Validity of an Account</description>
+    <interviewLabel
+  >scaleMatters__scaleMattersAccountProcess-3_InterviewLabel</interviewLabel>
     <label>scaleMattersAccountProcess</label>
     <processMetadataValues>
         <name>ObjectType</name>

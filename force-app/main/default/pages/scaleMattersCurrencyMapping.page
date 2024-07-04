@@ -1,129 +1,217 @@
 <!-- Page: -->
-<apex:page controller="scaleMattersCurrencyMappingCNTRL" lightningStylesheets="true" action="{!createCurrencyMapping}">
-   <apex:form >
-       <apex:pageBlock title="scaleMatters Currency Field Mapping" >
-           <iframe id="theIframe" scrolling="no" name="theIframe" src="https://www.scalematters.com/scalematters-currency-mapping" width="100%" style="border:none;"></iframe>
-           <apex:pageBlockSection title="Map Any Opportunity Currency Field with scaleMatters Currency 1" >
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Currency Field 1:" ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMapping1}" size="1" multiselect="false" >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                    <apex:commandButton value="Map Field" action="{!currencyField1Mapping}" />
-               </apex:pageBlockSectionItem><br/>
-              <apex:pageblockSectionItem >
-               <apex:outputText style="margin-left: -20%;" value="Map this field to the currency field that best represents Monthly Recurring Revenue. If the field you want to map here has an API Name of MRR__c please create a formula field to sync off of." ></apex:outputText>
-              </apex:pageblockSectionItem>
-               
-            </apex:pageBlockSection>
-           <br/>
-           <apex:pageBlockSection title="Map Any Opportunity Currency Field with scaleMatters Currency 2">
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Currency Field 2:" ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMapping2}" size="1" multiselect="false" >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                    <apex:commandButton value="Map Field" action="{!currencyField2Mapping}"  />
-               </apex:pageBlockSectionItem><br/>
-               
-              <apex:pageblockSectionItem >
-               <apex:outputText style="margin-left: -20%;" value="Map this field to the currency field that best represents Annual Recurring Revenue. If the field you want to map here has an API Name of ACV__c please create a formula field to sync off of." ></apex:outputText>
-              </apex:pageblockSectionItem>
+<apex:page
+  controller="scaleMattersCurrencyMappingCNTRL"
+  lightningStylesheets="true"
+  action="{!createCurrencyMapping}"
+>
+  <apex:form>
+    <apex:pageBlock title="scaleMatters Currency Field Mapping">
+      <iframe
+        id="theIframe"
+        scrolling="no"
+        name="theIframe"
+        src="https://www.scalematters.com/scalematters-currency-mapping"
+        width="100%"
+        style="border: none"
+      ></iframe>
+      <apex:pageBlockSection
+        title="Map Any Opportunity Currency Field with scaleMatters Currency 1"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Currency Field 1:"
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMapping1}" size="1" multiselect="false">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+          <apex:commandButton
+            value="Map Field"
+            action="{!currencyField1Mapping}"
+          /> </apex:pageBlockSectionItem
+        ><br />
+        <apex:pageblockSectionItem>
+          <apex:outputText
+            style="margin-left: -20%"
+            value="Map this field to the currency field that best represents Monthly Recurring Revenue. If the field you want to map here has an API Name of MRR__c please create a formula field to sync off of."
+          ></apex:outputText>
+        </apex:pageblockSectionItem>
+      </apex:pageBlockSection>
+      <br />
+      <apex:pageBlockSection
+        title="Map Any Opportunity Currency Field with scaleMatters Currency 2"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Currency Field 2:"
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMapping2}" size="1" multiselect="false">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+          <apex:commandButton
+            value="Map Field"
+            action="{!currencyField2Mapping}"
+          /> </apex:pageBlockSectionItem
+        ><br />
 
-            </apex:pageBlockSection>
-           <br/>
-           <apex:pageBlockSection title="Map Any Opportunity Currency Field with scaleMatters Currency 3" >
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Currency Field 3:" ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMapping3}" size="1" multiselect="false" >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                    <apex:commandButton value="Map Field" action="{!currencyField3Mapping}" />
-               </apex:pageBlockSectionItem><br/>
-               
-              <apex:pageblockSectionItem >
-               <apex:outputText style="margin-left: -20%;" value="Map this field to the currency field that best represents First Year Contract value. Typically this will be Annual Recurring Revenue plus Non-Recurring Revenue for the first year. If the field you want to map here has an API Name of FYCV__c please create a formula field to sync off of." ></apex:outputText>
-              </apex:pageblockSectionItem>
+        <apex:pageblockSectionItem>
+          <apex:outputText
+            style="margin-left: -20%"
+            value="Map this field to the currency field that best represents Annual Recurring Revenue. If the field you want to map here has an API Name of ACV__c please create a formula field to sync off of."
+          ></apex:outputText>
+        </apex:pageblockSectionItem>
+      </apex:pageBlockSection>
+      <br />
+      <apex:pageBlockSection
+        title="Map Any Opportunity Currency Field with scaleMatters Currency 3"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Currency Field 3:"
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMapping3}" size="1" multiselect="false">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+          <apex:commandButton
+            value="Map Field"
+            action="{!currencyField3Mapping}"
+          /> </apex:pageBlockSectionItem
+        ><br />
 
-            </apex:pageBlockSection>
-           <br/>
-           <apex:pageBlockSection title="Map Any Opportunity Currency Field with scaleMatters Currency 4" >
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Currency Field 4:" ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMapping4}" size="1" multiselect="false" >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                    <apex:commandButton value="Map Field" action="{!currencyField4Mapping}" />
-               </apex:pageBlockSectionItem><br/>
-               
-              <apex:pageblockSectionItem >
-               <apex:outputText style="margin-left: -20%;" value="Map this field to the currency field that best represents Total Contract Value. If the field you want to map here has an API Name of TCV__c please create a formula field to sync off of." ></apex:outputText>
-              </apex:pageblockSectionItem>
+        <apex:pageblockSectionItem>
+          <apex:outputText
+            style="margin-left: -20%"
+            value="Map this field to the currency field that best represents First Year Contract value. Typically this will be Annual Recurring Revenue plus Non-Recurring Revenue for the first year. If the field you want to map here has an API Name of FYCV__c please create a formula field to sync off of."
+          ></apex:outputText>
+        </apex:pageblockSectionItem>
+      </apex:pageBlockSection>
+      <br />
+      <apex:pageBlockSection
+        title="Map Any Opportunity Currency Field with scaleMatters Currency 4"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Currency Field 4:"
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMapping4}" size="1" multiselect="false">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+          <apex:commandButton
+            value="Map Field"
+            action="{!currencyField4Mapping}"
+          /> </apex:pageBlockSectionItem
+        ><br />
 
-            </apex:pageBlockSection>
-           <br/>
-           <apex:pageBlockSection title="Map Any Opportunity Currency Field with scaleMatters Currency 5" >
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Currency Field 5:" ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMapping5}" size="1" multiselect="false" >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                    <apex:commandButton value="Map Field" action="{!currencyField5Mapping}" />
-               </apex:pageBlockSectionItem><br/>
-               
-              <apex:pageblockSectionItem >
-               <apex:outputText style="margin-left: -20%;" value="Map this field to the currency field that best represents a one-time fee. Examples of this is a set up fee, start up fee, etc. If the field you want to map here has an API Name of OneTime_Fee__c please create a formula field to sync off of." ></apex:outputText>
-              </apex:pageblockSectionItem>
+        <apex:pageblockSectionItem>
+          <apex:outputText
+            style="margin-left: -20%"
+            value="Map this field to the currency field that best represents Total Contract Value. If the field you want to map here has an API Name of TCV__c please create a formula field to sync off of."
+          ></apex:outputText>
+        </apex:pageblockSectionItem>
+      </apex:pageBlockSection>
+      <br />
+      <apex:pageBlockSection
+        title="Map Any Opportunity Currency Field with scaleMatters Currency 5"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Currency Field 5:"
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMapping5}" size="1" multiselect="false">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+          <apex:commandButton
+            value="Map Field"
+            action="{!currencyField5Mapping}"
+          /> </apex:pageBlockSectionItem
+        ><br />
 
-            </apex:pageBlockSection>
-           <br/>
-           <apex:pageBlockSection title="Map Any Opportunity Currency Field with scaleMatters Currency 6" >
-               <apex:outputText style="margin-left: 60%;font-weight: bold;" value="scaleMatters Currency Field 6:" ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMapping6}" size="1" multiselect="false" >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                    <apex:commandButton value="Map Field" action="{!currencyField6Mapping}" />
-               </apex:pageBlockSectionItem><br/>
-               
-              <apex:pageblockSectionItem >
-               <apex:outputText style="margin-left: -20%;" value="Should you sell tangible items or perpetual products map this field to the currency field that best represents this value. If the field you want to map here has an API Name of Product_OneTime_Fee__c please create a formula field to sync off of." ></apex:outputText>
-              </apex:pageblockSectionItem>
+        <apex:pageblockSectionItem>
+          <apex:outputText
+            style="margin-left: -20%"
+            value="Map this field to the currency field that best represents a one-time fee. Examples of this is a set up fee, start up fee, etc. If the field you want to map here has an API Name of OneTime_Fee__c please create a formula field to sync off of."
+          ></apex:outputText>
+        </apex:pageblockSectionItem>
+      </apex:pageBlockSection>
+      <br />
+      <apex:pageBlockSection
+        title="Map Any Opportunity Currency Field with scaleMatters Currency 6"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Currency Field 6:"
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMapping6}" size="1" multiselect="false">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+          <apex:commandButton
+            value="Map Field"
+            action="{!currencyField6Mapping}"
+          /> </apex:pageBlockSectionItem
+        ><br />
 
-            </apex:pageBlockSection>
-           <br/>
-           <apex:pageBlockSection title="Map Any Opportunity Currency Field with scaleMatters Currency 7" >
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Currency Field 7:" ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMapping7}" size="1" multiselect="false" >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                    <apex:commandButton value="Map Field" action="{!currencyField7Mapping}" />
-               </apex:pageBlockSectionItem><br/>
-               
-              <apex:pageblockSectionItem >
-               <apex:outputText style="margin-left: -20%;" value="Map this field to the currency field that best represents a currency not outline above that you'd want to see in SellScience but would not be included in benchmarking." ></apex:outputText>
-              </apex:pageblockSectionItem>
+        <apex:pageblockSectionItem>
+          <apex:outputText
+            style="margin-left: -20%"
+            value="Should you sell tangible items or perpetual products map this field to the currency field that best represents this value. If the field you want to map here has an API Name of Product_OneTime_Fee__c please create a formula field to sync off of."
+          ></apex:outputText>
+        </apex:pageblockSectionItem>
+      </apex:pageBlockSection>
+      <br />
+      <apex:pageBlockSection
+        title="Map Any Opportunity Currency Field with scaleMatters Currency 7"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Currency Field 7:"
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMapping7}" size="1" multiselect="false">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+          <apex:commandButton
+            value="Map Field"
+            action="{!currencyField7Mapping}"
+          /> </apex:pageBlockSectionItem
+        ><br />
 
-            </apex:pageBlockSection>
-           <br/>
-           <apex:pageBlockSection title="Map Any Opportunity Currency Field with scaleMatters Currency 8" >
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Currency Field 8:" ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMapping8}" size="1" multiselect="false" >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                    <apex:commandButton value="Map Field" action="{!currencyField8Mapping}" />
-               </apex:pageBlockSectionItem><br/>
-               
-              <apex:pageblockSectionItem >
-               <apex:outputText style="margin-left: -20%;" value="Map this field to the currency field that best represents a currency not outline above that you'd want to see in SellScience but would not be included in benchmarking." ></apex:outputText>
-              </apex:pageblockSectionItem>
+        <apex:pageblockSectionItem>
+          <apex:outputText
+            style="margin-left: -20%"
+            value="Map this field to the currency field that best represents a currency not outline above that you'd want to see in SellScience but would not be included in benchmarking."
+          ></apex:outputText>
+        </apex:pageblockSectionItem>
+      </apex:pageBlockSection>
+      <br />
+      <apex:pageBlockSection
+        title="Map Any Opportunity Currency Field with scaleMatters Currency 8"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Currency Field 8:"
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMapping8}" size="1" multiselect="false">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+          <apex:commandButton
+            value="Map Field"
+            action="{!currencyField8Mapping}"
+          /> </apex:pageBlockSectionItem
+        ><br />
 
-            </apex:pageBlockSection>
-           
+        <apex:pageblockSectionItem>
+          <apex:outputText
+            style="margin-left: -20%"
+            value="Map this field to the currency field that best represents a currency not outline above that you'd want to see in SellScience but would not be included in benchmarking."
+          ></apex:outputText>
+        </apex:pageblockSectionItem>
+      </apex:pageBlockSection>
     </apex:pageBlock>
-       
-    </apex:form>
-
+  </apex:form>
 </apex:page>

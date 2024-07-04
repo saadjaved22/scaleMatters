@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
     <assignments>
-        <description>Used to store values of data you&apos;d want to pass from the 3rd party tool</description>
+        <description
+    >Used to store values of data you&apos;d want to pass from the 3rd party tool</description>
         <name>Store_Booked_via_3rd_Party_Tool_Variables_FIXME</name>
         <label>Store Booked via 3rd Party Tool Variables - FIXME</label>
         <locationX>1172</locationX>
@@ -18,7 +19,8 @@
             <assignToReference>varMeetingSourceRole</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Get_Assigned_to_User.Current_Role__c</elementReference>
+                <elementReference
+        >Get_Assigned_to_User.Current_Role__c</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -26,7 +28,8 @@
         </connector>
     </assignments>
     <assignments>
-        <description>Used to store values of user who created event</description>
+        <description
+    >Used to store values of user who created event</description>
         <name>Store_Created_by_Variables</name>
         <label>Store Created by Variables</label>
         <locationX>1436</locationX>
@@ -42,7 +45,8 @@
             <assignToReference>varMeetingSourceRole</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Get_Created_by_User.Current_Role__c</elementReference>
+                <elementReference
+        >Get_Created_by_User.Current_Role__c</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -101,21 +105,24 @@
             <name>Contact_Missing_Meeting_Data_Lead_3_and_Lead_2</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Contact.Meeting_Date__c</leftValueReference>
+                <leftValueReference
+        >Get_Contact.Meeting_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Get_Contact.Lead_3_Date__c</leftValueReference>
+                <leftValueReference
+        >Get_Contact.Lead_3_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Get_Contact.Lead_2_Date__c</leftValueReference>
+                <leftValueReference
+        >Get_Contact.Lead_2_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -130,21 +137,24 @@
             <name>Contact_Missing_Meeting_Data_and_Lead_3</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Contact.Meeting_Date__c</leftValueReference>
+                <leftValueReference
+        >Get_Contact.Meeting_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Get_Contact.Lead_3_Date__c</leftValueReference>
+                <leftValueReference
+        >Get_Contact.Lead_3_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Contact_Update_Meeting_and_Lead_3_FIXME</targetReference>
+                <targetReference
+        >Contact_Update_Meeting_and_Lead_3_FIXME</targetReference>
             </connector>
             <label>Contact - Missing Meeting Data and Lead 3</label>
         </rules>
@@ -152,20 +162,23 @@
             <name>Contact_Missing_Meeting_Data</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Contact.Meeting_Date__c</leftValueReference>
+                <leftValueReference
+        >Get_Contact.Meeting_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Contact_Update_Meeting_Data_FIXME</targetReference>
+                <targetReference
+        >Contact_Update_Meeting_Data_FIXME</targetReference>
             </connector>
             <label>Contact - Missing Meeting Data</label>
         </rules>
     </decisions>
     <decisions>
-        <description>Checking to see if Contact&apos;s Meeting data is there or not</description>
+        <description
+    >Checking to see if Contact&apos;s Meeting data is there or not</description>
         <name>Does_Contact_have_Meeting_Info</name>
         <label>Does Contact have Meeting Info?</label>
         <locationX>3548</locationX>
@@ -175,14 +188,16 @@
             <name>Contact_has_Meeting_Data</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Contact_Edit.Meeting_Date__c</leftValueReference>
+                <leftValueReference
+        >Get_Contact_Edit.Meeting_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Is_Contact_s_Meeting_Data_same_Prior</targetReference>
+                <targetReference
+        >Is_Contact_s_Meeting_Data_same_Prior</targetReference>
             </connector>
             <label>Contact has Meeting Data</label>
         </rules>
@@ -201,7 +216,8 @@
             <name>Lead_Missing_Meeting_Data_Lead_3_and_Lead_2</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Lead.Meeting_Date__c</leftValueReference>
+                <leftValueReference
+        >Get_Lead.Meeting_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -230,7 +246,8 @@
             <name>Lead_Missing_Meeting_Data_and_Lead_3</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Lead.Meeting_Date__c</leftValueReference>
+                <leftValueReference
+        >Get_Lead.Meeting_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -244,7 +261,8 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Lead_Update_Meeting_and_Lead_3_FIXME</targetReference>
+                <targetReference
+        >Lead_Update_Meeting_and_Lead_3_FIXME</targetReference>
             </connector>
             <label>Lead - Missing Meeting Data and Lead 3</label>
         </rules>
@@ -252,20 +270,23 @@
             <name>Lead_Missing_Meeting_Data</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Lead.Meeting_Date__c</leftValueReference>
+                <leftValueReference
+        >Get_Lead.Meeting_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Lead_Update_Meeting_Data_FIXME</targetReference>
+                <targetReference
+        >Lead_Update_Meeting_Data_FIXME</targetReference>
             </connector>
             <label>Lead - Missing Meeting Data</label>
         </rules>
     </decisions>
     <decisions>
-        <description>Checking to see if Lead&apos;s Meeting data is there or not</description>
+        <description
+    >Checking to see if Lead&apos;s Meeting data is there or not</description>
         <name>Does_Lead_have_Meeting_Info</name>
         <label>Does Lead have Meeting Info?</label>
         <locationX>2756</locationX>
@@ -275,20 +296,23 @@
             <name>Lead_has_Meeting_Data</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Lead_Edit.Meeting_Date__c</leftValueReference>
+                <leftValueReference
+        >Get_Lead_Edit.Meeting_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Is_Lead_s_Meeting_Data_same_Prior</targetReference>
+                <targetReference
+        >Is_Lead_s_Meeting_Data_same_Prior</targetReference>
             </connector>
             <label>Lead has Meeting Data</label>
         </rules>
     </decisions>
     <decisions>
-        <description>Checking to see if contact meeting date is same as the prior start date</description>
+        <description
+    >Checking to see if contact meeting date is same as the prior start date</description>
         <name>Is_Contact_s_Meeting_Data_same_Prior</name>
         <label>Is Contact&apos;s Meeting Data same Prior?</label>
         <locationX>3350</locationX>
@@ -298,7 +322,8 @@
             <name>Contact_Meeting_Date_Update</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Contact_Edit.Meeting_Date__c</leftValueReference>
+                <leftValueReference
+        >Get_Contact_Edit.Meeting_Date__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>PriorStartDate</elementReference>
@@ -311,7 +336,8 @@
         </rules>
     </decisions>
     <decisions>
-        <description>Checking to see if lead meeting date is same as the prior start date</description>
+        <description
+    >Checking to see if lead meeting date is same as the prior start date</description>
         <name>Is_Lead_s_Meeting_Data_same_Prior</name>
         <label>Is Lead&apos;s Meeting Data same Prior?</label>
         <locationX>2558</locationX>
@@ -321,7 +347,8 @@
             <name>Lead_Meeting_Date_Update</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Lead_Edit.Meeting_Date__c</leftValueReference>
+                <leftValueReference
+        >Get_Lead_Edit.Meeting_Date__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>PriorStartDate</elementReference>
@@ -360,7 +387,8 @@
         </rules>
     </decisions>
     <decisions>
-        <description>Checking to see if the Start Date has changed or not</description>
+        <description
+    >Checking to see if the Start Date has changed or not</description>
         <name>Start_Date_Changed</name>
         <label>Start Date Changed</label>
         <locationX>3828</locationX>
@@ -383,7 +411,8 @@
         </rules>
     </decisions>
     <decisions>
-        <description>Checking to see who booked the meeting. You&apos;ll want to update this to include how meetings come into Salesforce. Are they coming from a 3rd party application connected with fields you&apos;d want to pull from to attribute to that solutions or other users. If you&apos;re not you can delete this decision and use the Default path.</description>
+        <description
+    >Checking to see who booked the meeting. You&apos;ll want to update this to include how meetings come into Salesforce. Are they coming from a 3rd party application connected with fields you&apos;d want to pull from to attribute to that solutions or other users. If you&apos;re not you can delete this decision and use the Default path.</description>
         <name>Who_Booked_Meeting_FIXME</name>
         <label>Who Booked Meeting - FIXME</label>
         <locationX>1304</locationX>
@@ -409,7 +438,8 @@
         </rules>
     </decisions>
     <decisions>
-        <description>Checking to see if we are updating a Lead or Contact</description>
+        <description
+    >Checking to see if we are updating a Lead or Contact</description>
         <name>WhoID_is_what</name>
         <label>WhoID is what?</label>
         <locationX>1304</locationX>
@@ -446,7 +476,8 @@
             <label>WhoID = Contact</label>
         </rules>
     </decisions>
-    <description>This template is designed to start you off when leveraging the People Meeting model with scaleMatters to automatically update a Lead or Contact to Lead 3 based on Event Name or check if an existing meeting date has changed to update the Lead or Contact.</description>
+    <description
+  >This template is designed to start you off when leveraging the People Meeting model with scaleMatters to automatically update a Lead or Contact to Lead 3 based on Event Name or check if an existing meeting date has changed to update the Lead or Contact.</description>
     <environments>Default</environments>
     <formulas>
         <description>Checking if record is new or not</description>
@@ -470,7 +501,8 @@ FALSE
         <dataType>Date</dataType>
         <expression>DATEVALUE({!$Record__Prior.StartDateTime})</expression>
     </formulas>
-    <interviewLabel>sM - Event - People Meeting - Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >sM - Event - People Meeting - Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <isTemplate>true</isTemplate>
     <label>sM - Event - People Meeting - Flow</label>
     <processMetadataValues>
@@ -498,9 +530,11 @@ FALSE
         <label>Get Assigned to User</label>
         <locationX>1172</locationX>
         <locationY>575</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Store_Booked_via_3rd_Party_Tool_Variables_FIXME</targetReference>
+            <targetReference
+      >Store_Booked_via_3rd_Party_Tool_Variables_FIXME</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -520,7 +554,8 @@ FALSE
         <label>Get Contact</label>
         <locationX>1502</locationX>
         <locationY>1031</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Does_Contact_have_Meeting_Data</targetReference>
         </connector>
@@ -542,7 +577,8 @@ FALSE
         <label>Get Contact Edit</label>
         <locationX>3548</locationX>
         <locationY>695</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Does_Contact_have_Meeting_Info</targetReference>
         </connector>
@@ -564,7 +600,8 @@ FALSE
         <label>Get Created by User</label>
         <locationX>1436</locationX>
         <locationY>575</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Store_Created_by_Variables</targetReference>
         </connector>
@@ -586,7 +623,8 @@ FALSE
         <label>Get Lead</label>
         <locationX>446</locationX>
         <locationY>1031</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Does_Lead_have_Meeting_Data</targetReference>
         </connector>
@@ -608,7 +646,8 @@ FALSE
         <label>Get Lead Edit</label>
         <locationX>2756</locationX>
         <locationY>695</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Does_Lead_have_Meeting_Info</targetReference>
         </connector>
@@ -625,7 +664,8 @@ FALSE
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
-        <description>In this update you&apos;ll update to include meeting data. Depending on your organization you might have other fields you&apos;ll want to update to signify a meeting has been set. Example, would be updating Status.</description>
+        <description
+    >In this update you&apos;ll update to include meeting data. Depending on your organization you might have other fields you&apos;ll want to update to signify a meeting has been set. Example, would be updating Status.</description>
         <name>Contact_Rating_FIXME</name>
         <label>Contact - Rating - FIXME</label>
         <locationX>1898</locationX>
@@ -653,7 +693,8 @@ FALSE
         <inputAssignments>
             <field>Record_Owner_Role__c</field>
             <value>
-                <elementReference>$Record.Owner:User.Current_Role__c</elementReference>
+                <elementReference
+        >$Record.Owner:User.Current_Role__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -677,7 +718,8 @@ FALSE
         <object>Contact</object>
     </recordUpdates>
     <recordUpdates>
-        <description>In this update you&apos;ll update to include meeting data. Depending on your organization you might have other fields you&apos;ll want to update to signify a meeting has been set. Example, would be updating Status.</description>
+        <description
+    >In this update you&apos;ll update to include meeting data. Depending on your organization you might have other fields you&apos;ll want to update to signify a meeting has been set. Example, would be updating Status.</description>
         <name>Contact_Update_All_Data_FIXME</name>
         <label>Contact - Update All Data - FIXME</label>
         <locationX>1106</locationX>
@@ -741,7 +783,8 @@ FALSE
         <inputAssignments>
             <field>Record_Owner_Role__c</field>
             <value>
-                <elementReference>$Record.Owner:User.Current_Role__c</elementReference>
+                <elementReference
+        >$Record.Owner:User.Current_Role__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -765,7 +808,8 @@ FALSE
         <object>Contact</object>
     </recordUpdates>
     <recordUpdates>
-        <description>In this update you&apos;ll update to include meeting data. Depending on your organization you might have other fields you&apos;ll want to update to signify a meeting has been set. Example, would be updating Status.</description>
+        <description
+    >In this update you&apos;ll update to include meeting data. Depending on your organization you might have other fields you&apos;ll want to update to signify a meeting has been set. Example, would be updating Status.</description>
         <name>Contact_Update_Meeting_and_Lead_3_FIXME</name>
         <label>Contact - Update Meeting and Lead 3 - FIXME</label>
         <locationX>1370</locationX>
@@ -817,7 +861,8 @@ FALSE
         <inputAssignments>
             <field>Record_Owner_Role__c</field>
             <value>
-                <elementReference>$Record.Owner:User.Current_Role__c</elementReference>
+                <elementReference
+        >$Record.Owner:User.Current_Role__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -841,7 +886,8 @@ FALSE
         <object>Contact</object>
     </recordUpdates>
     <recordUpdates>
-        <description>In this update you&apos;ll update to include meeting data. Depending on your organization you might have other fields you&apos;ll want to update to signify a meeting has been set. Example, would be updating Status.</description>
+        <description
+    >In this update you&apos;ll update to include meeting data. Depending on your organization you might have other fields you&apos;ll want to update to signify a meeting has been set. Example, would be updating Status.</description>
         <name>Contact_Update_Meeting_Data_FIXME</name>
         <label>Contact - Update Meeting Data - FIXME</label>
         <locationX>1634</locationX>
@@ -887,7 +933,8 @@ FALSE
         <inputAssignments>
             <field>Record_Owner_Role__c</field>
             <value>
-                <elementReference>$Record.Owner:User.Current_Role__c</elementReference>
+                <elementReference
+        >$Record.Owner:User.Current_Role__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -911,7 +958,8 @@ FALSE
         <object>Contact</object>
     </recordUpdates>
     <recordUpdates>
-        <description>In this update you&apos;ll update to include meeting data. Depending on your organization you might have other fields you&apos;ll want to update to signify a meeting has been set. Example, would be updating Status.</description>
+        <description
+    >In this update you&apos;ll update to include meeting data. Depending on your organization you might have other fields you&apos;ll want to update to signify a meeting has been set. Example, would be updating Status.</description>
         <name>Lead_Rating_FIXME</name>
         <label>Lead - Rating - FIXME</label>
         <locationX>842</locationX>
@@ -939,7 +987,8 @@ FALSE
         <inputAssignments>
             <field>Record_Owner_Role__c</field>
             <value>
-                <elementReference>$Record.Owner:User.Current_Role__c</elementReference>
+                <elementReference
+        >$Record.Owner:User.Current_Role__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -963,7 +1012,8 @@ FALSE
         <object>Lead</object>
     </recordUpdates>
     <recordUpdates>
-        <description>In this update you&apos;ll update to include meeting data. Depending on your organization you might have other fields you&apos;ll want to update to signify a meeting has been set. Example, would be updating Status.</description>
+        <description
+    >In this update you&apos;ll update to include meeting data. Depending on your organization you might have other fields you&apos;ll want to update to signify a meeting has been set. Example, would be updating Status.</description>
         <name>Lead_Update_All_Data_FIXME</name>
         <label>Lead - Update All Data - FIXME</label>
         <locationX>50</locationX>
@@ -1027,7 +1077,8 @@ FALSE
         <inputAssignments>
             <field>Record_Owner_Role__c</field>
             <value>
-                <elementReference>$Record.Owner:User.Current_Role__c</elementReference>
+                <elementReference
+        >$Record.Owner:User.Current_Role__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1051,7 +1102,8 @@ FALSE
         <object>Lead</object>
     </recordUpdates>
     <recordUpdates>
-        <description>In this update you&apos;ll update to include meeting data. Depending on your organization you might have other fields you&apos;ll want to update to signify a meeting has been set. Example, would be updating Status.</description>
+        <description
+    >In this update you&apos;ll update to include meeting data. Depending on your organization you might have other fields you&apos;ll want to update to signify a meeting has been set. Example, would be updating Status.</description>
         <name>Lead_Update_Meeting_and_Lead_3_FIXME</name>
         <label>Lead - Update Meeting and Lead 3 - FIXME</label>
         <locationX>314</locationX>
@@ -1103,7 +1155,8 @@ FALSE
         <inputAssignments>
             <field>Record_Owner_Role__c</field>
             <value>
-                <elementReference>$Record.Owner:User.Current_Role__c</elementReference>
+                <elementReference
+        >$Record.Owner:User.Current_Role__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1127,7 +1180,8 @@ FALSE
         <object>Lead</object>
     </recordUpdates>
     <recordUpdates>
-        <description>In this update you&apos;ll update to include meeting data. Depending on your organization you might have other fields you&apos;ll want to update to signify a meeting has been set. Example, would be updating Status.</description>
+        <description
+    >In this update you&apos;ll update to include meeting data. Depending on your organization you might have other fields you&apos;ll want to update to signify a meeting has been set. Example, would be updating Status.</description>
         <name>Lead_Update_Meeting_Data_FIXME</name>
         <label>Lead - Update Meeting Data - FIXME</label>
         <locationX>578</locationX>
@@ -1173,7 +1227,8 @@ FALSE
         <inputAssignments>
             <field>Record_Owner_Role__c</field>
             <value>
-                <elementReference>$Record.Owner:User.Current_Role__c</elementReference>
+                <elementReference
+        >$Record.Owner:User.Current_Role__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1268,7 +1323,8 @@ FALSE
         <isOutput>false</isOutput>
     </variables>
     <variables>
-        <description>Used to store value user&apos;s scaleMatters&apos; role</description>
+        <description
+    >Used to store value user&apos;s scaleMatters&apos; role</description>
         <name>varMeetingSourceRole</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>

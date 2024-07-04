@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>scaleMatters_Currency_7__c</fullName>
-    <description>Map this field to the currency field that best represents a currency not outline above that you&apos;d want to see in scaleMatters but would not be included in benchmarking.</description>
+    <description
+  >Map this field to the currency field that best represents a currency not outline above that you&apos;d want to see in scaleMatters but would not be included in benchmarking.</description>
     <externalId>false</externalId>
     <label>scaleMatters Currency 7</label>
     <precision>18</precision>

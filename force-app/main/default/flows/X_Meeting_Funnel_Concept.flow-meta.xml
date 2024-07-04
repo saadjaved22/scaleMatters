@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
     <decisions>
-        <description>Making relationship connection from Event to Funnel Conversion Cycle</description>
+        <description
+    >Making relationship connection from Event to Funnel Conversion Cycle</description>
         <name>Check_if_related_to_Funnel_Conversion_Cycle</name>
         <label>Check if related to Funnel Conversion Cycle</label>
         <locationX>842</locationX>
@@ -12,7 +13,8 @@
             <name>Not_releated</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.scaleMatters__scaleMatters_Record__c</leftValueReference>
+                <leftValueReference
+        >$Record.scaleMatters__scaleMatters_Record__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -25,20 +27,23 @@
         </rules>
     </decisions>
     <decisions>
-        <description>Checking to see if the meeting date just needs to be updated</description>
+        <description
+    >Checking to see if the meeting date just needs to be updated</description>
         <name>Checking_Meeting_Date_is_Prior_Start_Date</name>
         <label>Checking Meeting Date is Prior Start Date</label>
         <locationX>666</locationX>
         <locationY>815</locationY>
         <defaultConnector>
-            <targetReference>Check_if_related_to_Funnel_Conversion_Cycle</targetReference>
+            <targetReference
+      >Check_if_related_to_Funnel_Conversion_Cycle</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Continue</defaultConnectorLabel>
         <rules>
             <name>Yes_Meeting_Date_is_Prior_Start</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Open_Funnel_Conversion_Cycle.Meeting_Date__c</leftValueReference>
+                <leftValueReference
+        >Get_Open_Funnel_Conversion_Cycle.Meeting_Date__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>PriorStartDate</elementReference>
@@ -51,7 +56,8 @@
         </rules>
     </decisions>
     <decisions>
-        <description>Checking if there is meeting information or not</description>
+        <description
+    >Checking if there is meeting information or not</description>
         <name>Does_Record_Have_Meeting_New</name>
         <label>Does Record Have Meeting - New</label>
         <locationX>182</locationX>
@@ -64,7 +70,8 @@
             <name>No_Meeting_New</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Open_Funnel_Conversion_Cycle.Meeting_Date__c</leftValueReference>
+                <leftValueReference
+        >Get_Open_Funnel_Conversion_Cycle.Meeting_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -120,7 +127,8 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Checking_Meeting_Date_is_Prior_Start_Date</targetReference>
+                <targetReference
+        >Checking_Meeting_Date_is_Prior_Start_Date</targetReference>
             </connector>
             <label>Yes - Start Date Changed</label>
         </rules>
@@ -136,7 +144,8 @@
             <name>Found_Record</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Open_Funnel_Conversion_Cycle.Id</leftValueReference>
+                <leftValueReference
+        >Get_Open_Funnel_Conversion_Cycle.Id</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -165,7 +174,8 @@ FALSE
         <dataType>Date</dataType>
         <expression>DATEVALUE({!$Record__Prior.StartDateTime})</expression>
     </formulas>
-    <interviewLabel>X-Meeting Funnel Concept {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >X-Meeting Funnel Concept {!$Flow.CurrentDateTime}</interviewLabel>
     <label>X-Meeting Funnel Concept</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -192,9 +202,11 @@ FALSE
         <label>Get Open Funnel Conversion Cycle</label>
         <locationX>1007</locationX>
         <locationY>335</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Was_an_Open_Funnel_Conversion_Cycle_Found</targetReference>
+            <targetReference
+      >Was_an_Open_Funnel_Conversion_Cycle_Found</targetReference>
         </connector>
         <filterLogic>(1 OR 2) AND 3</filterLogic>
         <filters>
@@ -231,7 +243,8 @@ FALSE
         <inputAssignments>
             <field>Funnel_Conversion_Cycle__c</field>
             <value>
-                <elementReference>Get_Open_Funnel_Conversion_Cycle.Id</elementReference>
+                <elementReference
+        >Get_Open_Funnel_Conversion_Cycle.Id</elementReference>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
@@ -250,7 +263,8 @@ FALSE
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Get_Open_Funnel_Conversion_Cycle.Id</elementReference>
+                <elementReference
+        >Get_Open_Funnel_Conversion_Cycle.Id</elementReference>
             </value>
         </filters>
         <inputAssignments>
@@ -275,7 +289,8 @@ FALSE
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Get_Open_Funnel_Conversion_Cycle.Id</elementReference>
+                <elementReference
+        >Get_Open_Funnel_Conversion_Cycle.Id</elementReference>
             </value>
         </filters>
         <inputAssignments>
@@ -287,7 +302,8 @@ FALSE
         <inputAssignments>
             <field>Meeting_Source_Role__c</field>
             <value>
-                <elementReference>$Record.CreatedBy.Current_Role__c</elementReference>
+                <elementReference
+        >$Record.CreatedBy.Current_Role__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>

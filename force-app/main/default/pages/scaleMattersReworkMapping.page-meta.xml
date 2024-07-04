@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
     <availableInTouch>true</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
-    <description>Used as a visualforce page to allow a user while configuring Salesforce and scaleMatters on when to close and create new Funnel Conversion Cycle records.</description>
+    <description
+  >Used as a visualforce page to allow a user while configuring Salesforce and scaleMatters on when to close and create new Funnel Conversion Cycle records.</description>
     <label>scaleMattersReworkMapping</label>
     <packageVersions>
         <majorNumber>1</majorNumber>

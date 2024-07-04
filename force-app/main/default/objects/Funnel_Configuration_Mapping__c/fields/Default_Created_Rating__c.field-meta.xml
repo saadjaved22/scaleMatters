@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Default_Created_Rating__c</fullName>
-    <description>Only used for Lead and Contact mapping. Used as a default option should the record not find a result to end up as Lead 0, Lead 1 or Lead 2.</description>
+    <description
+  >Only used for Lead and Contact mapping. Used as a default option should the record not find a result to end up as Lead 0, Lead 1 or Lead 2.</description>
     <externalId>false</externalId>
     <label>Default Created Rating</label>
     <required>false</required>

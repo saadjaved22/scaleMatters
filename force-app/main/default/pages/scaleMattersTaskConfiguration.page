@@ -1,32 +1,54 @@
-<apex:page lightningStylesheets="true" controller="scaleMattersTaskUpdate" title="scaleMatters Task Configuration" action="{!createTaskMapping}">
-    <apex:form >
-     <apex:pageBlock title="scaleMatters Task Configuration">
-         <iframe height="125px" id="theIframe" scrolling="no" name="theIframe" src="https://www.scalematters.com/scalematters-task-mapping" width="100%" style="border:none;"></iframe>
-         <apex:pageBlockSection title="Please Select LinkedIn Mapping">
-             <apex:pageBlockSectionItem >
-                 <apex:outputText value="Please Enter Mapping for LinkedIn"></apex:outputText>
-                 <apex:inputText value="{!linkedInMapping}"></apex:inputText>
-             </apex:pageBlockSectionItem>
-             <br/>
-         </apex:pageBlockSection>
-         <apex:pageBlockSection title="Please Select Email Mapping">
-             <apex:pageBlockSectionItem >
-                 <apex:outputText value="Please Enter Mapping for Email"></apex:outputText>
-                 <apex:inputText value="{!emailMapping}"></apex:inputText>
-             </apex:pageBlockSectionItem>
-             <br/>
-         </apex:pageBlockSection>
-         <apex:pageBlockSection title="Please Select Call Mapping">
-             <apex:pageBlockSectionItem >
-                 <apex:outputText value="Please Enter Mapping for Call"></apex:outputText>
-                 <apex:inputText value="{!callMapping}"></apex:inputText>             
-             </apex:pageBlockSectionItem>
-             <br/>
-             <br/>
-         </apex:pageBlockSection>
-         
-                       <apex:commandButton action="{!updateTaskMapping}" value="Save Mapping" style="margin-left: 630px;" />
+<apex:page
+  lightningStylesheets="true"
+  controller="scaleMattersTaskUpdate"
+  title="scaleMatters Task Configuration"
+  action="{!createTaskMapping}"
+>
+  <apex:form>
+    <apex:pageBlock title="scaleMatters Task Configuration">
+      <iframe
+        height="125px"
+        id="theIframe"
+        scrolling="no"
+        name="theIframe"
+        src="https://www.scalematters.com/scalematters-task-mapping"
+        width="100%"
+        style="border: none"
+      ></iframe>
+      <apex:pageBlockSection title="Please Select LinkedIn Mapping">
+        <apex:pageBlockSectionItem>
+          <apex:outputText
+            value="Please Enter Mapping for LinkedIn"
+          ></apex:outputText>
+          <apex:inputText value="{!linkedInMapping}"></apex:inputText>
+        </apex:pageBlockSectionItem>
+        <br />
+      </apex:pageBlockSection>
+      <apex:pageBlockSection title="Please Select Email Mapping">
+        <apex:pageBlockSectionItem>
+          <apex:outputText
+            value="Please Enter Mapping for Email"
+          ></apex:outputText>
+          <apex:inputText value="{!emailMapping}"></apex:inputText>
+        </apex:pageBlockSectionItem>
+        <br />
+      </apex:pageBlockSection>
+      <apex:pageBlockSection title="Please Select Call Mapping">
+        <apex:pageBlockSectionItem>
+          <apex:outputText
+            value="Please Enter Mapping for Call"
+          ></apex:outputText>
+          <apex:inputText value="{!callMapping}"></apex:inputText>
+        </apex:pageBlockSectionItem>
+        <br />
+        <br />
+      </apex:pageBlockSection>
 
-     </apex:pageBlock>
-    </apex:form>
+      <apex:commandButton
+        action="{!updateTaskMapping}"
+        value="Save Mapping"
+        style="margin-left: 630px"
+      />
+    </apex:pageBlock>
+  </apex:form>
 </apex:page>

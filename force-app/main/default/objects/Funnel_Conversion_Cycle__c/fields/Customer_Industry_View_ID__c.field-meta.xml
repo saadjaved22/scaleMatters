@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Customer_Industry_View_ID__c</fullName>
-    <description>Used the GUID for scaleMatters to run queries off of Industry View values</description>
+    <description
+  >Used the GUID for scaleMatters to run queries off of Industry View values</description>
     <externalId>false</externalId>
     <label>Customer Industry View ID</label>
     <length>32</length>

@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>User_Source__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <description>User who was the source of working this record originally for scaleMatters</description>
+    <description
+  >User who was the source of working this record originally for scaleMatters</description>
     <externalId>false</externalId>
     <label>User Source</label>
     <referenceTo>User</referenceTo>
