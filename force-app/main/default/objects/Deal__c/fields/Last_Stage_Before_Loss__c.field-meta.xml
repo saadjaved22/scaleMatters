@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Last_Stage_Before_Loss__c</fullName>
-    <description>Used to state what is/was the last stage an opportunity reached before a loss status.</description>
+    <description
+  >Used to state what is/was the last stage an opportunity reached before a loss status.</description>
     <externalId>false</externalId>
     <label>Last Stage Before Loss</label>
     <precision>2</precision>

@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Operational_View__c</fullName>
-    <description>The list of Operational Views a customer can use in scaleMatters</description>
+    <description
+  >The list of Operational Views a customer can use in scaleMatters</description>
     <externalId>false</externalId>
     <label>Operational View</label>
     <required>false</required>

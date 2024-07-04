@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <processMetadataValues>
             <name>apexSelection</name>
             <value>
-                <stringValue>scaleMatters__scaleMattersReworkConfig</stringValue>
+                <stringValue
+        >scaleMatters__scaleMattersReworkConfig</stringValue>
             </value>
         </processMetadataValues>
         <name>myRule_1_A1</name>
@@ -45,7 +46,7 @@
             <processMetadataValues>
                 <name>objectType</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -102,7 +103,7 @@
             <processMetadataValues>
                 <name>objectType</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -113,22 +114,27 @@
             </processMetadataValues>
             <name>ids</name>
             <value>
-                <elementReference>myVariable_current.Contact__c</elementReference>
+                <elementReference
+        >myVariable_current.Contact__c</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
     <apiVersion>57.0</apiVersion>
     <decisions>
-        <name>isChangedDecision2_myRule_1_scaleMatters_New_Recycle_Mapped_Date_c</name>
-        <label>isChangedDecision2_myRule_1_scaleMatters_New_Recycle_Mapped_Date_c</label>
+        <name
+    >isChangedDecision2_myRule_1_scaleMatters_New_Recycle_Mapped_Date_c</name>
+        <label
+    >isChangedDecision2_myRule_1_scaleMatters_New_Recycle_Mapped_Date_c</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>isChangedDecision3_myRule_1_scaleMatters_Old_Recycle_Mapped_Date_c</targetReference>
+            <targetReference
+      >isChangedDecision3_myRule_1_scaleMatters_Old_Recycle_Mapped_Date_c</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>isChangedRule_2_myRule_1_scaleMatters_New_Recycle_Mapped_Date_c</name>
+            <name
+      >isChangedRule_2_myRule_1_scaleMatters_New_Recycle_Mapped_Date_c</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>myVariable_old</leftValueReference>
@@ -138,29 +144,37 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>myVariable_old.New_Recycle_Mapped_Date__c</leftValueReference>
+                <leftValueReference
+        >myVariable_old.New_Recycle_Mapped_Date__c</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
-                    <elementReference>myVariable_current.New_Recycle_Mapped_Date__c</elementReference>
+                    <elementReference
+          >myVariable_current.New_Recycle_Mapped_Date__c</elementReference>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>isChangedDecision3_myRule_1_scaleMatters_Old_Recycle_Mapped_Date_c</targetReference>
+                <targetReference
+        >isChangedDecision3_myRule_1_scaleMatters_Old_Recycle_Mapped_Date_c</targetReference>
             </connector>
-            <label>isChangedRule_2_myRule_1_scaleMatters_New_Recycle_Mapped_Date_c</label>
+            <label
+      >isChangedRule_2_myRule_1_scaleMatters_New_Recycle_Mapped_Date_c</label>
         </rules>
     </decisions>
     <decisions>
-        <name>isChangedDecision3_myRule_1_scaleMatters_Old_Recycle_Mapped_Date_c</name>
-        <label>isChangedDecision3_myRule_1_scaleMatters_Old_Recycle_Mapped_Date_c</label>
+        <name
+    >isChangedDecision3_myRule_1_scaleMatters_Old_Recycle_Mapped_Date_c</name>
+        <label
+    >isChangedDecision3_myRule_1_scaleMatters_Old_Recycle_Mapped_Date_c</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>isChangedDecision6_myRule_5_scaleMatters_New_Recycle_Mapped_Date_c</targetReference>
+            <targetReference
+      >isChangedDecision6_myRule_5_scaleMatters_New_Recycle_Mapped_Date_c</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>isChangedRule_3_myRule_1_scaleMatters_Old_Recycle_Mapped_Date_c</name>
+            <name
+      >isChangedRule_3_myRule_1_scaleMatters_Old_Recycle_Mapped_Date_c</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>myVariable_old</leftValueReference>
@@ -170,29 +184,37 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>myVariable_old.Old_Recycle_Mapped_Date__c</leftValueReference>
+                <leftValueReference
+        >myVariable_old.Old_Recycle_Mapped_Date__c</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
-                    <elementReference>myVariable_current.Old_Recycle_Mapped_Date__c</elementReference>
+                    <elementReference
+          >myVariable_current.Old_Recycle_Mapped_Date__c</elementReference>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>isChangedDecision6_myRule_5_scaleMatters_New_Recycle_Mapped_Date_c</targetReference>
+                <targetReference
+        >isChangedDecision6_myRule_5_scaleMatters_New_Recycle_Mapped_Date_c</targetReference>
             </connector>
-            <label>isChangedRule_3_myRule_1_scaleMatters_Old_Recycle_Mapped_Date_c</label>
+            <label
+      >isChangedRule_3_myRule_1_scaleMatters_Old_Recycle_Mapped_Date_c</label>
         </rules>
     </decisions>
     <decisions>
-        <name>isChangedDecision6_myRule_5_scaleMatters_New_Recycle_Mapped_Date_c</name>
-        <label>isChangedDecision6_myRule_5_scaleMatters_New_Recycle_Mapped_Date_c</label>
+        <name
+    >isChangedDecision6_myRule_5_scaleMatters_New_Recycle_Mapped_Date_c</name>
+        <label
+    >isChangedDecision6_myRule_5_scaleMatters_New_Recycle_Mapped_Date_c</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>isChangedDecision7_myRule_5_scaleMatters_Old_Recycle_Mapped_Date_c</targetReference>
+            <targetReference
+      >isChangedDecision7_myRule_5_scaleMatters_Old_Recycle_Mapped_Date_c</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>isChangedRule_6_myRule_5_scaleMatters_New_Recycle_Mapped_Date_c</name>
+            <name
+      >isChangedRule_6_myRule_5_scaleMatters_New_Recycle_Mapped_Date_c</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>myVariable_old</leftValueReference>
@@ -202,21 +224,27 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>myVariable_old.New_Recycle_Mapped_Date__c</leftValueReference>
+                <leftValueReference
+        >myVariable_old.New_Recycle_Mapped_Date__c</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
-                    <elementReference>myVariable_current.New_Recycle_Mapped_Date__c</elementReference>
+                    <elementReference
+          >myVariable_current.New_Recycle_Mapped_Date__c</elementReference>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>isChangedDecision7_myRule_5_scaleMatters_Old_Recycle_Mapped_Date_c</targetReference>
+                <targetReference
+        >isChangedDecision7_myRule_5_scaleMatters_Old_Recycle_Mapped_Date_c</targetReference>
             </connector>
-            <label>isChangedRule_6_myRule_5_scaleMatters_New_Recycle_Mapped_Date_c</label>
+            <label
+      >isChangedRule_6_myRule_5_scaleMatters_New_Recycle_Mapped_Date_c</label>
         </rules>
     </decisions>
     <decisions>
-        <name>isChangedDecision7_myRule_5_scaleMatters_Old_Recycle_Mapped_Date_c</name>
-        <label>isChangedDecision7_myRule_5_scaleMatters_Old_Recycle_Mapped_Date_c</label>
+        <name
+    >isChangedDecision7_myRule_5_scaleMatters_Old_Recycle_Mapped_Date_c</name>
+        <label
+    >isChangedDecision7_myRule_5_scaleMatters_Old_Recycle_Mapped_Date_c</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
@@ -224,7 +252,8 @@
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>isChangedRule_7_myRule_5_scaleMatters_Old_Recycle_Mapped_Date_c</name>
+            <name
+      >isChangedRule_7_myRule_5_scaleMatters_Old_Recycle_Mapped_Date_c</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>myVariable_old</leftValueReference>
@@ -234,16 +263,19 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>myVariable_old.Old_Recycle_Mapped_Date__c</leftValueReference>
+                <leftValueReference
+        >myVariable_old.Old_Recycle_Mapped_Date__c</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
-                    <elementReference>myVariable_current.Old_Recycle_Mapped_Date__c</elementReference>
+                    <elementReference
+          >myVariable_current.Old_Recycle_Mapped_Date__c</elementReference>
                 </rightValue>
             </conditions>
             <connector>
                 <targetReference>myDecision</targetReference>
             </connector>
-            <label>isChangedRule_7_myRule_5_scaleMatters_Old_Recycle_Mapped_Date_c</label>
+            <label
+      >isChangedRule_7_myRule_5_scaleMatters_Old_Recycle_Mapped_Date_c</label>
         </rules>
     </decisions>
     <decisions>
@@ -289,7 +321,8 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>isChangedRule_2_myRule_1_scaleMatters_New_Recycle_Mapped_Date_c</leftValueReference>
+                <leftValueReference
+        >isChangedRule_2_myRule_1_scaleMatters_New_Recycle_Mapped_Date_c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -320,7 +353,8 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>isChangedRule_3_myRule_1_scaleMatters_Old_Recycle_Mapped_Date_c</leftValueReference>
+                <leftValueReference
+        >isChangedRule_3_myRule_1_scaleMatters_Old_Recycle_Mapped_Date_c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -357,7 +391,8 @@
                         <stringValue>GlobalConstant</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>myVariable_current.Lead__c</leftValueReference>
+                <leftValueReference
+        >myVariable_current.Lead__c</leftValueReference>
                 <operator>NotEqualTo</operator>
             </conditions>
             <connector>
@@ -406,7 +441,8 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>isChangedRule_6_myRule_5_scaleMatters_New_Recycle_Mapped_Date_c</leftValueReference>
+                <leftValueReference
+        >isChangedRule_6_myRule_5_scaleMatters_New_Recycle_Mapped_Date_c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -437,7 +473,8 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>isChangedRule_7_myRule_5_scaleMatters_Old_Recycle_Mapped_Date_c</leftValueReference>
+                <leftValueReference
+        >isChangedRule_7_myRule_5_scaleMatters_Old_Recycle_Mapped_Date_c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -474,7 +511,8 @@
                         <stringValue>GlobalConstant</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>myVariable_current.Contact__c</leftValueReference>
+                <leftValueReference
+        >myVariable_current.Contact__c</leftValueReference>
                 <operator>NotEqualTo</operator>
             </conditions>
             <connector>
@@ -483,7 +521,8 @@
             <label>Contact Mapped Date Field is changed</label>
         </rules>
     </decisions>
-    <interviewLabel>scaleMatters__scaleMattersProcess-12_InterviewLabel</interviewLabel>
+    <interviewLabel
+  >scaleMatters__scaleMattersProcess-12_InterviewLabel</interviewLabel>
     <label>scaleMattersProcess</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -510,7 +549,8 @@
         </value>
     </processMetadataValues>
     <processType>Workflow</processType>
-    <startElementReference>isChangedDecision2_myRule_1_scaleMatters_New_Recycle_Mapped_Date_c</startElementReference>
+    <startElementReference
+  >isChangedDecision2_myRule_1_scaleMatters_New_Recycle_Mapped_Date_c</startElementReference>
     <status>Obsolete</status>
     <variables>
         <name>myVariable_current</name>

@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>OneTime_Fee__c</fullName>
-    <description>Used to include a additional fees that are not recurring and not specifically included in Product One-Time Fee</description>
+    <description
+  >Used to include a additional fees that are not recurring and not specifically included in Product One-Time Fee</description>
     <externalId>false</externalId>
     <label>One-Time Fee</label>
     <precision>18</precision>

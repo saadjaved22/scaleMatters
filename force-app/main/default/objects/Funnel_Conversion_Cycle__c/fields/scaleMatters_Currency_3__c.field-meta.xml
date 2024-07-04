@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>scaleMatters_Currency_3__c</fullName>
-    <description>Map this field to the currency field that best represents First Year Contract value. Typically this will be Annual Recurring Revenue plus Non-Recurring Revenue for the first year.</description>
+    <description
+  >Map this field to the currency field that best represents First Year Contract value. Typically this will be Annual Recurring Revenue plus Non-Recurring Revenue for the first year.</description>
     <externalId>false</externalId>
     <label>scaleMatters Currency 3</label>
     <precision>18</precision>

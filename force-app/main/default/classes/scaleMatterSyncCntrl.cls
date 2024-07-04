@@ -1,535 +1,571 @@
 public class scaleMatterSyncCntrl {
-    
+  public String condition;
+  public void setcondition(String condition) {
+    this.condition = condition;
+  }
+  public String getcondition() {
+    String conditions = '';
 
-    public String condition ;
-    public void setcondition(String condition){
-        this.condition = condition;
-    
-    }
-    public String getcondition(){
-        
-        String conditions = '';
-        
-        List<scaleMatters__Sync_Mapping__c> smList = [select scaleMatters__Sync_Mapping__c from scaleMatters__Sync_Mapping__c where scaleMatters__Name__c LIKE 'scaleMatters Sync Mapping'];
-        
-        if(smList.size()>0){ 
-        conditions = smList[0].scaleMatters__Sync_Mapping__c;
-                
-        }
-        
-        return conditions;
-        
-    }
-    
-    public List<String> filtersList {get; set;}
+    List<scaleMatters__Sync_Mapping__c> smList = [
+      SELECT scaleMatters__Sync_Mapping__c
+      FROM scaleMatters__Sync_Mapping__c
+      WHERE scaleMatters__Name__c LIKE 'scaleMatters Sync Mapping'
+    ];
 
-    Public String filterType {set;}  
-    public List<SelectOption> getfilterType(){
-        
+    if (smList.size() > 0) {
+      conditions = smList[0].scaleMatters__Sync_Mapping__c;
+    }
+
+    return conditions;
+  }
+
+  public List<String> filtersList { get; set; }
+
+  public String filterType { set; }
+  public List<SelectOption> getfilterType() {
     List<SelectOption> selectoptions = new List<SelectOption>();
-        List<String> fList = new List<String>();
-        fList.add('SOQL Condition');
-        fList.add('Filter Condition');
-        
-        
-        for(String operator: fList){
-            
-        selectoptions.add(new SelectOption(operator,operator));
+    List<String> fList = new List<String>();
+    fList.add('SOQL Condition');
+    fList.add('Filter Condition');
 
-        }
-        
-        return selectoptions;
+    for (String operator : fList) {
+      selectoptions.add(new SelectOption(operator, operator));
     }
-    
-    
-    
-    public String smFilter;
-    public String getsmFilter() {
-        return smFilter;
-    }
-    public void setsmFilter(String smFilter) {
-        this.smFilter = smFilter;
-    }
-    
-    public void updateFilterMapping(){
-        List<scaleMatters__Sync_Mapping__c> smList = [select scaleMatters__Filter_Type__c from scaleMatters__Sync_Mapping__c where scaleMatters__Name__c LIKE 'scaleMatters Sync Mapping'];
-        if(smList.size()>0){        
-        smList[0].scaleMatters__Filter_Type__c = smFilter;
-        update smList;
-            
-        }
-    }    
-    
-    
-    
-    public void createSyncMapping(){
-        
-        List<scaleMatters__Run_Triggers__c> permissionCS = [select scaleMatters__Name__c from scaleMatters__Run_Triggers__c where scaleMatters__Name__c Like 'scaleMatters Run Triggers' AND isDeleted = false];
-        
-        if(permissionCS.size() == 0){
-            
-            scaleMatters__Run_Triggers__c permissionsObj = new scaleMatters__Run_Triggers__c();
-            permissionsObj.scaleMatters__Name__c = 'scaleMatters Run Triggers';
-            insert permissionsObj;
-            
-        }
-        
-        List<scaleMatters__Sync_Mapping__c> smList = [select scaleMatters__Name__c from scaleMatters__Sync_Mapping__c where scaleMatters__Name__c LIKE 'scaleMatters Sync Mapping'];
-        if(smList.size()==0){
-        
-            scaleMatters__Sync_Mapping__c sm = new scaleMatters__Sync_Mapping__c();
-            sm.scaleMatters__Name__c = 'scaleMatters Sync Mapping';
-            sm.scaleMatters__Filter_1_Mapping__c = '-';
-            sm.scaleMatters__Filter_1_Mapping__c = '-';  
-            sm.scaleMatters__Filter_2_Mapping__c = '-';  
-            sm.scaleMatters__Filter_3_Mapping__c = '-';  
-            sm.scaleMatters__Filter_4_Mapping__c = '-';
-            sm.scaleMatters__Filter_5_Mapping__c = '-';  
-            sm.scaleMatters__Filter_6_Mapping__c = '-';  
-            sm.scaleMatters__Filter_7_Mapping__c = '-';  
-            sm.scaleMatters__Filter_8_Mapping__c = '-';  
-            sm.scaleMatters__Filter_9_Mapping__c = '-';  
-            sm.scaleMatters__Filter_10_Mapping__c = '-';  
-            sm.scaleMatters__Filter_11_Mapping__c = '-';  
-            sm.scaleMatters__Filter_12_Mapping__c = '-';  
-            sm.scaleMatters__Filter_13_Mapping__c = '-';  
-            sm.scaleMatters__Filter_14_Mapping__c = '-';  
-            sm.scaleMatters__Filter_15_Mapping__c = '-';  
-            sm.scaleMatters__Filter_16_Mapping__c = '-';  
-            sm.scaleMatters__Filter_17_Mapping__c = '-';  
-            sm.scaleMatters__Filter_18_Mapping__c = '-';  
-            sm.scaleMatters__Filter_19_Mapping__c = '-';  
-            sm.scaleMatters__Filter_20_Mapping__c = '-';  
-            sm.scaleMatters__Filter_21_Mapping__c = '-';  
-            sm.scaleMatters__Filter_22_Mapping__c = '-';  
-            sm.scaleMatters__Filter_23_Mapping__c = '-';  
-            sm.scaleMatters__Filter_24_Mapping__c = '-';  
-            sm.scaleMatters__Filter_25_Mapping__c = '-';  
-            
-            
-        insert sm;
-            
-        }
-        
-    }   
-    
-    public void updateSyncMapping(){
-        List<scaleMatters__Sync_Mapping__c> smList = [select scaleMatters__Name__c from scaleMatters__Sync_Mapping__c where scaleMatters__Name__c LIKE 'scaleMatters Sync Mapping'];
-        if(smList.size()>0){        
-        smList[0].scaleMatters__Sync_Mapping__c = condition;
-        update smList;
-            
-        }
-    }    
-    
-    
-    //methods used to query all fields on Opportunity Object and insert in DropDown
-    public List<String> fieldsList {get; set;}  
-    public static List<String> getFieldsList(){
-        
-        List<String> cFList = new List<String>();
-        String SobjectApiName = 'Opportunity';
-        Map<String, Schema.SObjectType> schemaMap = Schema.getGlobalDescribe();
-        Map<String, Schema.SObjectField> fieldMap = schemaMap.get(SobjectApiName).getDescribe().fields.getMap();
-        for(String fieldName : fieldMap.keyset() )
-            {
-                //It provides to get the object fields label.
-             
-                    
-                    cFList.add(fieldMap.get(fieldName).getDescribe().getName());
-                                
-               
-                
-            }
-        
-        return cFList;
-                
-    }
-    Public String fields {set;}  
-    public List<SelectOption> getfields() {
-        List<SelectOption> options = new List<SelectOption>();
-        List < String > strList = new List < String > { 'None'};  
 
-        fieldsList = getFieldsList();
-        fieldsList.add(0, 'None');
-        
-        for(String cur: fieldsList){
-            
-                    options.add(new SelectOption(cur,cur));
+    return selectoptions;
+  }
 
-        }
-        
-        return options;
+  public String smFilter;
+  public String getsmFilter() {
+    return smFilter;
+  }
+  public void setsmFilter(String smFilter) {
+    this.smFilter = smFilter;
+  }
+
+  public void updateFilterMapping() {
+    List<scaleMatters__Sync_Mapping__c> smList = [
+      SELECT scaleMatters__Filter_Type__c
+      FROM scaleMatters__Sync_Mapping__c
+      WHERE scaleMatters__Name__c LIKE 'scaleMatters Sync Mapping'
+    ];
+    if (smList.size() > 0) {
+      smList[0].scaleMatters__Filter_Type__c = smFilter;
+      update smList;
     }
-    
-    //methods used for adding all values in operator dropdown
-    
-    Public String oprtrs {set;}  
-    public List<SelectOption> getoprtrs(){
-        
+  }
+
+  public void createSyncMapping() {
+    List<scaleMatters__Run_Triggers__c> permissionCS = [
+      SELECT scaleMatters__Name__c
+      FROM scaleMatters__Run_Triggers__c
+      WHERE
+        scaleMatters__Name__c LIKE 'scaleMatters Run Triggers'
+        AND isDeleted = FALSE
+    ];
+
+    if (permissionCS.size() == 0) {
+      scaleMatters__Run_Triggers__c permissionsObj = new scaleMatters__Run_Triggers__c();
+      permissionsObj.scaleMatters__Name__c = 'scaleMatters Run Triggers';
+      insert permissionsObj;
+    }
+
+    List<scaleMatters__Sync_Mapping__c> smList = [
+      SELECT scaleMatters__Name__c
+      FROM scaleMatters__Sync_Mapping__c
+      WHERE scaleMatters__Name__c LIKE 'scaleMatters Sync Mapping'
+    ];
+    if (smList.size() == 0) {
+      scaleMatters__Sync_Mapping__c sm = new scaleMatters__Sync_Mapping__c();
+      sm.scaleMatters__Name__c = 'scaleMatters Sync Mapping';
+      sm.scaleMatters__Filter_1_Mapping__c = '-';
+      sm.scaleMatters__Filter_1_Mapping__c = '-';
+      sm.scaleMatters__Filter_2_Mapping__c = '-';
+      sm.scaleMatters__Filter_3_Mapping__c = '-';
+      sm.scaleMatters__Filter_4_Mapping__c = '-';
+      sm.scaleMatters__Filter_5_Mapping__c = '-';
+      sm.scaleMatters__Filter_6_Mapping__c = '-';
+      sm.scaleMatters__Filter_7_Mapping__c = '-';
+      sm.scaleMatters__Filter_8_Mapping__c = '-';
+      sm.scaleMatters__Filter_9_Mapping__c = '-';
+      sm.scaleMatters__Filter_10_Mapping__c = '-';
+      sm.scaleMatters__Filter_11_Mapping__c = '-';
+      sm.scaleMatters__Filter_12_Mapping__c = '-';
+      sm.scaleMatters__Filter_13_Mapping__c = '-';
+      sm.scaleMatters__Filter_14_Mapping__c = '-';
+      sm.scaleMatters__Filter_15_Mapping__c = '-';
+      sm.scaleMatters__Filter_16_Mapping__c = '-';
+      sm.scaleMatters__Filter_17_Mapping__c = '-';
+      sm.scaleMatters__Filter_18_Mapping__c = '-';
+      sm.scaleMatters__Filter_19_Mapping__c = '-';
+      sm.scaleMatters__Filter_20_Mapping__c = '-';
+      sm.scaleMatters__Filter_21_Mapping__c = '-';
+      sm.scaleMatters__Filter_22_Mapping__c = '-';
+      sm.scaleMatters__Filter_23_Mapping__c = '-';
+      sm.scaleMatters__Filter_24_Mapping__c = '-';
+      sm.scaleMatters__Filter_25_Mapping__c = '-';
+
+      insert sm;
+    }
+  }
+
+  public void updateSyncMapping() {
+    List<scaleMatters__Sync_Mapping__c> smList = [
+      SELECT scaleMatters__Name__c
+      FROM scaleMatters__Sync_Mapping__c
+      WHERE scaleMatters__Name__c LIKE 'scaleMatters Sync Mapping'
+    ];
+    if (smList.size() > 0) {
+      smList[0].scaleMatters__Sync_Mapping__c = condition;
+      update smList;
+    }
+  }
+
+  //methods used to query all fields on Opportunity Object and insert in DropDown
+  public List<String> fieldsList { get; set; }
+  public static List<String> getFieldsList() {
+    List<String> cFList = new List<String>();
+    String SobjectApiName = 'Opportunity';
+    Map<String, Schema.SObjectType> schemaMap = Schema.getGlobalDescribe();
+    Map<String, Schema.SObjectField> fieldMap = schemaMap.get(SobjectApiName)
+      .getDescribe()
+      .fields.getMap();
+    for (String fieldName : fieldMap.keyset()) {
+      //It provides to get the object fields label.
+
+      cFList.add(fieldMap.get(fieldName).getDescribe().getName());
+    }
+
+    return cFList;
+  }
+  public String fields { set; }
+  public List<SelectOption> getfields() {
+    List<SelectOption> options = new List<SelectOption>();
+    List<String> strList = new List<String>{ 'None' };
+
+    fieldsList = getFieldsList();
+    fieldsList.add(0, 'None');
+
+    for (String cur : fieldsList) {
+      options.add(new SelectOption(cur, cur));
+    }
+
+    return options;
+  }
+
+  //methods used for adding all values in operator dropdown
+
+  public String oprtrs { set; }
+  public List<SelectOption> getoprtrs() {
     List<SelectOption> selectoptions = new List<SelectOption>();
-        List<String> operatorList = new List<String>();
-        operatorList.add('=');
-        operatorList.add('!=');
-        operatorList.add('>');
-        operatorList.add('<');
-        operatorList.add('>=');
-        operatorList.add('<=');
-        operatorList.add('LIKE');
-        
-        for(String operator: operatorList){
-            
-        selectoptions.add(new SelectOption(operator,operator));
+    List<String> operatorList = new List<String>();
+    operatorList.add('=');
+    operatorList.add('!=');
+    operatorList.add('>');
+    operatorList.add('<');
+    operatorList.add('>=');
+    operatorList.add('<=');
+    operatorList.add('LIKE');
 
-        }
-        
-        return selectoptions;
+    for (String operator : operatorList) {
+      selectoptions.add(new SelectOption(operator, operator));
     }
-    
-  	//all methods which are used to set Field 1 Mapping 
-    public String smMapping1;
-    public String getsmMapping1() {
-        return smMapping1;
-    }
-    public void setsmMapping1(String smMapping1) {
-        this.smMapping1 = smMapping1;
-    }
-    
-    public String smMapping1Operator;
-    public String getsmMapping1Operator() {
-        return smMapping1Operator;
-    }
-    public void setsmMapping1Operator(String smMapping1Operator) {
-        this.smMapping1Operator = smMapping1Operator;
-    }
-    
-    public String smMapping1Value;
-    public String getsmMapping1Value() {
-        return smMapping1Value;
-    }
-    public void setsmMapping1Value(String smMapping1Value) {
-        this.smMapping1Value = smMapping1Value;
-    }
-       
-    public void field1Mapping() {
-        
- 
-        
-        List<scaleMatters__Sync_Mapping__c> cmd = [select scaleMatters__Filter_1_Mapping__c from scaleMatters__Sync_Mapping__c where scaleMatters__Name__c Like 'scaleMatters Sync Mapping' AND isDeleted = false ];
-        cmd[0].scaleMatters__Filter_1_Mapping__c = smMapping1 + ' ' + smMapping1Operator + ' ' + ' %' + smMapping1Value.replace(' ', '$') + '%';
-        
-        update cmd;
-        
-       
-        
-        }
-    
-    
-    //all methods which are used to set Field 2 Mapping 
-    public String smMapping2;
-    public String getsmMapping2() {
-        return smMapping2;
-    }
-    public void setsmMapping2(String smMapping2) {
-        this.smMapping2 = smMapping2;
-    }
-    
-    public String smMapping2Operator;
-    public String getsmMapping2Operator() {
-        return smMapping2Operator;
-    }
-    public void setsmMapping2Operator(String smMapping2Operator) {
-        this.smMapping2Operator = smMapping2Operator;
-    }
-    
-    public String smMapping2Value;
-    public String getsmMapping2Value() {
-        return smMapping2Value;
-    }
-    public void setsmMapping2Value(String smMapping2Value) {
-        this.smMapping2Value = smMapping2Value;
-    }
-       
-    public void field2Mapping() {
-        
- 
-        
-        List<scaleMatters__Sync_Mapping__c> cmd = [select scaleMatters__Filter_2_Mapping__c from scaleMatters__Sync_Mapping__c where scaleMatters__Name__c Like 'scaleMatters Sync Mapping' AND isDeleted = false ];
-        cmd[0].scaleMatters__Filter_2_Mapping__c = smMapping2 + ' ' + smMapping2Operator + ' %' + smMapping2Value.replace(' ', '$') + '%';
-        
-        update cmd;
-        
-       
-        
-        }
-    
-     //all methods which are used to set Field 3 Mapping 
-    public String smMapping3;
-    public String getsmMapping3() {
-        return smMapping3;
-    }
-    public void setsmMapping3(String smMapping3) {
-        this.smMapping3 = smMapping3;
-    }
-    
-    public String smMapping3Operator;
-    public String getsmMapping3Operator() {
-        return smMapping3Operator;
-    }
-    public void setsmMapping3Operator(String smMapping3Operator) {
-        this.smMapping3Operator = smMapping3Operator;
-    }
-    
-    public String smMapping3Value;
-    public String getsmMapping3Value() {
-        return smMapping3Value;
-    }
-    public void setsmMapping3Value(String smMapping3Value) {
-        this.smMapping3Value = smMapping3Value;
-    }
-       
-    public void field3Mapping() {
-        
- 
-        
-        List<scaleMatters__Sync_Mapping__c> cmd = [select scaleMatters__Filter_3_Mapping__c from scaleMatters__Sync_Mapping__c where scaleMatters__Name__c Like 'scaleMatters Sync Mapping' AND isDeleted = false ];
-        cmd[0].scaleMatters__Filter_3_Mapping__c = smMapping3 + ' ' + smMapping3Operator + ' %' + smMapping3Value.replace(' ', '$') + '%';
-        
-        update cmd;
-        
-       
-        
-        }
-    
-    //all methods which are used to set Field 4 Mapping 
-    public String smMapping4;
-    public String getsmMapping4() {
-        return smMapping4;
-    }
-    public void setsmMapping4(String smMapping4) {
-        this.smMapping4 = smMapping4;
-    }
-    
-    public String smMapping4Operator;
-    public String getsmMapping4Operator() {
-        return smMapping4Operator;
-    }
-    public void setsmMapping4Operator(String smMapping4Operator) {
-        this.smMapping4Operator = smMapping4Operator;
-    }
-    
-    public String smMapping4Value;
-    public String getsmMapping4Value() {
-        return smMapping4Value;
-    }
-    public void setsmMapping4Value(String smMapping4Value) {
-        this.smMapping4Value = smMapping4Value;
-    }
-       
-    public void field4Mapping() {
-        
- 
-        
-        List<scaleMatters__Sync_Mapping__c> cmd = [select scaleMatters__Filter_4_Mapping__c from scaleMatters__Sync_Mapping__c where scaleMatters__Name__c Like 'scaleMatters Sync Mapping' AND isDeleted = false ];
-        cmd[0].scaleMatters__Filter_4_Mapping__c = smMapping4 + ' ' + smMapping4Operator + ' %' + smMapping4Value.replace(' ', '$') + '%';
-        
-        update cmd;
-        
-       
-        
-        }
-    
-     //all methods which are used to set Field 5 Mapping 
-    public String smMapping5;
-    public String getsmMapping5() {
-        return smMapping5;
-    }
-    public void setsmMapping5(String smMapping5) {
-        this.smMapping5 = smMapping5;
-    }
-    
-    public String smMapping5Operator;
-    public String getsmMapping5Operator() {
-        return smMapping5Operator;
-    }
-    public void setsmMapping5Operator(String smMapping5Operator) {
-        this.smMapping5Operator = smMapping5Operator;
-    }
-    
-    public String smMapping5Value;
-    public String getsmMapping5Value() {
-        return smMapping5Value;
-    }
-    public void setsmMapping5Value(String smMapping5Value) {
-        this.smMapping5Value = smMapping5Value;
-    }
-       
-    public void field5Mapping() {
-        
- 
-        
-        List<scaleMatters__Sync_Mapping__c> cmd = [select scaleMatters__Filter_5_Mapping__c from scaleMatters__Sync_Mapping__c where scaleMatters__Name__c Like 'scaleMatters Sync Mapping' AND isDeleted = false ];
-        cmd[0].scaleMatters__Filter_5_Mapping__c = smMapping5 + ' ' + smMapping5Operator + ' ' + smMapping5Value  ;
-        
-        update cmd;
-        
-       
-        
-        }
-    
-    
-     //all methods which are used to set Field 6 Mapping 
-    public String smMapping6;
-    public String getsmMapping6() {
-        return smMapping6;
-    }
-    public void setsmMapping6(String smMapping6) {
-        this.smMapping6 = smMapping6;
-    }
-    
-    public String smMapping6Operator;
-    public String getsmMapping6Operator() {
-        return smMapping6Operator;
-    }
-    public void setsmMapping6Operator(String smMapping6Operator) {
-        this.smMapping6Operator = smMapping6Operator;
-    }
-    
-    public String smMapping6Value;
-    public String getsmMapping6Value() {
-        return smMapping6Value;
-    }
-    public void setsmMapping6Value(String smMapping6Value) {
-        this.smMapping6Value = smMapping6Value;
-    }
-       
-    public void field6Mapping() {
-        
- 
-        
-        List<scaleMatters__Sync_Mapping__c> cmd = [select scaleMatters__Filter_6_Mapping__c from scaleMatters__Sync_Mapping__c where scaleMatters__Name__c Like 'scaleMatters Sync Mapping' AND isDeleted = false ];
-        cmd[0].scaleMatters__Filter_6_Mapping__c = smMapping6 + ' ' + smMapping6Operator + ' ' + smMapping6Value  ;
-        
-        update cmd;
-        
-       
-        
-        }
-    
-     //all methods which are used to set Field 7 Mapping 
-    public String smMapping7;
-    public String getsmMapping7() {
-        return smMapping7;
-    }
-    public void setsmMapping7(String smMapping7) {
-        this.smMapping7 = smMapping7;
-    }
-    
-    public String smMapping7Operator;
-    public String getsmMapping7Operator() {
-        return smMapping7Operator;
-    }
-    public void setsmMapping7Operator(String smMapping7Operator) {
-        this.smMapping7Operator = smMapping7Operator;
-    }
-    
-    public String smMapping7Value;
-    public String getsmMapping7Value() {
-        return smMapping7Value;
-    }
-    public void setsmMapping7Value(String smMapping7Value) {
-        this.smMapping7Value = smMapping7Value;
-    }
-       
-    public void field7Mapping() {
-        
- 
-        
-        List<scaleMatters__Sync_Mapping__c> cmd = [select scaleMatters__Filter_7_Mapping__c from scaleMatters__Sync_Mapping__c where scaleMatters__Name__c Like 'scaleMatters Sync Mapping' AND isDeleted = false ];
-        cmd[0].scaleMatters__Filter_7_Mapping__c = smMapping7 + ' ' + smMapping7Operator + ' ' + smMapping7Value  ;
-        
-        update cmd;
-        
-       
-        
-        }
-    
-    //all methods which are used to set Field 8 Mapping 
-    public String smMapping8;
-    public String getsmMapping8() {
-        return smMapping8;
-    }
-    public void setsmMapping8(String smMapping8) {
-        this.smMapping8 = smMapping8;
-    }
-    
-    public String smMapping8Operator;
-    public String getsmMapping8Operator() {
-        return smMapping8Operator;
-    }
-    public void setsmMapping8Operator(String smMapping8Operator) {
-        this.smMapping8Operator = smMapping8Operator;
-    }
-    
-    public String smMapping8Value;
-    public String getsmMapping8Value() {
-        return smMapping8Value;
-    }
-    public void setsmMapping8Value(String smMapping8Value) {
-        this.smMapping8Value = smMapping8Value;
-    }
-       
-    public void field8Mapping() {
-        
- 
-        
-        List<scaleMatters__Sync_Mapping__c> cmd = [select scaleMatters__Filter_8_Mapping__c from scaleMatters__Sync_Mapping__c where scaleMatters__Name__c Like 'scaleMatters Sync Mapping' AND isDeleted = false ];
-        cmd[0].scaleMatters__Filter_8_Mapping__c = smMapping8 + ' ' + smMapping8Operator + ' ' + smMapping8Value  ;
-        
-        update cmd;
-        
-       
-        
-        }
-//all methods which are used to set Field 9 Mapping 
-    public String smMapping9;
-    public String getsmMapping9() {
-        return smMapping9;
-    }
-    public void setsmMapping9(String smMapping9) {
-        this.smMapping9 = smMapping9;
-    }
-    
-    public String smMapping9Operator;
-    public String getsmMapping9Operator() {
-        return smMapping9Operator;
-    }
-    public void setsmMapping9Operator(String smMapping9Operator) {
-        this.smMapping9Operator = smMapping9Operator;
-    }
-    
-    public String smMapping9Value;
-    public String getsmMapping9Value() {
-        return smMapping9Value;
-    }
-    public void setsmMapping9Value(String smMapping9Value) {
-        this.smMapping9Value = smMapping9Value;
-    }
-       
-    public void field9Mapping() {
-        
- 
-        
-        List<scaleMatters__Sync_Mapping__c> cmd = [select scaleMatters__Filter_9_Mapping__c from scaleMatters__Sync_Mapping__c where scaleMatters__Name__c Like 'scaleMatters Sync Mapping' AND isDeleted = false ];
-        cmd[0].scaleMatters__Filter_9_Mapping__c = smMapping9 + ' ' + smMapping9Operator + ' ' + smMapping9Value  ;
-        
-        update cmd;
-        
-       
-        
-        }
-    
-    /**
+
+    return selectoptions;
+  }
+
+  //all methods which are used to set Field 1 Mapping
+  public String smMapping1;
+  public String getsmMapping1() {
+    return smMapping1;
+  }
+  public void setsmMapping1(String smMapping1) {
+    this.smMapping1 = smMapping1;
+  }
+
+  public String smMapping1Operator;
+  public String getsmMapping1Operator() {
+    return smMapping1Operator;
+  }
+  public void setsmMapping1Operator(String smMapping1Operator) {
+    this.smMapping1Operator = smMapping1Operator;
+  }
+
+  public String smMapping1Value;
+  public String getsmMapping1Value() {
+    return smMapping1Value;
+  }
+  public void setsmMapping1Value(String smMapping1Value) {
+    this.smMapping1Value = smMapping1Value;
+  }
+
+  public void field1Mapping() {
+    List<scaleMatters__Sync_Mapping__c> cmd = [
+      SELECT scaleMatters__Filter_1_Mapping__c
+      FROM scaleMatters__Sync_Mapping__c
+      WHERE
+        scaleMatters__Name__c LIKE 'scaleMatters Sync Mapping'
+        AND isDeleted = FALSE
+    ];
+    cmd[0].scaleMatters__Filter_1_Mapping__c =
+      smMapping1 +
+      ' ' +
+      smMapping1Operator +
+      ' ' +
+      ' %' +
+      smMapping1Value.replace(' ', '$') +
+      '%';
+
+    update cmd;
+  }
+
+  //all methods which are used to set Field 2 Mapping
+  public String smMapping2;
+  public String getsmMapping2() {
+    return smMapping2;
+  }
+  public void setsmMapping2(String smMapping2) {
+    this.smMapping2 = smMapping2;
+  }
+
+  public String smMapping2Operator;
+  public String getsmMapping2Operator() {
+    return smMapping2Operator;
+  }
+  public void setsmMapping2Operator(String smMapping2Operator) {
+    this.smMapping2Operator = smMapping2Operator;
+  }
+
+  public String smMapping2Value;
+  public String getsmMapping2Value() {
+    return smMapping2Value;
+  }
+  public void setsmMapping2Value(String smMapping2Value) {
+    this.smMapping2Value = smMapping2Value;
+  }
+
+  public void field2Mapping() {
+    List<scaleMatters__Sync_Mapping__c> cmd = [
+      SELECT scaleMatters__Filter_2_Mapping__c
+      FROM scaleMatters__Sync_Mapping__c
+      WHERE
+        scaleMatters__Name__c LIKE 'scaleMatters Sync Mapping'
+        AND isDeleted = FALSE
+    ];
+    cmd[0].scaleMatters__Filter_2_Mapping__c =
+      smMapping2 +
+      ' ' +
+      smMapping2Operator +
+      ' %' +
+      smMapping2Value.replace(' ', '$') +
+      '%';
+
+    update cmd;
+  }
+
+  //all methods which are used to set Field 3 Mapping
+  public String smMapping3;
+  public String getsmMapping3() {
+    return smMapping3;
+  }
+  public void setsmMapping3(String smMapping3) {
+    this.smMapping3 = smMapping3;
+  }
+
+  public String smMapping3Operator;
+  public String getsmMapping3Operator() {
+    return smMapping3Operator;
+  }
+  public void setsmMapping3Operator(String smMapping3Operator) {
+    this.smMapping3Operator = smMapping3Operator;
+  }
+
+  public String smMapping3Value;
+  public String getsmMapping3Value() {
+    return smMapping3Value;
+  }
+  public void setsmMapping3Value(String smMapping3Value) {
+    this.smMapping3Value = smMapping3Value;
+  }
+
+  public void field3Mapping() {
+    List<scaleMatters__Sync_Mapping__c> cmd = [
+      SELECT scaleMatters__Filter_3_Mapping__c
+      FROM scaleMatters__Sync_Mapping__c
+      WHERE
+        scaleMatters__Name__c LIKE 'scaleMatters Sync Mapping'
+        AND isDeleted = FALSE
+    ];
+    cmd[0].scaleMatters__Filter_3_Mapping__c =
+      smMapping3 +
+      ' ' +
+      smMapping3Operator +
+      ' %' +
+      smMapping3Value.replace(' ', '$') +
+      '%';
+
+    update cmd;
+  }
+
+  //all methods which are used to set Field 4 Mapping
+  public String smMapping4;
+  public String getsmMapping4() {
+    return smMapping4;
+  }
+  public void setsmMapping4(String smMapping4) {
+    this.smMapping4 = smMapping4;
+  }
+
+  public String smMapping4Operator;
+  public String getsmMapping4Operator() {
+    return smMapping4Operator;
+  }
+  public void setsmMapping4Operator(String smMapping4Operator) {
+    this.smMapping4Operator = smMapping4Operator;
+  }
+
+  public String smMapping4Value;
+  public String getsmMapping4Value() {
+    return smMapping4Value;
+  }
+  public void setsmMapping4Value(String smMapping4Value) {
+    this.smMapping4Value = smMapping4Value;
+  }
+
+  public void field4Mapping() {
+    List<scaleMatters__Sync_Mapping__c> cmd = [
+      SELECT scaleMatters__Filter_4_Mapping__c
+      FROM scaleMatters__Sync_Mapping__c
+      WHERE
+        scaleMatters__Name__c LIKE 'scaleMatters Sync Mapping'
+        AND isDeleted = FALSE
+    ];
+    cmd[0].scaleMatters__Filter_4_Mapping__c =
+      smMapping4 +
+      ' ' +
+      smMapping4Operator +
+      ' %' +
+      smMapping4Value.replace(' ', '$') +
+      '%';
+
+    update cmd;
+  }
+
+  //all methods which are used to set Field 5 Mapping
+  public String smMapping5;
+  public String getsmMapping5() {
+    return smMapping5;
+  }
+  public void setsmMapping5(String smMapping5) {
+    this.smMapping5 = smMapping5;
+  }
+
+  public String smMapping5Operator;
+  public String getsmMapping5Operator() {
+    return smMapping5Operator;
+  }
+  public void setsmMapping5Operator(String smMapping5Operator) {
+    this.smMapping5Operator = smMapping5Operator;
+  }
+
+  public String smMapping5Value;
+  public String getsmMapping5Value() {
+    return smMapping5Value;
+  }
+  public void setsmMapping5Value(String smMapping5Value) {
+    this.smMapping5Value = smMapping5Value;
+  }
+
+  public void field5Mapping() {
+    List<scaleMatters__Sync_Mapping__c> cmd = [
+      SELECT scaleMatters__Filter_5_Mapping__c
+      FROM scaleMatters__Sync_Mapping__c
+      WHERE
+        scaleMatters__Name__c LIKE 'scaleMatters Sync Mapping'
+        AND isDeleted = FALSE
+    ];
+    cmd[0].scaleMatters__Filter_5_Mapping__c =
+      smMapping5 +
+      ' ' +
+      smMapping5Operator +
+      ' ' +
+      smMapping5Value;
+
+    update cmd;
+  }
+
+  //all methods which are used to set Field 6 Mapping
+  public String smMapping6;
+  public String getsmMapping6() {
+    return smMapping6;
+  }
+  public void setsmMapping6(String smMapping6) {
+    this.smMapping6 = smMapping6;
+  }
+
+  public String smMapping6Operator;
+  public String getsmMapping6Operator() {
+    return smMapping6Operator;
+  }
+  public void setsmMapping6Operator(String smMapping6Operator) {
+    this.smMapping6Operator = smMapping6Operator;
+  }
+
+  public String smMapping6Value;
+  public String getsmMapping6Value() {
+    return smMapping6Value;
+  }
+  public void setsmMapping6Value(String smMapping6Value) {
+    this.smMapping6Value = smMapping6Value;
+  }
+
+  public void field6Mapping() {
+    List<scaleMatters__Sync_Mapping__c> cmd = [
+      SELECT scaleMatters__Filter_6_Mapping__c
+      FROM scaleMatters__Sync_Mapping__c
+      WHERE
+        scaleMatters__Name__c LIKE 'scaleMatters Sync Mapping'
+        AND isDeleted = FALSE
+    ];
+    cmd[0].scaleMatters__Filter_6_Mapping__c =
+      smMapping6 +
+      ' ' +
+      smMapping6Operator +
+      ' ' +
+      smMapping6Value;
+
+    update cmd;
+  }
+
+  //all methods which are used to set Field 7 Mapping
+  public String smMapping7;
+  public String getsmMapping7() {
+    return smMapping7;
+  }
+  public void setsmMapping7(String smMapping7) {
+    this.smMapping7 = smMapping7;
+  }
+
+  public String smMapping7Operator;
+  public String getsmMapping7Operator() {
+    return smMapping7Operator;
+  }
+  public void setsmMapping7Operator(String smMapping7Operator) {
+    this.smMapping7Operator = smMapping7Operator;
+  }
+
+  public String smMapping7Value;
+  public String getsmMapping7Value() {
+    return smMapping7Value;
+  }
+  public void setsmMapping7Value(String smMapping7Value) {
+    this.smMapping7Value = smMapping7Value;
+  }
+
+  public void field7Mapping() {
+    List<scaleMatters__Sync_Mapping__c> cmd = [
+      SELECT scaleMatters__Filter_7_Mapping__c
+      FROM scaleMatters__Sync_Mapping__c
+      WHERE
+        scaleMatters__Name__c LIKE 'scaleMatters Sync Mapping'
+        AND isDeleted = FALSE
+    ];
+    cmd[0].scaleMatters__Filter_7_Mapping__c =
+      smMapping7 +
+      ' ' +
+      smMapping7Operator +
+      ' ' +
+      smMapping7Value;
+
+    update cmd;
+  }
+
+  //all methods which are used to set Field 8 Mapping
+  public String smMapping8;
+  public String getsmMapping8() {
+    return smMapping8;
+  }
+  public void setsmMapping8(String smMapping8) {
+    this.smMapping8 = smMapping8;
+  }
+
+  public String smMapping8Operator;
+  public String getsmMapping8Operator() {
+    return smMapping8Operator;
+  }
+  public void setsmMapping8Operator(String smMapping8Operator) {
+    this.smMapping8Operator = smMapping8Operator;
+  }
+
+  public String smMapping8Value;
+  public String getsmMapping8Value() {
+    return smMapping8Value;
+  }
+  public void setsmMapping8Value(String smMapping8Value) {
+    this.smMapping8Value = smMapping8Value;
+  }
+
+  public void field8Mapping() {
+    List<scaleMatters__Sync_Mapping__c> cmd = [
+      SELECT scaleMatters__Filter_8_Mapping__c
+      FROM scaleMatters__Sync_Mapping__c
+      WHERE
+        scaleMatters__Name__c LIKE 'scaleMatters Sync Mapping'
+        AND isDeleted = FALSE
+    ];
+    cmd[0].scaleMatters__Filter_8_Mapping__c =
+      smMapping8 +
+      ' ' +
+      smMapping8Operator +
+      ' ' +
+      smMapping8Value;
+
+    update cmd;
+  }
+  //all methods which are used to set Field 9 Mapping
+  public String smMapping9;
+  public String getsmMapping9() {
+    return smMapping9;
+  }
+  public void setsmMapping9(String smMapping9) {
+    this.smMapping9 = smMapping9;
+  }
+
+  public String smMapping9Operator;
+  public String getsmMapping9Operator() {
+    return smMapping9Operator;
+  }
+  public void setsmMapping9Operator(String smMapping9Operator) {
+    this.smMapping9Operator = smMapping9Operator;
+  }
+
+  public String smMapping9Value;
+  public String getsmMapping9Value() {
+    return smMapping9Value;
+  }
+  public void setsmMapping9Value(String smMapping9Value) {
+    this.smMapping9Value = smMapping9Value;
+  }
+
+  public void field9Mapping() {
+    List<scaleMatters__Sync_Mapping__c> cmd = [
+      SELECT scaleMatters__Filter_9_Mapping__c
+      FROM scaleMatters__Sync_Mapping__c
+      WHERE
+        scaleMatters__Name__c LIKE 'scaleMatters Sync Mapping'
+        AND isDeleted = FALSE
+    ];
+    cmd[0].scaleMatters__Filter_9_Mapping__c =
+      smMapping9 +
+      ' ' +
+      smMapping9Operator +
+      ' ' +
+      smMapping9Value;
+
+    update cmd;
+  }
+
+  /**
 //all methods which are used to set Field 10 Mapping 
     public String smMapping10;
     public String getsmMapping10() {
@@ -1128,32 +1164,27 @@ public class scaleMatterSyncCntrl {
         
         }
 **/
-    
-    
-    //all methods which are used to set Filtering Logics
-    //
-    public String filteringLogic;
-    public String getfilteringLogic() {
-        return filteringLogic;
-    }
-    public void setfilteringLogic(String filteringLogic) {
-        this.filteringLogic = filteringLogic;
-    }
-    
-   
-    
-    public void createFilteringLogic() {
-        
-        
-        List<scaleMatters__Sync_Mapping__c> cmd = [select scaleMatters__Filtering_Logic__c from scaleMatters__Sync_Mapping__c where scaleMatters__Name__c Like 'scaleMatters Sync Mapping' AND isDeleted = false ];
-        cmd[0].scaleMatters__Filtering_Logic__c = filteringLogic ;
-        
-        update cmd;
-        
-       
-        
-        }
-    
-    
 
+  //all methods which are used to set Filtering Logics
+  //
+  public String filteringLogic;
+  public String getfilteringLogic() {
+    return filteringLogic;
+  }
+  public void setfilteringLogic(String filteringLogic) {
+    this.filteringLogic = filteringLogic;
+  }
+
+  public void createFilteringLogic() {
+    List<scaleMatters__Sync_Mapping__c> cmd = [
+      SELECT scaleMatters__Filtering_Logic__c
+      FROM scaleMatters__Sync_Mapping__c
+      WHERE
+        scaleMatters__Name__c LIKE 'scaleMatters Sync Mapping'
+        AND isDeleted = FALSE
+    ];
+    cmd[0].scaleMatters__Filtering_Logic__c = filteringLogic;
+
+    update cmd;
+  }
 }

@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Lead_0_SOQL_Condition__c</fullName>
-    <description>SOQL condition for this funnel to result in Lead 0</description>
+    <description
+  >SOQL condition for this funnel to result in Lead 0</description>
     <externalId>false</externalId>
     <label>Lead 0 - SOQL Condition</label>
     <length>25000</length>

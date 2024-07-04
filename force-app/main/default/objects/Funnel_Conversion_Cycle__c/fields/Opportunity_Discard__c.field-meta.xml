@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Opportunity_Discard__c</fullName>
     <defaultValue>false</defaultValue>
-    <description>Used to identify if Opportunity should be removed from scaleMatters</description>
+    <description
+  >Used to identify if Opportunity should be removed from scaleMatters</description>
     <externalId>false</externalId>
     <label>Opportunity Discard</label>
     <trackHistory>false</trackHistory>

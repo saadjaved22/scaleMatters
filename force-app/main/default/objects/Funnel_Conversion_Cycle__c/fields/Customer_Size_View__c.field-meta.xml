@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Customer_Size_View__c</fullName>
-    <description>Operational views segmented by off Size for scaleMatters</description>
+    <description
+  >Operational views segmented by off Size for scaleMatters</description>
     <externalId>false</externalId>
     <label>Customer Size View</label>
     <required>false</required>

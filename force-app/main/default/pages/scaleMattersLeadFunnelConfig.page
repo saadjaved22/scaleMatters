@@ -1,44 +1,51 @@
 <apex:page lightningStylesheets="true" controller="scaleMattersLeadFunnelCntrl">
-    
-    <apex:form >
-        
-        <apex:pageBlock title="scaleMatters Funnel Configuration Mapping">
-             <apex:pageBlockSection title="Please Enter Mapping for Funnel Groups" >
-                    <apex:pageBlockSectionItem >
-                        
-                    <apex:outputText value="Please Enter Funnel Mapping Name: " ></apex:outputText>
-                    <apex:selectList value="{!nameLead}" size="1" multiselect="false">
-             		<apex:selectOptions value="{!funnelGroup}"/>
-            		</apex:selectList>    
-                    </apex:pageBlockSectionItem>
-                    <br/>
-                    <apex:pageBlockSectionItem >
-                    <apex:outputText value="Please Enter Funnel SOQL Condition: " ></apex:outputText>
-             		<apex:inputTextarea value="{!soqlConditionLead}" />
-                    </apex:pageBlockSectionItem>
-                    <br/>
-                    <apex:pageBlockSectionItem > 
-                    <apex:outputText value="Please Enter Funnel Mapping Object: " ></apex:outputText>
-             		<apex:selectList value="{!objectName}" size="1" multiselect="false">
-             		<apex:selectOptions value="{!funnelObject}"/>
-            		</apex:selectList>  
-                    </apex:pageBlockSectionItem>
-                    <br/>
-                    <apex:pageBlockSectionItem > 
-                    <apex:outputText value="Please Enter Funnel Mapping Order: " ></apex:outputText>
-             		<apex:inputText value="{!funnelOrderLead}" />
-                    </apex:pageBlockSectionItem>
-                    <br/>
-                    <br/>
-                    
-                    <apex:pageBlockSectionItem >
-                    <apex:commandButton value="Save Mapping" action="{!createMappingLead}" style="margin-left: 540px;"  />                        
-                    </apex:pageBlockSectionItem>
-            </apex:pageBlockSection>
-            <br/>
-             </apex:pageBlock>
-            <br/>
+  <apex:form>
+    <apex:pageBlock title="scaleMatters Funnel Configuration Mapping">
+      <apex:pageBlockSection title="Please Enter Mapping for Funnel Groups">
+        <apex:pageBlockSectionItem>
+          <apex:outputText
+            value="Please Enter Funnel Mapping Name: "
+          ></apex:outputText>
+          <apex:selectList value="{!nameLead}" size="1" multiselect="false">
+            <apex:selectOptions value="{!funnelGroup}" />
+          </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <br />
+        <apex:pageBlockSectionItem>
+          <apex:outputText
+            value="Please Enter Funnel SOQL Condition: "
+          ></apex:outputText>
+          <apex:inputTextarea value="{!soqlConditionLead}" />
+        </apex:pageBlockSectionItem>
+        <br />
+        <apex:pageBlockSectionItem>
+          <apex:outputText
+            value="Please Enter Funnel Mapping Object: "
+          ></apex:outputText>
+          <apex:selectList value="{!objectName}" size="1" multiselect="false">
+            <apex:selectOptions value="{!funnelObject}" />
+          </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <br />
+        <apex:pageBlockSectionItem>
+          <apex:outputText
+            value="Please Enter Funnel Mapping Order: "
+          ></apex:outputText>
+          <apex:inputText value="{!funnelOrderLead}" />
+        </apex:pageBlockSectionItem>
+        <br />
+        <br />
 
-    </apex:form>
-
+        <apex:pageBlockSectionItem>
+          <apex:commandButton
+            value="Save Mapping"
+            action="{!createMappingLead}"
+            style="margin-left: 540px"
+          />
+        </apex:pageBlockSectionItem>
+      </apex:pageBlockSection>
+      <br />
+    </apex:pageBlock>
+    <br />
+  </apex:form>
 </apex:page>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Call_Funnel_to_update_Funnel_Groups</name>
@@ -17,7 +17,8 @@
     </actionCalls>
     <apiVersion>57.0</apiVersion>
     <environments>Default</environments>
-    <interviewLabel>scaleMatters Funnel Conversion {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >scaleMatters Funnel Conversion {!$Flow.CurrentDateTime}</interviewLabel>
     <label>scaleMatters Funnel Conversion Flow</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -42,7 +43,8 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Call_Funnel_to_update_Funnel_Groups</targetReference>
+            <targetReference
+      >Call_Funnel_to_update_Funnel_Groups</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>

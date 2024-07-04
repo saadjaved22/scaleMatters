@@ -1,267 +1,386 @@
-<apex:page controller="scaleMattersStageMappingCNTRL" lightningStylesheets="true" action="{!createCustomSettings}" >
-    
-    
-   <apex:form >
-       <apex:pageBlock title="scaleMatters Stage Field Mapping" >
-    <iframe height="200px" id="theIframe" scrolling="no" name="theIframe" src="https://www.scalematters.com/scalematters-stage-mapping" width="100%" style="border:none;"></iframe>
-      
-<apex:pageBlockSection title="Map Any Stage Picklist Value with scaleMatters Stage 1" >
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Stage 1: " ></apex:outputText>
-                 <apex:pageBlockSectionItem >
-                        <apex:selectList value="{!smMapping1}" size="6" multiselect="true"  >
-                            <apex:selectOptions value="{!items}"/>
-                        </apex:selectList>
-                        </apex:pageBlockSectionItem>
-                        <apex:outputText style="margin-left: 60%; font-weight: bold;" value="Last Stage before Lost: " ></apex:outputText>
-                        <apex:pageBlockSectionItem >
-                        <apex:inputText value="{!LSBL1}"/>
-                        </apex:pageBlockSectionItem>
-                        <div style="margin-left:100px;">
-                        <br/>
-                        <apex:commandButton value="Map Field" action="{!stage1Mapping}" />                        
-                        <br/>
-                        <apex:outputText value="Please map the first stage(s) related to your opportunities" ></apex:outputText>
-                        </div>
-                   
-            </apex:pageBlockSection>
-           <br/> 
-           <apex:pageBlockSection title="Map Any Stage Picklist Value with scaleMatters Stage 2" >
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Stage 2: " ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMapping2}" size="6" multiselect="true"  >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                   </apex:pageBlockSectionItem>
-                   <apex:outputText style="margin-left: 60%; font-weight: bold;" value="Last Stage before Lost: " ></apex:outputText>
-                   <apex:pageBlockSectionItem >
-                   <apex:inputText value="{!LSBL2}"/>
-                   </apex:pageBlockSectionItem>
-                   
-                    <div style="margin-left:100px;">
-                    <br/>
-                    <apex:commandButton value="Map Field" action="{!stage2Mapping}" />                        
-                    
-                    <br/>
-                    <apex:outputText value="Please map the second stage(s) related to your opportunities if your organization uses this stage" ></apex:outputText>
-                    </div>
-                   
-            </apex:pageBlockSection>
-           <br/>
-           <apex:pageBlockSection title="Map Any Stage Picklist Value with scaleMatters Stage 3" >
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Stage 3: " ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMapping3}" size="6" multiselect="true"  >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                   </apex:pageBlockSectionItem>
-                   <apex:outputText style="margin-left: 60%; font-weight: bold;" value="Last Stage before Lost: " ></apex:outputText>
-                   <apex:pageBlockSectionItem >
-                   <apex:inputText value="{!LSBL3}"/>
-                   </apex:pageBlockSectionItem>
-                   
-                    <div style="margin-left:100px;">
-                    <br/>
-                    <apex:commandButton value="Map Field" action="{!stage3Mapping}" />                        
-                    
-                    <br/>
-                    <apex:outputText value="Please map the third stage(s) related to your opportunities if your organization uses this stage" ></apex:outputText>
-                    </div>
-                   
-            </apex:pageBlockSection>
-           <br/>
-           <apex:pageBlockSection title="Map Any Stage Picklist Value with scaleMatters Stage 4" >
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Stage 4: " ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMapping4}" size="6" multiselect="true"  >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                   </apex:pageBlockSectionItem>
-                   <apex:outputText style="margin-left: 60%; font-weight: bold;" value="Last Stage before Lost: " ></apex:outputText>
-                   <apex:pageBlockSectionItem >
-                   <apex:inputText value="{!LSBL4}"/>
-                   </apex:pageBlockSectionItem>
-                   
-                    <div style="margin-left:100px;">
-                    <br/>
-                    <apex:commandButton value="Map Field" action="{!stage4Mapping}" />                        
-                    
-                    <br/>
-                    <apex:outputText value="Please map the fourth stage(s) related to your opportunities if your organization uses this stage" ></apex:outputText>
-                    </div>
-                   
-            </apex:pageBlockSection>
-           <br/>
-           <apex:pageBlockSection title="Map Any Stage Picklist Value with scaleMatters Stage 5" >
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Stage 5: " ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMapping5}" size="6" multiselect="true"  >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                   </apex:pageBlockSectionItem>
-                   <apex:outputText style="margin-left: 60%; font-weight: bold;" value="Last Stage before Lost: " ></apex:outputText>
-                   <apex:pageBlockSectionItem >
-                   <apex:inputText value="{!LSBL5}"/>
-                   </apex:pageBlockSectionItem>
-                   
-                    <div style="margin-left:100px;">
-                    <br/>
-                    <apex:commandButton value="Map Field" action="{!stage5Mapping}" />                        
-                    
-                    <br/>
-                    <apex:outputText value="Please map the fifth stage(s) related to your opportunities if your organization uses this stage" ></apex:outputText>
-                    </div>
-                   
-            </apex:pageBlockSection>
-           <br/>
-           <apex:pageBlockSection title="Map Any Stage Picklist Value with scaleMatters Stage 6" >
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Stage 6: " ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMapping6}" size="6" multiselect="true"  >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                   </apex:pageBlockSectionItem>
-                   <apex:outputText style="margin-left: 60%; font-weight: bold;" value="Last Stage before Lost: " ></apex:outputText>
-                   <apex:pageBlockSectionItem >
-                   <apex:inputText value="{!LSBL6}"/>
-                   </apex:pageBlockSectionItem>
-                   
-                    <div style="margin-left:100px;">
-                    <br/>
-                    <apex:commandButton value="Map Field" action="{!stage6Mapping}" />                        
-                    
-                    <br/>
-                    <apex:outputText value="Please map the sixth stage(s) related to your opportunities if your organization uses this stage" ></apex:outputText>
-                    </div>
-                   
-            </apex:pageBlockSection>
-           <br/>
-           <apex:pageBlockSection title="Map Any Stage Picklist Value with scaleMatters Stage 7" >
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Stage 7: " ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMapping7}" size="6" multiselect="true"  >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                   </apex:pageBlockSectionItem>
-                   <apex:outputText style="margin-left: 60%; font-weight: bold;" value="Last Stage before Lost: " ></apex:outputText>
-                   <apex:pageBlockSectionItem >
-                   <apex:inputText value="{!LSBL7}"/>
-                   </apex:pageBlockSectionItem>
-                   
-                    <div style="margin-left:100px;">
-                    <br/>
-                    <apex:commandButton value="Map Field" action="{!stage7Mapping}" />                        
-                    
-                    <br/>
-                    <apex:outputText value="Please map the seventh stage(s) related to your opportunities if your organization uses this stage" ></apex:outputText>
-                    </div>
-                   
-            </apex:pageBlockSection>
-           <br/>
-           <apex:pageBlockSection title="Map Any Stage Picklist Value with scaleMatters Stage 8" >
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Stage 8: " ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMapping8}" size="6" multiselect="true"  >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                   </apex:pageBlockSectionItem>
-                   <apex:outputText style="margin-left: 60%; font-weight: bold;" value="Last Stage before Lost: " ></apex:outputText>
-                   <apex:pageBlockSectionItem >
-                   <apex:inputText value="{!LSBL8}"/>
-                   </apex:pageBlockSectionItem>
-                   
-                    <div style="margin-left:100px;">
-                    <br/>
-                    <apex:commandButton value="Map Field" action="{!stage8Mapping}" />                        
-                    
-                    <br/>
-                    <apex:outputText value="Please map the eighth stage(s) related to your opportunities if your organization uses this stage" ></apex:outputText>
-                    </div>
-                   
-            </apex:pageBlockSection>
-           <br/>
-           <apex:pageBlockSection title="Map Any Stage Picklist Value with Won Opportunity" >
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Stage Closed Won: " ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMappingcw}" size="6" multiselect="true"  >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                    </apex:pageBlockSectionItem>
-                    <apex:outputText style="margin-left: 60%; font-weight: bold;" value="Last Stage before Lost: " ></apex:outputText>
-                    <apex:pageBlockSectionItem >
-                    <apex:inputText value="{!LSBLcw}"/>
-                    </apex:pageBlockSectionItem>
-                    <br/>
-                    <div style="margin-left:100px;">
-                    <br/>
-                    <apex:commandButton value="Map Field" action="{!stagecwMapping}" />                        
-                    <br/>
-                    <apex:outputText value="Please map the won stage(s) related to your opportunities" ></apex:outputText>
-                    </div>
-           </apex:pageBlockSection>
-           <br/>
-           <apex:pageBlockSection title="Map Any Stage Picklist Value with Lost Opportunity" >
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Stage Closed/Lost: " ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMappingcl}" size="6" multiselect="true"  >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                    </apex:pageBlockSectionItem>
-                    <apex:outputText style="margin-left: 60%; font-weight: bold;" value="Last Stage before Lost: " ></apex:outputText>
-                    <apex:pageBlockSectionItem >
-                    <apex:inputText value="{!LSBLcl}"/>
-                    </apex:pageBlockSectionItem>
-                    <br/>
-                    <div style="margin-left:100px;">
-                    <br/>
-                    <apex:commandButton value="Map Field" action="{!stageclMapping}" />                        
-                    <br/>
-                    <apex:outputText value="Please map the confirmed lost stage(s) related to your opportunities" ></apex:outputText>
-                    </div>
-           </apex:pageBlockSection>
-           <br/>
-           <apex:pageBlockSection title="Map Any Stage Picklist Value with Booked/Certfied Deals Opportunity" >
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Stage isCertified: " ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMappingic}" size="6" multiselect="true"  >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                    </apex:pageBlockSectionItem>
-                    <apex:outputText style="margin-left: 60%; font-weight: bold;" value="Last Stage before Lost: " ></apex:outputText>
-                    <apex:pageBlockSectionItem >
-                    <apex:inputText value="{!LSBLic}"/>
-                    </apex:pageBlockSectionItem>
-                    <br/>
-                    <div style="margin-left:100px;">
-                    <br/>
-                    <apex:commandButton value="Map Field" action="{!stageicMapping}" />                        
-                    <br/>
-                    <apex:outputText value="If your organization has the concept of Certifying an opportunity please map the stage(s) related to your opportunities" ></apex:outputText>
-                    </div>
-           </apex:pageBlockSection>
-           <br/>
-           <apex:pageBlockSection title="Map Any Stage Picklist Value with isGhosted Opportunity" >
-               <apex:outputText style="margin-left: 60%; font-weight: bold;" value="scaleMatters Stage isGhosted: " ></apex:outputText>
-               <apex:pageBlockSectionItem >
-                    <apex:selectList value="{!smMappingig}" size="6" multiselect="true"  >
-                        <apex:selectOptions value="{!items}"/>
-                    </apex:selectList>
-                    </apex:pageBlockSectionItem>
-                    <apex:outputText style="margin-left: 60%; font-weight: bold;" value="Last Stage before Lost: " ></apex:outputText>
-                    <apex:pageBlockSectionItem >
-                    <apex:inputText value="{!LSBLig}"/>
-                    </apex:pageBlockSectionItem>
-                    <br/>
-                    <div style="margin-left:100px;">
-                    <br/>
-                    <apex:commandButton value="Map Field" action="{!stageigMapping}" />                        
-                    <br/>
-                    <apex:outputText value="If your organization has the concept of Ghosted opportunities please map the stage(s) related to your opportunities" ></apex:outputText>
-                    </div>
-           </apex:pageBlockSection>
-           <br/>
-    </apex:pageBlock>
-       
-    </apex:form>
+<apex:page
+  controller="scaleMattersStageMappingCNTRL"
+  lightningStylesheets="true"
+  action="{!createCustomSettings}"
+>
+  <apex:form>
+    <apex:pageBlock title="scaleMatters Stage Field Mapping">
+      <iframe
+        height="200px"
+        id="theIframe"
+        scrolling="no"
+        name="theIframe"
+        src="https://www.scalematters.com/scalematters-stage-mapping"
+        width="100%"
+        style="border: none"
+      ></iframe>
 
-    
+      <apex:pageBlockSection
+        title="Map Any Stage Picklist Value with scaleMatters Stage 1"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Stage 1: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMapping1}" size="6" multiselect="true">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="Last Stage before Lost: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:inputText value="{!LSBL1}" />
+        </apex:pageBlockSectionItem>
+        <div style="margin-left: 100px">
+          <br />
+          <apex:commandButton value="Map Field" action="{!stage1Mapping}" />
+          <br />
+          <apex:outputText
+            value="Please map the first stage(s) related to your opportunities"
+          ></apex:outputText>
+        </div>
+      </apex:pageBlockSection>
+      <br />
+      <apex:pageBlockSection
+        title="Map Any Stage Picklist Value with scaleMatters Stage 2"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Stage 2: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMapping2}" size="6" multiselect="true">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="Last Stage before Lost: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:inputText value="{!LSBL2}" />
+        </apex:pageBlockSectionItem>
+
+        <div style="margin-left: 100px">
+          <br />
+          <apex:commandButton value="Map Field" action="{!stage2Mapping}" />
+
+          <br />
+          <apex:outputText
+            value="Please map the second stage(s) related to your opportunities if your organization uses this stage"
+          ></apex:outputText>
+        </div>
+      </apex:pageBlockSection>
+      <br />
+      <apex:pageBlockSection
+        title="Map Any Stage Picklist Value with scaleMatters Stage 3"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Stage 3: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMapping3}" size="6" multiselect="true">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="Last Stage before Lost: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:inputText value="{!LSBL3}" />
+        </apex:pageBlockSectionItem>
+
+        <div style="margin-left: 100px">
+          <br />
+          <apex:commandButton value="Map Field" action="{!stage3Mapping}" />
+
+          <br />
+          <apex:outputText
+            value="Please map the third stage(s) related to your opportunities if your organization uses this stage"
+          ></apex:outputText>
+        </div>
+      </apex:pageBlockSection>
+      <br />
+      <apex:pageBlockSection
+        title="Map Any Stage Picklist Value with scaleMatters Stage 4"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Stage 4: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMapping4}" size="6" multiselect="true">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="Last Stage before Lost: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:inputText value="{!LSBL4}" />
+        </apex:pageBlockSectionItem>
+
+        <div style="margin-left: 100px">
+          <br />
+          <apex:commandButton value="Map Field" action="{!stage4Mapping}" />
+
+          <br />
+          <apex:outputText
+            value="Please map the fourth stage(s) related to your opportunities if your organization uses this stage"
+          ></apex:outputText>
+        </div>
+      </apex:pageBlockSection>
+      <br />
+      <apex:pageBlockSection
+        title="Map Any Stage Picklist Value with scaleMatters Stage 5"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Stage 5: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMapping5}" size="6" multiselect="true">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="Last Stage before Lost: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:inputText value="{!LSBL5}" />
+        </apex:pageBlockSectionItem>
+
+        <div style="margin-left: 100px">
+          <br />
+          <apex:commandButton value="Map Field" action="{!stage5Mapping}" />
+
+          <br />
+          <apex:outputText
+            value="Please map the fifth stage(s) related to your opportunities if your organization uses this stage"
+          ></apex:outputText>
+        </div>
+      </apex:pageBlockSection>
+      <br />
+      <apex:pageBlockSection
+        title="Map Any Stage Picklist Value with scaleMatters Stage 6"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Stage 6: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMapping6}" size="6" multiselect="true">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="Last Stage before Lost: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:inputText value="{!LSBL6}" />
+        </apex:pageBlockSectionItem>
+
+        <div style="margin-left: 100px">
+          <br />
+          <apex:commandButton value="Map Field" action="{!stage6Mapping}" />
+
+          <br />
+          <apex:outputText
+            value="Please map the sixth stage(s) related to your opportunities if your organization uses this stage"
+          ></apex:outputText>
+        </div>
+      </apex:pageBlockSection>
+      <br />
+      <apex:pageBlockSection
+        title="Map Any Stage Picklist Value with scaleMatters Stage 7"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Stage 7: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMapping7}" size="6" multiselect="true">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="Last Stage before Lost: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:inputText value="{!LSBL7}" />
+        </apex:pageBlockSectionItem>
+
+        <div style="margin-left: 100px">
+          <br />
+          <apex:commandButton value="Map Field" action="{!stage7Mapping}" />
+
+          <br />
+          <apex:outputText
+            value="Please map the seventh stage(s) related to your opportunities if your organization uses this stage"
+          ></apex:outputText>
+        </div>
+      </apex:pageBlockSection>
+      <br />
+      <apex:pageBlockSection
+        title="Map Any Stage Picklist Value with scaleMatters Stage 8"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Stage 8: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMapping8}" size="6" multiselect="true">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="Last Stage before Lost: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:inputText value="{!LSBL8}" />
+        </apex:pageBlockSectionItem>
+
+        <div style="margin-left: 100px">
+          <br />
+          <apex:commandButton value="Map Field" action="{!stage8Mapping}" />
+
+          <br />
+          <apex:outputText
+            value="Please map the eighth stage(s) related to your opportunities if your organization uses this stage"
+          ></apex:outputText>
+        </div>
+      </apex:pageBlockSection>
+      <br />
+      <apex:pageBlockSection
+        title="Map Any Stage Picklist Value with Won Opportunity"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Stage Closed Won: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMappingcw}" size="6" multiselect="true">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="Last Stage before Lost: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:inputText value="{!LSBLcw}" />
+        </apex:pageBlockSectionItem>
+        <br />
+        <div style="margin-left: 100px">
+          <br />
+          <apex:commandButton value="Map Field" action="{!stagecwMapping}" />
+          <br />
+          <apex:outputText
+            value="Please map the won stage(s) related to your opportunities"
+          ></apex:outputText>
+        </div>
+      </apex:pageBlockSection>
+      <br />
+      <apex:pageBlockSection
+        title="Map Any Stage Picklist Value with Lost Opportunity"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Stage Closed/Lost: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMappingcl}" size="6" multiselect="true">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="Last Stage before Lost: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:inputText value="{!LSBLcl}" />
+        </apex:pageBlockSectionItem>
+        <br />
+        <div style="margin-left: 100px">
+          <br />
+          <apex:commandButton value="Map Field" action="{!stageclMapping}" />
+          <br />
+          <apex:outputText
+            value="Please map the confirmed lost stage(s) related to your opportunities"
+          ></apex:outputText>
+        </div>
+      </apex:pageBlockSection>
+      <br />
+      <apex:pageBlockSection
+        title="Map Any Stage Picklist Value with Booked/Certfied Deals Opportunity"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Stage isCertified: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMappingic}" size="6" multiselect="true">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="Last Stage before Lost: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:inputText value="{!LSBLic}" />
+        </apex:pageBlockSectionItem>
+        <br />
+        <div style="margin-left: 100px">
+          <br />
+          <apex:commandButton value="Map Field" action="{!stageicMapping}" />
+          <br />
+          <apex:outputText
+            value="If your organization has the concept of Certifying an opportunity please map the stage(s) related to your opportunities"
+          ></apex:outputText>
+        </div>
+      </apex:pageBlockSection>
+      <br />
+      <apex:pageBlockSection
+        title="Map Any Stage Picklist Value with isGhosted Opportunity"
+      >
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="scaleMatters Stage isGhosted: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:selectList value="{!smMappingig}" size="6" multiselect="true">
+            <apex:selectOptions value="{!items}" />
+          </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:outputText
+          style="margin-left: 60%; font-weight: bold"
+          value="Last Stage before Lost: "
+        ></apex:outputText>
+        <apex:pageBlockSectionItem>
+          <apex:inputText value="{!LSBLig}" />
+        </apex:pageBlockSectionItem>
+        <br />
+        <div style="margin-left: 100px">
+          <br />
+          <apex:commandButton value="Map Field" action="{!stageigMapping}" />
+          <br />
+          <apex:outputText
+            value="If your organization has the concept of Ghosted opportunities please map the stage(s) related to your opportunities"
+          ></apex:outputText>
+        </div>
+      </apex:pageBlockSection>
+      <br />
+    </apex:pageBlock>
+  </apex:form>
 </apex:page>

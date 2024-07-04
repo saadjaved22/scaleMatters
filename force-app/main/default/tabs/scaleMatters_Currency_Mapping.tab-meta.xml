@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>Used for configuring opportunities currency fields to sync to scaleMatters</description>
+    <description
+  >Used for configuring opportunities currency fields to sync to scaleMatters</description>
     <icon>scaleMatters/scaleMatters_Logo.png</icon>
     <label>scaleMatters Currency Mapping</label>
     <motif>Custom118: TV Widescreen</motif>

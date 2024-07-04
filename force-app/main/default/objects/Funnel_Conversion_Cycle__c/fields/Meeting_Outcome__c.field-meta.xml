@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Meeting_Outcome__c</fullName>
-    <description>Used as detailed field to determine overall meeting result.</description>
+    <description
+  >Used as detailed field to determine overall meeting result.</description>
     <externalId>false</externalId>
     <label>Meeting Outcome</label>
     <required>false</required>

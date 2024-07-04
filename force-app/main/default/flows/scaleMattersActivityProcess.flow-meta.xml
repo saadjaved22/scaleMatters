@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <processMetadataValues>
@@ -45,7 +45,7 @@
             <processMetadataValues>
                 <name>objectType</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -102,7 +102,7 @@
             <processMetadataValues>
                 <name>objectType</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -159,7 +159,7 @@
             <processMetadataValues>
                 <name>objectType</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -255,7 +255,8 @@
                         <stringValue>ID</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>myVariable_current.WhoId</leftValueReference>
+                <leftValueReference
+        >myVariable_current.WhoId</leftValueReference>
                 <operator>StartsWith</operator>
                 <rightValue>
                     <stringValue>00Q</stringValue>
@@ -313,7 +314,8 @@
                         <stringValue>ID</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>myVariable_current.WhoId</leftValueReference>
+                <leftValueReference
+        >myVariable_current.WhoId</leftValueReference>
                 <operator>StartsWith</operator>
                 <rightValue>
                     <stringValue>003</stringValue>
@@ -325,13 +327,15 @@
             <label>Related Contact</label>
         </rules>
     </decisions>
-    <description>Used to run scaleMatters&apos; Apex on Task for Outreach Model</description>
+    <description
+  >Used to run scaleMatters&apos; Apex on Task for Outreach Model</description>
     <formulas>
         <name>formula_myRule_1</name>
         <dataType>Boolean</dataType>
         <expression>true</expression>
     </formulas>
-    <interviewLabel>scaleMatters__scaleMattersActivityProcess-6_InterviewLabel</interviewLabel>
+    <interviewLabel
+  >scaleMatters__scaleMattersActivityProcess-6_InterviewLabel</interviewLabel>
     <label>scaleMattersActivityProcess</label>
     <processMetadataValues>
         <name>ObjectType</name>

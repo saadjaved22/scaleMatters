@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Meeting_Disposition__c</fullName>
-    <description>Used to get a final disposition if a meeting happened or not with the Lead or Contact.</description>
+    <description
+  >Used to get a final disposition if a meeting happened or not with the Lead or Contact.</description>
     <externalId>false</externalId>
     <label>Meeting Disposition</label>
     <required>false</required>

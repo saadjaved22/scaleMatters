@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Lead_SOQL_Condition__c</fullName>
-    <description>SOQL Condition on the Lead Record to set into Operational View</description>
+    <description
+  >SOQL Condition on the Lead Record to set into Operational View</description>
     <externalId>false</externalId>
     <label>Lead SOQL Condition</label>
     <length>32768</length>

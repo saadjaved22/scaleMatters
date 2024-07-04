@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>56.0</apiVersion>
     <assignments>
@@ -11,11 +11,13 @@
             <assignToReference>All_Contact_Campaign_Member</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>Each_Contact_Campaign_Member</elementReference>
+                <elementReference
+        >Each_Contact_Campaign_Member</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Loop_through_Contact_Campaign_Members</targetReference>
+            <targetReference
+      >Loop_through_Contact_Campaign_Members</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -49,7 +51,8 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Loop_through_Lead_Campaign_Members</targetReference>
+            <targetReference
+      >Loop_through_Lead_Campaign_Members</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -76,21 +79,25 @@
         <locationX>138</locationX>
         <locationY>2639</locationY>
         <assignmentItems>
-            <assignToReference>Each_Contact_Campaign_Member.Id</assignToReference>
+            <assignToReference
+      >Each_Contact_Campaign_Member.Id</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Loop_through_Contact_Campaign_Members.Id</elementReference>
+                <elementReference
+        >Loop_through_Contact_Campaign_Members.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>Each_Contact_Campaign_Member.Funnel_Conversion_Cycle__c</assignToReference>
+            <assignToReference
+      >Each_Contact_Campaign_Member.Funnel_Conversion_Cycle__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Create_sM_Record</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Add_to_Contact_Campaign_Member_Collection</targetReference>
+            <targetReference
+      >Add_to_Contact_Campaign_Member_Collection</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -103,11 +110,13 @@
             <assignToReference>Each_Contact_Task.Id</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Loop_through_Contact_Tasks.Id</elementReference>
+                <elementReference
+        >Loop_through_Contact_Tasks.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>Each_Contact_Task.Funnel_Conversion_Cycle__c</assignToReference>
+            <assignToReference
+      >Each_Contact_Task.Funnel_Conversion_Cycle__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Create_sM_Record</elementReference>
@@ -131,7 +140,8 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>Each_Lead_Task.Funnel_Conversion_Cycle__c</assignToReference>
+            <assignToReference
+      >Each_Lead_Task.Funnel_Conversion_Cycle__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Create_sM_Record</elementReference>
@@ -151,18 +161,21 @@
             <assignToReference>Each_Lead_Campaign_Member.Id</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Loop_through_Lead_Campaign_Members.Id</elementReference>
+                <elementReference
+        >Loop_through_Lead_Campaign_Members.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>Each_Lead_Campaign_Member.Funnel_Conversion_Cycle__c</assignToReference>
+            <assignToReference
+      >Each_Lead_Campaign_Member.Funnel_Conversion_Cycle__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Create_sM_Record</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Add_to_Lead_Campaign_Member_Collection</targetReference>
+            <targetReference
+      >Add_to_Lead_Campaign_Member_Collection</targetReference>
         </connector>
     </assignments>
     <decisions>
@@ -176,7 +189,8 @@
             <name>Has_Contact_ID</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.ConvertedContactId</leftValueReference>
+                <leftValueReference
+        >$Record.ConvertedContactId</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -189,13 +203,15 @@
         </rules>
     </decisions>
     <decisions>
-        <description>Checking to see if this is a new record or an updated record</description>
+        <description
+    >Checking to see if this is a new record or an updated record</description>
         <name>IsNew</name>
         <label>IsNew?</label>
         <locationX>611</locationX>
         <locationY>335</locationY>
         <defaultConnector>
-            <targetReference>Was_create_sM_Record_Toggled_to_TRUE</targetReference>
+            <targetReference
+      >Was_create_sM_Record_Toggled_to_TRUE</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Edit</defaultConnectorLabel>
         <rules>
@@ -209,7 +225,8 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.scaleMatters__x_Create_sM_Record__c</leftValueReference>
+                <leftValueReference
+        >$Record.scaleMatters__x_Create_sM_Record__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -222,7 +239,8 @@
         </rules>
     </decisions>
     <decisions>
-        <description>Checking to see if the record was set to create sM Record or not</description>
+        <description
+    >Checking to see if the record was set to create sM Record or not</description>
         <name>Was_create_sM_Record_Toggled_to_TRUE</name>
         <label>Was create sM Record Toggled to TRUE?</label>
         <locationX>743</locationX>
@@ -232,14 +250,16 @@
             <name>Yes_Create_sM_Record</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.scaleMatters__x_Create_sM_Record__c</leftValueReference>
+                <leftValueReference
+        >$Record.scaleMatters__x_Create_sM_Record__c</leftValueReference>
                 <operator>IsChanged</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.scaleMatters__x_Create_sM_Record__c</leftValueReference>
+                <leftValueReference
+        >$Record.scaleMatters__x_Create_sM_Record__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -252,7 +272,8 @@
         </rules>
     </decisions>
     <decisions>
-        <description>Checking to see if the Lead has been converted or not.</description>
+        <description
+    >Checking to see if the Lead has been converted or not.</description>
         <name>Was_Lead_Converted</name>
         <label>Was Lead Converted?</label>
         <locationX>611</locationX>
@@ -278,7 +299,8 @@
         </rules>
     </decisions>
     <decisions>
-        <description>Checking to see if there are campaign members to associate the sM Record to</description>
+        <description
+    >Checking to see if there are campaign members to associate the sM Record to</description>
         <name>Were_Contact_Campaign_Members_Found</name>
         <label>Were Contact Campaign Members Found?</label>
         <locationX>182</locationX>
@@ -288,20 +310,23 @@
             <name>Found_Contact_Campaign_Members</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Contact_Campaign_Members</leftValueReference>
+                <leftValueReference
+        >Get_Contact_Campaign_Members</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Loop_through_Contact_Campaign_Members</targetReference>
+                <targetReference
+        >Loop_through_Contact_Campaign_Members</targetReference>
             </connector>
             <label>Found Contact Campaign Members</label>
         </rules>
     </decisions>
     <decisions>
-        <description>Checking to see if there are campaign members to associate the sM Record to</description>
+        <description
+    >Checking to see if there are campaign members to associate the sM Record to</description>
         <name>Were_Lead_Campaign_Members_Found</name>
         <label>Were Lead Campaign Members Found?</label>
         <locationX>886</locationX>
@@ -311,20 +336,23 @@
             <name>Found_Lead_Campaign_Members</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Lead_Campaign_Members</leftValueReference>
+                <leftValueReference
+        >Get_Lead_Campaign_Members</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Loop_through_Lead_Campaign_Members</targetReference>
+                <targetReference
+        >Loop_through_Lead_Campaign_Members</targetReference>
             </connector>
             <label>Found Lead Campaign Members</label>
         </rules>
     </decisions>
     <decisions>
-        <description>Checking to see if we were able to find Tasks associated to this contact</description>
+        <description
+    >Checking to see if we were able to find Tasks associated to this contact</description>
         <name>Were_Tasks_found_Contact</name>
         <label>Were Tasks found - Contact</label>
         <locationX>182</locationX>
@@ -350,7 +378,8 @@
         </rules>
     </decisions>
     <decisions>
-        <description>Checking to see if we were able to find Tasks associated to this Lead</description>
+        <description
+    >Checking to see if we were able to find Tasks associated to this Lead</description>
         <name>Were_Tasks_found_Lead</name>
         <label>Were Tasks found - Lead</label>
         <locationX>886</locationX>
@@ -375,7 +404,8 @@
             <label>Found Tasks - Lead</label>
         </rules>
     </decisions>
-    <description>Testing to see about mass creating sM Record from Lead and related records</description>
+    <description
+  >Testing to see about mass creating sM Record from Lead and related records</description>
     <environments>Default</environments>
     <formulas>
         <description>Checking if record is new or not</description>
@@ -387,10 +417,12 @@ TRUE,
 FALSE
 )</expression>
     </formulas>
-    <interviewLabel>Lead create sM Record Test {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Lead create sM Record Test {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Lead create sM Record Test</label>
     <loops>
-        <description>Looping to associated sM Record to Campaign Members</description>
+        <description
+    >Looping to associated sM Record to Campaign Members</description>
         <name>Loop_through_Contact_Campaign_Members</name>
         <label>Loop through Contact Campaign Members</label>
         <locationX>50</locationX>
@@ -398,14 +430,17 @@ FALSE
         <collectionReference>Get_Contact_Campaign_Members</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
-            <targetReference>Associate_each_Contact_Campaign_Member</targetReference>
+            <targetReference
+      >Associate_each_Contact_Campaign_Member</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>Update_Contact_Campaign_Member_Collection</targetReference>
+            <targetReference
+      >Update_Contact_Campaign_Member_Collection</targetReference>
         </noMoreValuesConnector>
     </loops>
     <loops>
-        <description>Loop through Contact Tasks to associate with scaleMatters record</description>
+        <description
+    >Loop through Contact Tasks to associate with scaleMatters record</description>
         <name>Loop_through_Contact_Tasks</name>
         <label>Loop through Contact Tasks</label>
         <locationX>50</locationX>
@@ -420,7 +455,8 @@ FALSE
         </noMoreValuesConnector>
     </loops>
     <loops>
-        <description>Looping to associated sM Record to Campaign Members</description>
+        <description
+    >Looping to associated sM Record to Campaign Members</description>
         <name>Loop_through_Lead_Campaign_Members</name>
         <label>Loop through Lead Campaign Members</label>
         <locationX>754</locationX>
@@ -428,14 +464,17 @@ FALSE
         <collectionReference>Get_Lead_Campaign_Members</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
-            <targetReference>Associate_each_Lead_Campaign_Member</targetReference>
+            <targetReference
+      >Associate_each_Lead_Campaign_Member</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>Update_Lead_Campaign_Member_Collection</targetReference>
+            <targetReference
+      >Update_Lead_Campaign_Member_Collection</targetReference>
         </noMoreValuesConnector>
     </loops>
     <loops>
-        <description>Loop through Lead Tasks to associate with scaleMatters record</description>
+        <description
+    >Loop through Lead Tasks to associate with scaleMatters record</description>
         <name>Loop_through_Lead_Tasks</name>
         <label>Loop through Lead Tasks</label>
         <locationX>754</locationX>
@@ -511,14 +550,17 @@ FALSE
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
-        <description>Getting all associated Campaign Members from Contact</description>
+        <description
+    >Getting all associated Campaign Members from Contact</description>
         <name>Get_Contact_Campaign_Members</name>
         <label>Get Contact Campaign Members</label>
         <locationX>182</locationX>
         <locationY>2279</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Were_Contact_Campaign_Members_Found</targetReference>
+            <targetReference
+      >Were_Contact_Campaign_Members_Found</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -538,7 +580,8 @@ FALSE
         <label>Get Contact Tasks</label>
         <locationX>182</locationX>
         <locationY>1367</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Were_Tasks_found_Contact</targetReference>
         </connector>
@@ -562,12 +605,14 @@ FALSE
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
-        <description>Getting all associated Campaign Members from Lead</description>
+        <description
+    >Getting all associated Campaign Members from Lead</description>
         <name>Get_Lead_Campaign_Members</name>
         <label>Get Lead Campaign Members</label>
         <locationX>886</locationX>
         <locationY>2039</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Were_Lead_Campaign_Members_Found</targetReference>
         </connector>
@@ -589,7 +634,8 @@ FALSE
         <label>Get Lead Tasks</label>
         <locationX>886</locationX>
         <locationY>1127</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Were_Tasks_found_Lead</targetReference>
         </connector>
@@ -613,7 +659,8 @@ FALSE
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
-        <description>Used to update with related Contact, Account and Opportunity if they are exist</description>
+        <description
+    >Used to update with related Contact, Account and Opportunity if they are exist</description>
         <name>Link_Converted_IDs_to_Record</name>
         <label>Link Converted IDs to Record</label>
         <locationX>336</locationX>
@@ -644,7 +691,8 @@ FALSE
         <inputAssignments>
             <field>Opportunity__c</field>
             <value>
-                <elementReference>$Record.ConvertedOpportunityId</elementReference>
+                <elementReference
+        >$Record.ConvertedOpportunityId</elementReference>
             </value>
         </inputAssignments>
         <object>Funnel_Conversion_Cycle__c</object>
@@ -708,7 +756,8 @@ FALSE
         <objectType>CampaignMember</objectType>
     </variables>
     <variables>
-        <description>Used a collection to get updated once completed</description>
+        <description
+    >Used a collection to get updated once completed</description>
         <name>All_Contact_Task</name>
         <dataType>SObject</dataType>
         <isCollection>true</isCollection>

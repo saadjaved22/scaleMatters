@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>56.0</apiVersion>
     <assignments>
@@ -8,7 +8,8 @@
         <locationX>314</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Ads - Facebook</stringValue>
@@ -22,7 +23,8 @@
         <locationX>578</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Ads - Instagram</stringValue>
@@ -36,7 +38,8 @@
         <locationX>842</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Ads - LinkedIn</stringValue>
@@ -50,7 +53,8 @@
         <locationX>1106</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Ads - Other</stringValue>
@@ -64,7 +68,8 @@
         <locationX>1370</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Ads - Search</stringValue>
@@ -78,7 +83,8 @@
         <locationX>1634</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Ads - Twitter</stringValue>
@@ -92,7 +98,8 @@
         <locationX>3482</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Events</stringValue>
@@ -106,7 +113,8 @@
         <locationX>1898</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Events - BIGRYG Webinar</stringValue>
@@ -120,7 +128,8 @@
         <locationX>2162</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Events - Impact Webinar</stringValue>
@@ -134,7 +143,8 @@
         <locationX>2426</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Events - Other</stringValue>
@@ -148,7 +158,8 @@
         <locationX>2690</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Events - RYG</stringValue>
@@ -162,7 +173,8 @@
         <locationX>2954</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Events - TL Webinar</stringValue>
@@ -176,7 +188,8 @@
         <locationX>3218</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Events - VRYG</stringValue>
@@ -190,7 +203,8 @@
         <locationX>3746</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Inbound Other</stringValue>
@@ -204,7 +218,8 @@
         <locationX>4010</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Inbound Unpaid</stringValue>
@@ -218,7 +233,8 @@
         <locationX>4274</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - Business Software</stringValue>
@@ -232,7 +248,8 @@
         <locationX>4538</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - BuyerZone</stringValue>
@@ -246,7 +263,8 @@
         <locationX>4802</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - Capterra</stringValue>
@@ -260,7 +278,8 @@
         <locationX>5066</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - G2 Crowd</stringValue>
@@ -274,7 +293,8 @@
         <locationX>5330</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - MVF</stringValue>
@@ -288,7 +308,8 @@
         <locationX>5594</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - Natural Intelligence</stringValue>
@@ -302,7 +323,8 @@
         <locationX>5858</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - Other</stringValue>
@@ -316,7 +338,8 @@
         <locationX>6122</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - Software Advice</stringValue>
@@ -330,7 +353,8 @@
         <locationX>6386</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - Trafficpoint</stringValue>
@@ -344,7 +368,8 @@
         <locationX>6650</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - TrustRadius</stringValue>
@@ -352,23 +377,27 @@
         </assignmentItems>
     </assignments>
     <assignments>
-        <description>Sets &quot;Record Owner&quot; and &quot;Record Owner Role&quot; field values</description>
+        <description
+    >Sets &quot;Record Owner&quot; and &quot;Record Owner Role&quot; field values</description>
         <name>New_Assign_Record_Owner_Record_Owner_Role</name>
         <label>New - Assign Record Owner &amp; Record Owner Role</label>
         <locationX>5066</locationX>
         <locationY>551</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Record_Owner__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Record_Owner__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Record.OwnerId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Record_Owner_Role__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Record_Owner_Role__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>$Record.Owner.Current_Role__c</elementReference>
+                <elementReference
+        >$Record.Owner.Current_Role__c</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -376,23 +405,27 @@
         </connector>
     </assignments>
     <assignments>
-        <description>Sets &quot;User Source&quot; and &quot;User Source Role&quot; field values</description>
+        <description
+    >Sets &quot;User Source&quot; and &quot;User Source Role&quot; field values</description>
         <name>New_Assign_User_Source_User_Source_Role</name>
         <label>New - Assign User Source &amp; User Source Role</label>
         <locationX>5066</locationX>
         <locationY>887</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__User_Source__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__User_Source__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Record.OwnerId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__User_Source_Role__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__User_Source_Role__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>$Record.Owner.Current_Role__c</elementReference>
+                <elementReference
+        >$Record.Owner.Current_Role__c</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -406,7 +439,8 @@
         <locationX>7178</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Organic</stringValue>
@@ -420,7 +454,8 @@
         <locationX>6914</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Other</stringValue>
@@ -434,7 +469,8 @@
         <locationX>7442</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Prospecting - 3rd Party</stringValue>
@@ -448,7 +484,8 @@
         <locationX>7706</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Prospecting - AE</stringValue>
@@ -462,7 +499,8 @@
         <locationX>7970</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Prospecting - SDR</stringValue>
@@ -476,7 +514,8 @@
         <locationX>8234</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Prospecting - Social</stringValue>
@@ -490,7 +529,8 @@
         <locationX>8498</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Referrals - Customer</stringValue>
@@ -504,7 +544,8 @@
         <locationX>8762</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Referrals - Employee</stringValue>
@@ -518,7 +559,8 @@
         <locationX>9026</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Referrals - Other</stringValue>
@@ -532,7 +574,8 @@
         <locationX>9290</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Referrals - Partner</stringValue>
@@ -540,7 +583,8 @@
         </assignmentItems>
     </assignments>
     <assignments>
-        <description>Used to update the close to date of the action moving to closed won.</description>
+        <description
+    >Used to update the close to date of the action moving to closed won.</description>
         <name>Set_Close_Date</name>
         <label>Set Close Date</label>
         <locationX>17705</locationX>
@@ -560,7 +604,8 @@
         <locationX>5066</locationX>
         <locationY>1223</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Lead_3_Date__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Lead_3_Date__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Flow.CurrentDate</elementReference>
@@ -571,20 +616,23 @@
         </connector>
     </assignments>
     <assignments>
-        <description>Assigning Lead 3 Date and Release to Cadence Date</description>
+        <description
+    >Assigning Lead 3 Date and Release to Cadence Date</description>
         <name>Set_Lead_3_Release_to_Cadence_New</name>
         <label>Set Lead 3 &amp; Release to Cadence New</label>
         <locationX>4802</locationX>
         <locationY>1223</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Lead_3_Date__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Lead_3_Date__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Flow.CurrentDate</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Released_to_Cadence__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Released_to_Cadence__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Flow.CurrentDate</elementReference>
@@ -615,7 +663,8 @@
         <locationX>5330</locationX>
         <locationY>1223</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Released_to_Cadence__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Released_to_Cadence__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Flow.CurrentDate</elementReference>
@@ -632,7 +681,8 @@
         <locationX>9554</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Syndication - Integrate</stringValue>
@@ -646,7 +696,8 @@
         <locationX>9818</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Syndication - Other</stringValue>
@@ -660,7 +711,8 @@
         <locationX>10082</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Syndication - TechTarget</stringValue>
@@ -674,7 +726,8 @@
         <locationX>10346</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Undefined</stringValue>
@@ -688,7 +741,8 @@
         <locationX>10874</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Ads - Facebook</stringValue>
@@ -705,7 +759,8 @@
         <locationX>11138</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Ads - Instagram</stringValue>
@@ -722,7 +777,8 @@
         <locationX>11402</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Ads - LinkedIn</stringValue>
@@ -739,7 +795,8 @@
         <locationX>11666</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Ads - Other</stringValue>
@@ -756,7 +813,8 @@
         <locationX>11930</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Ads - Search</stringValue>
@@ -773,7 +831,8 @@
         <locationX>12194</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Ads - Twitter</stringValue>
@@ -790,7 +849,8 @@
         <locationX>14042</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Events</stringValue>
@@ -807,7 +867,8 @@
         <locationX>12458</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Events - BIGRYG Webinar</stringValue>
@@ -824,7 +885,8 @@
         <locationX>12722</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Events - Impact Webinar</stringValue>
@@ -841,7 +903,8 @@
         <locationX>12986</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Events - Other</stringValue>
@@ -858,7 +921,8 @@
         <locationX>13250</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Events - RYG</stringValue>
@@ -875,7 +939,8 @@
         <locationX>13514</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Events - TL Webinar</stringValue>
@@ -892,7 +957,8 @@
         <locationX>13778</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Events - VRYG</stringValue>
@@ -909,7 +975,8 @@
         <locationX>14306</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Inbound Other</stringValue>
@@ -926,7 +993,8 @@
         <locationX>14570</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Inbound Unpaid</stringValue>
@@ -943,7 +1011,8 @@
         <locationX>14834</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - Business Software</stringValue>
@@ -960,7 +1029,8 @@
         <locationX>15098</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - BuyerZone</stringValue>
@@ -977,7 +1047,8 @@
         <locationX>15362</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - Capterra</stringValue>
@@ -994,7 +1065,8 @@
         <locationX>15626</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - G2 Crowd</stringValue>
@@ -1011,7 +1083,8 @@
         <locationX>15890</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - MVF</stringValue>
@@ -1028,7 +1101,8 @@
         <locationX>16154</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - Natural Intelligence</stringValue>
@@ -1045,7 +1119,8 @@
         <locationX>16418</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - Other</stringValue>
@@ -1062,7 +1137,8 @@
         <locationX>16682</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - Software Advice</stringValue>
@@ -1079,7 +1155,8 @@
         <locationX>16946</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - Trafficpoint</stringValue>
@@ -1096,7 +1173,8 @@
         <locationX>17210</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Listings - TrustRadius</stringValue>
@@ -1113,7 +1191,8 @@
         <locationX>17738</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Organic</stringValue>
@@ -1130,7 +1209,8 @@
         <locationX>17474</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Other</stringValue>
@@ -1147,7 +1227,8 @@
         <locationX>18002</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Prospecting - 3rd Party</stringValue>
@@ -1164,7 +1245,8 @@
         <locationX>18266</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Prospecting - AE</stringValue>
@@ -1181,7 +1263,8 @@
         <locationX>18530</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Prospecting - SDR</stringValue>
@@ -1198,7 +1281,8 @@
         <locationX>18794</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Prospecting - Social</stringValue>
@@ -1215,59 +1299,71 @@
         <locationX>18464</locationX>
         <locationY>551</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Record_Owner__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Record_Owner__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Record.OwnerId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Record_Owner_Role__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Record_Owner_Role__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>$Record.Owner.Current_Role__c</elementReference>
+                <elementReference
+        >$Record.Owner.Current_Role__c</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Should_the_funnel_group_be_re_evaulated_FIXME</targetReference>
+            <targetReference
+      >Should_the_funnel_group_be_re_evaulated_FIXME</targetReference>
         </connector>
     </assignments>
     <assignments>
-        <description>Used to set value of Record Owner and User Source</description>
+        <description
+    >Used to set value of Record Owner and User Source</description>
         <name>Update_Record_Owner_User_Source</name>
         <label>Update Record Owner &amp; User Source</label>
         <locationX>18200</locationX>
         <locationY>551</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Record_Owner__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Record_Owner__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Record.OwnerId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Record_Owner_Role__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Record_Owner_Role__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>$Record.Owner.Current_Role__c</elementReference>
+                <elementReference
+        >$Record.Owner.Current_Role__c</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__User_Source__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__User_Source__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Record.OwnerId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__User_Source_Role__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__User_Source_Role__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>$Record.Owner.Current_Role__c</elementReference>
+                <elementReference
+        >$Record.Owner.Current_Role__c</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Should_the_funnel_group_be_re_evaulated_FIXME</targetReference>
+            <targetReference
+      >Should_the_funnel_group_be_re_evaulated_FIXME</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -1277,7 +1373,8 @@
         <locationX>19058</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Referrals - Customer</stringValue>
@@ -1294,7 +1391,8 @@
         <locationX>19322</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Referrals - Employee</stringValue>
@@ -1311,7 +1409,8 @@
         <locationX>19586</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Referrals - Other</stringValue>
@@ -1328,7 +1427,8 @@
         <locationX>19850</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Referrals - Partner</stringValue>
@@ -1345,7 +1445,8 @@
         <locationX>20114</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Syndication - Integrate</stringValue>
@@ -1362,7 +1463,8 @@
         <locationX>20378</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Syndication - Other</stringValue>
@@ -1379,7 +1481,8 @@
         <locationX>20642</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Syndication - TechTarget</stringValue>
@@ -1396,7 +1499,8 @@
         <locationX>20906</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Undefined</stringValue>
@@ -1413,7 +1517,8 @@
         <locationX>10610</locationX>
         <locationY>1007</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Upsell</stringValue>
@@ -1430,7 +1535,8 @@
         <locationX>50</locationX>
         <locationY>1559</locationY>
         <assignmentItems>
-            <assignToReference>$Record.scaleMatters__Funnel_Group__c</assignToReference>
+            <assignToReference
+      >$Record.scaleMatters__Funnel_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Upsell</stringValue>
@@ -1438,7 +1544,8 @@
         </assignmentItems>
     </assignments>
     <decisions>
-        <description>Checks to see if Lead 3 Date or Release to Cadence Dates are blank</description>
+        <description
+    >Checks to see if Lead 3 Date or Release to Cadence Dates are blank</description>
         <name>Check_L3_Release_to_Cadence</name>
         <label>Check L3 &amp; Release to Cadence</label>
         <locationX>5198</locationX>
@@ -1451,21 +1558,24 @@
             <name>Lead_3_Date_Release_to_Cadence_Blank</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.scaleMatters__Lead_3_Date__c</leftValueReference>
+                <leftValueReference
+        >$Record.scaleMatters__Lead_3_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.scaleMatters__Released_to_Cadence__c</leftValueReference>
+                <leftValueReference
+        >$Record.scaleMatters__Released_to_Cadence__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Set_Lead_3_Release_to_Cadence_New</targetReference>
+                <targetReference
+        >Set_Lead_3_Release_to_Cadence_New</targetReference>
             </connector>
             <label>Lead 3 Date &amp; Release to Cadence Blank</label>
         </rules>
@@ -1473,7 +1583,8 @@
             <name>Lead_3_Date_is_Blank</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.scaleMatters__Lead_3_Date__c</leftValueReference>
+                <leftValueReference
+        >$Record.scaleMatters__Lead_3_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -1488,7 +1599,8 @@
             <name>Release_to_Cadence_Is_Blank</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.scaleMatters__Released_to_Cadence__c</leftValueReference>
+                <leftValueReference
+        >$Record.scaleMatters__Released_to_Cadence__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -1501,7 +1613,8 @@
         </rules>
     </decisions>
     <decisions>
-        <description>In this decision we are checking to see if the opportunity stage change is still open or moved to a closed stage. 
+        <description
+    >In this decision we are checking to see if the opportunity stage change is still open or moved to a closed stage. 
 
 ***Delete this and everything after this once you&apos;ve updated for customer***
 Review the Data Integrity Framework document for this customer and use that to map the customer&apos;s stage names to scaleMatters&apos; opportunity stages as to what is still open, closed ghosted, closed lost and closed won. Based on those stage values you can update close date, set other fields, etc in this section. If you do not need you can simply delete this decision.
@@ -1544,7 +1657,8 @@ Review the Data Integrity Framework document for this customer and use that to m
             <name>Closed_Lost_Ghosted_FIXME</name>
             <conditionLogic>(1 AND 2 AND 3) OR (2 AND 3)</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.scaleMatters__IsGhosted__c</leftValueReference>
+                <leftValueReference
+        >$Record.scaleMatters__IsGhosted__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -1571,7 +1685,8 @@ Review the Data Integrity Framework document for this customer and use that to m
         </rules>
     </decisions>
     <decisions>
-        <description>Checks to see if scaleMatters field &quot;Record Owner&quot; is blank.</description>
+        <description
+    >Checks to see if scaleMatters field &quot;Record Owner&quot; is blank.</description>
         <name>New_Is_Record_Owner_Blank</name>
         <label>New - Is Record Owner Blank?</label>
         <locationX>5198</locationX>
@@ -1584,20 +1699,23 @@ Review the Data Integrity Framework document for this customer and use that to m
             <name>Record_Owner_Blank</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.scaleMatters__Record_Owner__c</leftValueReference>
+                <leftValueReference
+        >$Record.scaleMatters__Record_Owner__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>New_Assign_Record_Owner_Record_Owner_Role</targetReference>
+                <targetReference
+        >New_Assign_Record_Owner_Record_Owner_Role</targetReference>
             </connector>
             <label>Record Owner Blank</label>
         </rules>
     </decisions>
     <decisions>
-        <description>Checks to see if scaleMatters field &quot;User Source&quot; is blank.</description>
+        <description
+    >Checks to see if scaleMatters field &quot;User Source&quot; is blank.</description>
         <name>New_Is_User_Source_Blank</name>
         <label>New - Is User Source Blank?</label>
         <locationX>5198</locationX>
@@ -1610,26 +1728,30 @@ Review the Data Integrity Framework document for this customer and use that to m
             <name>User_Source_Blank</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.scaleMatters__User_Source__c</leftValueReference>
+                <leftValueReference
+        >$Record.scaleMatters__User_Source__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>New_Assign_User_Source_User_Source_Role</targetReference>
+                <targetReference
+        >New_Assign_User_Source_User_Source_Role</targetReference>
             </connector>
             <label>User Source Blank</label>
         </rules>
     </decisions>
     <decisions>
-        <description>Checking the owner changed and is the opportunity is still open?</description>
+        <description
+    >Checking the owner changed and is the opportunity is still open?</description>
         <name>Open_Opp_and_Owner_Changed</name>
         <label>Open Opp and Owner Changed</label>
         <locationX>18464</locationX>
         <locationY>431</locationY>
         <defaultConnector>
-            <targetReference>Should_the_funnel_group_be_re_evaulated_FIXME</targetReference>
+            <targetReference
+      >Should_the_funnel_group_be_re_evaulated_FIXME</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Continue to next step</defaultConnectorLabel>
         <rules>
@@ -1643,7 +1765,8 @@ Review the Data Integrity Framework document for this customer and use that to m
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.scaleMatters__User_Source__c</leftValueReference>
+                <leftValueReference
+        >$Record.scaleMatters__User_Source__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -1657,7 +1780,8 @@ Review the Data Integrity Framework document for this customer and use that to m
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_Record_Owner_User_Source</targetReference>
+                <targetReference
+        >Update_Record_Owner_User_Source</targetReference>
             </connector>
             <label>Open Owner Changed &amp; No User Source</label>
         </rules>
@@ -1685,7 +1809,8 @@ Review the Data Integrity Framework document for this customer and use that to m
         </rules>
     </decisions>
     <decisions>
-        <description>This is a decision checking if the opportunity is new or being edited.</description>
+        <description
+    >This is a decision checking if the opportunity is new or being edited.</description>
         <name>Record_IsNew</name>
         <label>Record IsNew</label>
         <locationX>11831</locationX>
@@ -1711,7 +1836,8 @@ Review the Data Integrity Framework document for this customer and use that to m
         </rules>
     </decisions>
     <decisions>
-        <description>Checking to see if the fields used to place into sourcing strategy changed or not. Update the the resources for Yes Re-Evaluate to include all fields used in sourcing strategy to OR and Is Changed to re-run.</description>
+        <description
+    >Checking to see if the fields used to place into sourcing strategy changed or not. Update the the resources for Yes Re-Evaluate to include all fields used in sourcing strategy to OR and Is Changed to re-run.</description>
         <name>Should_the_funnel_group_be_re_evaulated_FIXME</name>
         <label>Should the funnel group be re-evaulated? - FIXME</label>
         <locationX>18464</locationX>
@@ -1738,13 +1864,15 @@ Review the Data Integrity Framework document for this customer and use that to m
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>What_is_New_Funnel_Group_FIXME</targetReference>
+                <targetReference
+        >What_is_New_Funnel_Group_FIXME</targetReference>
             </connector>
             <label>Yes Re-Evaluate - FIXME</label>
         </rules>
     </decisions>
     <decisions>
-        <description>Checking if the stage changed to review close date</description>
+        <description
+    >Checking if the stage changed to review close date</description>
         <name>Stage_Changed</name>
         <label>Stage Changed?</label>
         <locationX>18464</locationX>
@@ -1761,13 +1889,15 @@ Review the Data Integrity Framework document for this customer and use that to m
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Check_Opportunity_Status_FIXME</targetReference>
+                <targetReference
+        >Check_Opportunity_Status_FIXME</targetReference>
             </connector>
             <label>Changed in Stage</label>
         </rules>
     </decisions>
     <decisions>
-        <description>Since our record changed to place into a funnel group this decision figured out what the new funnel group should be.
+        <description
+    >Since our record changed to place into a funnel group this decision figured out what the new funnel group should be.
 
 ***Delete this and everything after this once you&apos;ve updated for customer***
 You&apos;ll reference the Data Integrity Framework document for this customer which will map the fields used for placing into the funnel groups.
@@ -2031,7 +2161,8 @@ You&apos;ll reference the Data Integrity Framework document for this customer wh
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_Listings_Business_Software</targetReference>
+                <targetReference
+        >Update_Listings_Business_Software</targetReference>
             </connector>
             <label>Edit Listings - Business Software - FIXME</label>
         </rules>
@@ -2106,7 +2237,8 @@ You&apos;ll reference the Data Integrity Framework document for this customer wh
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_Listings_Natural_Intelligence</targetReference>
+                <targetReference
+        >Update_Listings_Natural_Intelligence</targetReference>
             </connector>
             <label>Edit Listings - Natural Intelligence - FIXME</label>
         </rules>
@@ -2136,7 +2268,8 @@ You&apos;ll reference the Data Integrity Framework document for this customer wh
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_Listings_Software_Advice</targetReference>
+                <targetReference
+        >Update_Listings_Software_Advice</targetReference>
             </connector>
             <label>Edit Listings - Software Advice - FIXME</label>
         </rules>
@@ -2367,7 +2500,8 @@ You&apos;ll reference the Data Integrity Framework document for this customer wh
         </rules>
     </decisions>
     <decisions>
-        <description>Since our record changed to place into a funnel group this decision figured out what the new funnel group should be.
+        <description
+    >Since our record changed to place into a funnel group this decision figured out what the new funnel group should be.
 
 ***Delete this and everything after this once you&apos;ve updated for customer***
 You&apos;ll reference the Data Integrity Framework document for this customer which will map the fields used for placing into the funnel groups.
@@ -2706,7 +2840,8 @@ You&apos;ll reference the Data Integrity Framework document for this customer wh
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Listings_Natural_Intelligence_0</targetReference>
+                <targetReference
+        >Listings_Natural_Intelligence_0</targetReference>
             </connector>
             <label>New Listings - Natural Intelligence - FIXME</label>
         </rules>
@@ -2989,10 +3124,12 @@ You&apos;ll reference the Data Integrity Framework document for this customer wh
             <label>Update Close Date for Won</label>
         </rules>
     </decisions>
-    <description>This is a flow used to populate scaleMatters data points on the Opportunity Object. This version removes all relationships to Currency, Stage and Opp Sync since replaced with Apex.</description>
+    <description
+  >This is a flow used to populate scaleMatters data points on the Opportunity Object. This version removes all relationships to Currency, Stage and Opp Sync since replaced with Apex.</description>
     <environments>Default</environments>
     <formulas>
-        <description>Used to check if ACV field is blank if so place $0 otherwise take ACV value</description>
+        <description
+    >Used to check if ACV field is blank if so place $0 otherwise take ACV value</description>
         <name>ACVFormulaFIXME</name>
         <dataType>Currency</dataType>
         <expression>IF(
@@ -3002,14 +3139,16 @@ ISBLANK({!$Record.scaleMatters__ACV__c}),
         <scale>2</scale>
     </formulas>
     <formulas>
-        <description>Formula used to check if the record is new or being edited</description>
+        <description
+    >Formula used to check if the record is new or being edited</description>
         <name>IsNEWFormula</name>
         <dataType>Boolean</dataType>
         <expression>IF( 
       ISNEW(),
 TRUE, FALSE)</expression>
     </formulas>
-    <interviewLabel>sM - Opportunity - Record Automation - Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >sM - Opportunity - Record Automation - Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <isTemplate>true</isTemplate>
     <label>sM - Opportunity - Record Automation - Flow</label>
     <processMetadataValues>

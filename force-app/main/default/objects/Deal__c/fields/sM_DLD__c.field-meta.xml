@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>sM_DLD__c</fullName>
-    <description>DATA LIVE DATE: This field defines the earliest date available for customer data analytics in SellScience.</description>
+    <description
+  >DATA LIVE DATE: This field defines the earliest date available for customer data analytics in SellScience.</description>
     <externalId>false</externalId>
     <label>sM DLD</label>
     <required>false</required>
